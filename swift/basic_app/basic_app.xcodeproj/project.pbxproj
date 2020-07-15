@@ -13,6 +13,7 @@
 		7B45A4D32468A42100E88BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B45A4D12468A42100E88BCA /* Main.storyboard */; };
 		7B45A4D52468A42300E88BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B45A4D42468A42300E88BCA /* Assets.xcassets */; };
 		7B45A4D82468A42300E88BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B45A4D62468A42300E88BCA /* LaunchScreen.storyboard */; };
+		7B4B5EB524BF33F600A06437 /* PeachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */; };
 		7B760F162485455F0074DB26 /* BananasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B760F152485455F0074DB26 /* BananasViewController.swift */; };
 		7B760F18248556740074DB26 /* DLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B760F17248556740074DB26 /* DLViewController.swift */; };
 		8D2AE63D76FC2E3F78C9FEF8 /* Pods_basic_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E1A1E5659155DBED7985A5 /* Pods_basic_app.framework */; };
@@ -30,6 +31,7 @@
 		7B45A4D72468A42300E88BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B45A4D92468A42300E88BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B45A4DF2469E0B800E88BCA /* basic_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = basic_app.entitlements; sourceTree = "<group>"; };
+		7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachesViewController.swift; sourceTree = "<group>"; };
 		7B760F152485455F0074DB26 /* BananasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananasViewController.swift; sourceTree = "<group>"; };
 		7B760F17248556740074DB26 /* DLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLViewController.swift; sourceTree = "<group>"; };
 		B9E1A1E5659155DBED7985A5 /* Pods_basic_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basic_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				7B45A4CF2468A42100E88BCA /* ApplesViewController.swift */,
 				7B760F17248556740074DB26 /* DLViewController.swift */,
 				7B760F152485455F0074DB26 /* BananasViewController.swift */,
+				7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */,
 				7B45A4D12468A42100E88BCA /* Main.storyboard */,
 				7B45A4D42468A42300E88BCA /* Assets.xcassets */,
 				7B45A4D62468A42300E88BCA /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			files = (
 				7B45A4D02468A42100E88BCA /* ApplesViewController.swift in Sources */,
 				7B760F162485455F0074DB26 /* BananasViewController.swift in Sources */,
+				7B4B5EB524BF33F600A06437 /* PeachesViewController.swift in Sources */,
 				7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */,
 				7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */,
 				7B760F18248556740074DB26 /* DLViewController.swift in Sources */,
