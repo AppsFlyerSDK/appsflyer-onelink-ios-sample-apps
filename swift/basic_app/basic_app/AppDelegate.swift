@@ -26,11 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Cannot find `appsFlyerDevKey` or `appleAppID` key")
         }
         // 2 - Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
-        AppsFlyerTracker.shared().appsFlyerDevKey = appsFlyerDevKey
-        AppsFlyerTracker.shared().appleAppID = appleAppID
-        AppsFlyerTracker.shared().delegate = self
+        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
+        AppsFlyerLib.shared().appleAppID = appleAppID
         //  Set isDebug to true to see AppsFlyer debug logs
-        AppsFlyerTracker.shared().isDebug = true
+        AppsFlyerLib.shared().isDebug = true
+        
+        AppsFlyerLib.shared().delegate = self
+        AppsFlyerLib.shared().deepLinkDelegate = self
         
         // 3 - Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
         // -[AppsFlyerTracker trackAppLaunch] from -[AppDelegate applicationDidBecomeActive:]
@@ -44,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     @objc func didBecomeActiveNotification() {
-        AppsFlyerTracker.shared().trackAppLaunch()
+        AppsFlyerLib.shared().start()
     }
     
     // Open Univerasal Links
@@ -52,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // For Swift version < 4.2 replace function signature with the commented out code
     // func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool { // this line for Swift < 4.2
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        AppsFlyerTracker.shared().continue(userActivity, restorationHandler: nil)
+        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
         return true
     }
     
@@ -60,45 +62,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Open URI-scheme for iOS 8 and below
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        AppsFlyerTracker.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
+        AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
         return true
     }
     
     // Open URI-scheme for iOS 9 and above
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        AppsFlyerTracker.shared().handleOpen(url, options: options)
+        AppsFlyerLib.shared().handleOpen(url, options: options)
         return true
     }
     
     // Report Push Notification attribution data for re-engagements
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        AppsFlyerTracker.shared().handlePushNotification(userInfo)
+        AppsFlyerLib.shared().handlePushNotification(userInfo)
     }
     
     // User logic
-    fileprivate func walkToSceneWithParams(params: [AnyHashable:Any]) {
+    fileprivate func walkToSceneWithParams(deepLinkObj: DeepLink) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
         
-        var fruitNameStr = ""
-        
-        if let thisFruitName = params["deep_link_value"] as? String {
-            fruitNameStr = thisFruitName
-        } else if let linkParam = params["link"] as? String {
-            guard let url = URLComponents(string: linkParam) else {
-                print("Could not extract query params from link")
-                return
-            }
-            if let thisFruitName = url.queryItems?.first(where: { $0.name == "deep_link_value" })?.value {
-                fruitNameStr = thisFruitName
-            }
+       guard let fruitNameStr = deepLinkObj.clickEvent["deep_link_value"] as? String else {
+            print("Could not extract query params from link")
+            return
         }
-        
+               
         let destVC = fruitNameStr + "_vc"
         if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
             
             print("AppsFlyer routing to section: \(destVC)")
-            newVC.attributionData = params
+            newVC.deepLinkData = deepLinkObj
             
              UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
         } else {
@@ -107,7 +100,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: AppsFlyerTrackerDelegate {
+extension AppDelegate: DeepLinkDelegate {
+     
+    func didResolveDeepLink(_ result: DeepLinkResult) {
+        switch result.status {
+        case .notFound:
+            print("Deep link not found")
+        case .found:
+            let deepLinkStr:String = result.deepLink!.toString()
+            print("DeepLink data is: \(deepLinkStr)")
+            
+            if( result.deepLink?.isDeferred == true) {
+                print("This is a deferred deep link")
+            } else {
+                print("This is a direct deep link")
+            }
+            walkToSceneWithParams(deepLinkObj: result.deepLink!)
+        case .failure:
+            print("Error %@", result.error!)
+        }
+    }
+    
+}
+
+extension AppDelegate: AppsFlyerLibDelegate {
      
     // Handle Organic/Non-organic installation
     func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
@@ -129,15 +145,6 @@ extension AppDelegate: AppsFlyerTrackerDelegate {
             if let is_first_launch = data["is_first_launch"] as? Bool,
                 is_first_launch {
                 print("First Launch")
-                if let fruit_name = data["deep_link_value"]
-                {
-                    // The key 'deep_link_value' exists only in OneLink originated installs
-                    print("deferred deep-linking to \(fruit_name)")
-                    walkToSceneWithParams(params: data)
-                }
-                else {
-                    print("Install from a non-owned media")
-                }
             } else {
                 print("Not First Launch")
             }
@@ -145,20 +152,6 @@ extension AppDelegate: AppsFlyerTrackerDelegate {
     }
     
     func onConversionDataFail(_ error: Error) {
-        print("\(error)")
-    }
-     
-    // Handle Deeplink
-    func onAppOpenAttribution(_ attributionData: [AnyHashable: Any]) {
-        //Handle Deep Link Data
-        print("onAppOpenAttribution data:")
-        for (key, value) in attributionData {
-            print(key, ":",value)
-        }
-        walkToSceneWithParams(params: attributionData)
-    }
-    
-    func onAppOpenAttributionFailure(_ error: Error) {
         print("\(error)")
     }
 }

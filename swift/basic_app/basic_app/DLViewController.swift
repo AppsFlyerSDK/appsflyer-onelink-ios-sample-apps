@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AppsFlyerLib
 
 class DLViewController: UIViewController {
     
-    var attributionData: [AnyHashable: Any] = [:]
+    var deepLinkData: DeepLink? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,9 @@ class DLViewController: UIViewController {
         let regularAttribute = [
            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
         ]
-        for (key, value) in attributionData {
+        for (key, value) in deepLinkData!.clickEvent {
             print("ViewController", key, ":",value)
-            let keyStr = key as! String
+            let keyStr = key
             let boldKeyStr = NSAttributedString(string: keyStr, attributes: boldAttribute)
             newString.append(boldKeyStr)
             let valueStr = value as? String ?? "null"
