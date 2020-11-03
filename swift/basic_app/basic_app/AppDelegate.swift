@@ -82,14 +82,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var fruitNameStr = ""
         
-        if let thisFruitName = params["fruit_name"] as? String {
+        if let thisFruitName = params["deep_link_value"] as? String {
             fruitNameStr = thisFruitName
         } else if let linkParam = params["link"] as? String {
             guard let url = URLComponents(string: linkParam) else {
                 print("Could not extract query params from link")
                 return
             }
-            if let thisFruitName = url.queryItems?.first(where: { $0.name == "fruit_name" })?.value {
+            if let thisFruitName = url.queryItems?.first(where: { $0.name == "deep_link_value" })?.value {
                 fruitNameStr = thisFruitName
             }
         }
@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("AppsFlyer routing to section: \(destVC)")
             newVC.attributionData = params
             
-            UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
+             UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
         } else {
             print("AppsFlyer: could not find section: \(destVC)")
         }
@@ -129,9 +129,9 @@ extension AppDelegate: AppsFlyerTrackerDelegate {
             if let is_first_launch = data["is_first_launch"] as? Bool,
                 is_first_launch {
                 print("First Launch")
-                if let fruit_name = data["fruit_name"]
+                if let fruit_name = data["deep_link_value"]
                 {
-                    // The key 'fruit_name' exists only in OneLink originated installs
+                    // The key 'deep_link_value' exists only in OneLink originated installs
                     print("deferred deep-linking to \(fruit_name)")
                     walkToSceneWithParams(params: data)
                 }
