@@ -30,7 +30,7 @@ class DLViewController: UIViewController {
             let keyStr = key as! String
             let boldKeyStr = NSAttributedString(string: keyStr, attributes: boldAttribute)
             newString.append(boldKeyStr)
-            let valueStr = value as! String
+            let valueStr = value as? String ?? "null"
             let normalValueStr = NSAttributedString(string: ": \(valueStr)\n", attributes: regularAttribute)
             newString.append(normalValueStr)
         }
