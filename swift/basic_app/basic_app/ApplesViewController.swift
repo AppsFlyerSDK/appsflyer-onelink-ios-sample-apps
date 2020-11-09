@@ -16,10 +16,11 @@ class ApplesViewController: DLViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .green        
-        
-        if ((attributionData["link"] as? String) != nil || (attributionData["deep_link_value"] as? String) != nil) {
+
+        if (deepLinkData != nil) {
             applesDlLabel.attributedText = attributionDataToString()
         }
+        
     }
 
 }

@@ -15,12 +15,11 @@ class PeachesViewController: DLViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .orange
-        
-        if ((attributionData["link"] as? String) != nil || (attributionData["deep_link_value"] as? String) != nil) {
+        view.backgroundColor = .orange        
+
+        if (deepLinkData != nil) {
             peachesDlLabel.attributedText = attributionDataToString()
         }
+        
     }
-
-
 }

@@ -15,9 +15,9 @@ class BananasViewController: DLViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .yellow
-        
-        if ((attributionData["link"] as? String) != nil || (attributionData["deep_link_value"] as? String) != nil) {
+        view.backgroundColor = .yellow        
+
+        if (deepLinkData != nil) {
             bananasDlLabel.attributedText = attributionDataToString()
         }
     }

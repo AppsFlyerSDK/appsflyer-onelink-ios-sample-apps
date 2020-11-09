@@ -15,13 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        AppsFlyerTracker.shared().continue(userActivity, restorationHandler: nil)
+        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         print("*** Attention *** - scene with openURLContexts")
         if let url = URLContexts.first?.url {
-            AppsFlyerTracker.shared().handleOpen(url, options: nil)
+            AppsFlyerLib.shared().handleOpen(url, options: nil)
         }
     }
 
