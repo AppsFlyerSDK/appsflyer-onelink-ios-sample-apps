@@ -1,5 +1,5 @@
-# appsflyer-onelink-simulator-ios
-iOS Simulator which demonstrate the usage of Appsflyer Onelink - A unified deep-linking solution.
+# appsflyer-onelink-ios-sample-apps
+iOS sample app which demonstrate the usage of Appsflyer Onelink - A unified deep-linking solution.
 This repository gives you sample apps to get you started easily with OneLink.
 
 ## Table of Contents
