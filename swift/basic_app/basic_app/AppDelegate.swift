@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().start()
     }
     
-    // Open Univerasal Links
+    // Open Universal Links
     
     // For Swift version < 4.2 replace function signature with the commented out code
     // func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool { // this line for Swift < 4.2
@@ -57,15 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
         return true
     }
-    
-    // Open Deeplinks
-    
-    // Open URI-scheme for iOS 8 and below
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
-        return true
-    }
-    
+            
     // Open URI-scheme for iOS 9 and above
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         AppsFlyerLib.shared().handleOpen(url, options: options)
@@ -78,16 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // User logic
-    fileprivate func walkToSceneWithParams(deepLinkObj: DeepLink) {
+    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkObj: DeepLink) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
-        
-       guard let fruitNameStr = deepLinkObj.clickEvent["deep_link_value"] as? String else {
-            print("Could not extract query params from link")
-            return
-        }
                
-        let destVC = fruitNameStr + "_vc"
+        let destVC = fruitName + "_vc"
         if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
             
             print("AppsFlyer routing to section: \(destVC)")
@@ -106,21 +93,35 @@ extension AppDelegate: DeepLinkDelegate {
         switch result.status {
         case .notFound:
             print("Deep link not found")
-        case .found:
-            let deepLinkStr:String = result.deepLink!.toString()
-            print("DeepLink data is: \(deepLinkStr)")
-            
-            if( result.deepLink?.isDeferred == true) {
-                print("This is a deferred deep link")
-            } else {
-                print("This is a direct deep link")
-            }
-            walkToSceneWithParams(deepLinkObj: result.deepLink!)
+            return
         case .failure:
             print("Error %@", result.error!)
+            return
+        case .found:
+            print("Deep link found")
         }
+        
+        guard let deepLinkObj:DeepLink = result.deepLink else {
+            print("Could not extract deep link object")
+            return
+        }
+        
+        let deepLinkStr:String = deepLinkObj.toString()
+        print("DeepLink data is: \(deepLinkStr)")
+        
+        if( deepLinkObj.isDeferred == true) {
+            print("This is a deferred deep link")
+        } else {
+            print("This is a direct deep link")
+        }
+        
+        guard let fruitNameStr = deepLinkObj.deeplinkValue else {
+            print("Could not extract deep_link_value from deep link object")
+            return
+        }
+        
+        walkToSceneWithParams(fruitName: fruitNameStr, deepLinkObj: deepLinkObj)
     }
-    
 }
 
 extension AppDelegate: AppsFlyerLibDelegate {
