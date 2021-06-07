@@ -11,7 +11,7 @@ import AppsFlyerLib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+    var ConversionData: [AnyHashable: Any]? = nil
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -128,7 +128,7 @@ extension AppDelegate: AppsFlyerLibDelegate {
      
     // Handle Organic/Non-organic installation
     func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
-        
+        ConversionData = data
         print("onConversionDataSuccess data:")
         for (key, value) in data {
             print(key, ":", value)

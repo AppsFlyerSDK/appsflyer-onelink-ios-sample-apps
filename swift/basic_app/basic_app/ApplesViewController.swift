@@ -14,11 +14,10 @@ class ApplesViewController: DLViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .green        
+        // Do any additional setup after loading the view.     
 
         if (deepLinkData != nil) {
-            applesDlLabel.attributedText = attributionDataToString()
+            applesDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
         }
         
     }
