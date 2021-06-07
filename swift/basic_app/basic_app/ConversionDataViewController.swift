@@ -20,6 +20,7 @@ class ConversionDataViewController: DLViewController {
             if let conversionData = conversionData as! [String:Any]? {
                 
                 ConversionDataParams.attributedText = attributionDataToString(data: conversionData)
+                ConversionDataParams.textColor = .label
             }
         }
     }

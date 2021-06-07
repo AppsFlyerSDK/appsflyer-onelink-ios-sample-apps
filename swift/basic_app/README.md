@@ -1,5 +1,5 @@
 # FEED.ME fruit store sample app
-<img src="https://user-images.githubusercontent.com/61788924/85712018-8d76c980-b6f0-11ea-9d34-72bbd8bf2493.jpg" height="400">
+<img src="https://user-images.githubusercontent.com/61788924/97542099-d906f000-19ce-11eb-8fe3-911d616ea953.jpg" height="400">
 
 ## What is it for?
 This app demonstrates the basic functionality of AppsFlyer's OneLink deep-linking solution.
