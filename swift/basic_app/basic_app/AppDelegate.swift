@@ -25,19 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    let appleAppID = properties["appleAppID"] else {
             fatalError("Cannot find `appsFlyerDevKey` or `appleAppID` key")
         }
-        // 2 - Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
-        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
-        AppsFlyerLib.shared().appleAppID = appleAppID
+        
         //  Set isDebug to true to see AppsFlyer debug logs
         AppsFlyerLib.shared().isDebug = true
         
+        // Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
+        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
+        AppsFlyerLib.shared().appleAppID = appleAppID
+               
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().deepLinkDelegate = self
         
-        // 3 - Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
-        // -[AppsFlyerTracker trackAppLaunch] from -[AppDelegate applicationDidBecomeActive:]
-        NotificationCenter.default.addObserver(self,
-        selector: #selector(didBecomeActiveNotification),
+        // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
+        // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
         // For Swift version < 4.2 replace name argument with the commented out code
         name: UIApplication.didBecomeActiveNotification, //.UIApplicationDidBecomeActive for Swift < 4.2
         object: nil)
@@ -77,12 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let destVC = fruitName + "_vc"
         if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
             
-            print("AppsFlyer routing to section: \(destVC)")
+            NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
             newVC.deepLinkData = deepLinkObj
             
              UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
         } else {
-            print("AppsFlyer: could not find section: \(destVC)")
+            NSLog("[AFSDK] AppsFlyer: could not find section: \(destVC)")
         }
     }
 }
@@ -92,27 +93,27 @@ extension AppDelegate: DeepLinkDelegate {
     func didResolveDeepLink(_ result: DeepLinkResult) {
         switch result.status {
         case .notFound:
-            print("Deep link not found")
+            NSLog("[AFSDK] Deep link not found")
             return
         case .failure:
             print("Error %@", result.error!)
             return
         case .found:
-            print("Deep link found")
+            NSLog("[AFSDK] Deep link found")
         }
         
         guard let deepLinkObj:DeepLink = result.deepLink else {
-            print("Could not extract deep link object")
+            NSLog("[AFSDK] Could not extract deep link object")
             return
         }
         
         let deepLinkStr:String = deepLinkObj.toString()
-        print("DeepLink data is: \(deepLinkStr)")
+        NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
         
         if( deepLinkObj.isDeferred == true) {
-            print("This is a deferred deep link")
+            NSLog("[AFSDK] This is a deferred deep link")
         } else {
-            print("This is a direct deep link")
+            NSLog("[AFSDK] This is a direct deep link")
         }
         
         guard let fruitNameStr = deepLinkObj.deeplinkValue else {
@@ -138,22 +139,22 @@ extension AppDelegate: AppsFlyerLibDelegate {
             if (status == "Non-organic") {
                 if let sourceID = data["media_source"],
                     let campaign = data["campaign"] {
-                    print("This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                    NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
                 }
             } else {
-                print("This is an organic install.")
+                NSLog("[AFSDK] This is an organic install.")
             }
             if let is_first_launch = data["is_first_launch"] as? Bool,
                 is_first_launch {
-                print("First Launch")
+                NSLog("[AFSDK] First Launch")
             } else {
-                print("Not First Launch")
+                NSLog("[AFSDK] Not First Launch")
             }
         }
     }
     
     func onConversionDataFail(_ error: Error) {
-        print("\(error)")
+        NSLog("[AFSDK] \(error)")
     }
 }
 
