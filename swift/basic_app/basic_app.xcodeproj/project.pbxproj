@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2484DE5E2668FD8800FBBC9B /* ConversionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */; };
 		7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CB2468A42100E88BCA /* AppDelegate.swift */; };
 		7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CD2468A42100E88BCA /* SceneDelegate.swift */; };
 		7B45A4D02468A42100E88BCA /* ApplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CF2468A42100E88BCA /* ApplesViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDataViewController.swift; sourceTree = "<group>"; };
 		2F40088F2E198447C891F0A6 /* Pods-basic_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basic_app.debug.xcconfig"; path = "Target Support Files/Pods-basic_app/Pods-basic_app.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2CBB21EED2656E438E5AE0 /* Pods-basic_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basic_app.release.xcconfig"; path = "Target Support Files/Pods-basic_app/Pods-basic_app.release.xcconfig"; sourceTree = "<group>"; };
 		7B45A4C82468A42100E88BCA /* basic_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basic_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				7B45A4D42468A42300E88BCA /* Assets.xcassets */,
 				7B45A4D62468A42300E88BCA /* LaunchScreen.storyboard */,
 				7B45A4D92468A42300E88BCA /* Info.plist */,
+				2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */,
 			);
 			path = basic_app;
 			sourceTree = "<group>";
@@ -130,7 +133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = OneLink;
 				TargetAttributes = {
 					7B45A4C72468A42100E88BCA = {
@@ -202,6 +205,7 @@
 				7B45A4D02468A42100E88BCA /* ApplesViewController.swift in Sources */,
 				7B760F162485455F0074DB26 /* BananasViewController.swift in Sources */,
 				7B4B5EB524BF33F600A06437 /* PeachesViewController.swift in Sources */,
+				2484DE5E2668FD8800FBBC9B /* ConversionDataViewController.swift in Sources */,
 				7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */,
 				7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */,
 				7B760F18248556740074DB26 /* DLViewController.swift in Sources */,
@@ -256,6 +260,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -280,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -316,6 +321,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -334,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

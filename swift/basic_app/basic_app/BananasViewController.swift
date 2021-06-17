@@ -14,11 +14,10 @@ class BananasViewController: DLViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .yellow        
+        // Do any additional setup after loading the view.     
 
         if (deepLinkData != nil) {
-            bananasDlLabel.attributedText = attributionDataToString()
+            bananasDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
         }
     }
 

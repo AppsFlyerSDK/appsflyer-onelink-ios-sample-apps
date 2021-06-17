@@ -18,7 +18,7 @@ class DLViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func attributionDataToString() -> NSMutableAttributedString {
+    func attributionDataToString(data : [String: Any]) -> NSMutableAttributedString {
         let newString = NSMutableAttributedString()
         let boldAttribute = [
            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
@@ -26,15 +26,27 @@ class DLViewController: UIViewController {
         let regularAttribute = [
            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
         ]
-        for (key, value) in deepLinkData!.clickEvent {
-            print("ViewController", key, ":",value)
+        let sortedKeys = Array(data.keys).sorted(by: <)
+        for key in sortedKeys {
+            print("ViewController", key, ":",data[key] ?? "null")
             let keyStr = key
             let boldKeyStr = NSAttributedString(string: keyStr, attributes: boldAttribute)
             newString.append(boldKeyStr)
-            let valueStr = value as? String ?? "null"
+            
+            var valueStr: String
+            switch data[key] {
+            case let s as String:
+                valueStr = s
+            case let b as Bool:
+                valueStr = b.description
+            default:
+                valueStr = "null"
+            }
+            
             let normalValueStr = NSAttributedString(string: ": \(valueStr)\n", attributes: regularAttribute)
             newString.append(normalValueStr)
         }
         return newString
     }
 }
+
