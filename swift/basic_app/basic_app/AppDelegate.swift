@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
         AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
         AppsFlyerLib.shared().appleAppID = appleAppID
+        
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
                
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().deepLinkDelegate = self

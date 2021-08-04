@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246ED43126BABD4E00A9685F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246ED43026BABD4E00A9685F /* MainViewController.swift */; };
 		2484DE5E2668FD8800FBBC9B /* ConversionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */; };
 		7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CB2468A42100E88BCA /* AppDelegate.swift */; };
 		7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CD2468A42100E88BCA /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		246ED43026BABD4E00A9685F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDataViewController.swift; sourceTree = "<group>"; };
 		2F40088F2E198447C891F0A6 /* Pods-basic_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basic_app.debug.xcconfig"; path = "Target Support Files/Pods-basic_app/Pods-basic_app.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2CBB21EED2656E438E5AE0 /* Pods-basic_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basic_app.release.xcconfig"; path = "Target Support Files/Pods-basic_app/Pods-basic_app.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				7B45A4D62468A42300E88BCA /* LaunchScreen.storyboard */,
 				7B45A4D92468A42300E88BCA /* Info.plist */,
 				2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */,
+				246ED43026BABD4E00A9685F /* MainViewController.swift */,
 			);
 			path = basic_app;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */,
 				7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */,
 				7B760F18248556740074DB26 /* DLViewController.swift in Sources */,
+				246ED43126BABD4E00A9685F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
