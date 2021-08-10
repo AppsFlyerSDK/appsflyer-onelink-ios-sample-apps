@@ -153,14 +153,28 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-6t-haQ">
-                                        <rect key="frame" x="110.66666666666669" y="739" width="193" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Show conversion data">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-6t-haQ">
+                                        <rect key="frame" x="-123.66666666666669" y="740" width="661.33333333333348" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="LBS-X8-rij"/>
+                                            <constraint firstAttribute="width" constant="661" id="Z2N-aA-HJ9"/>
+                                        </constraints>
+                                        <state key="normal" image="Conversion data button">
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="EC2-w1-0jT" kind="show" id="4ta-tK-FDn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-ub-JQ0">
+                                        <rect key="frame" x="140.66666666666666" y="674" width="132.99999999999997" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="133" id="Qko-Mp-zlo"/>
+                                            <constraint firstAttribute="height" constant="37" id="ccn-TD-H2j"/>
+                                        </constraints>
+                                        <state key="normal" image="copy link button"/>
+                                        <connections>
+                                            <action selector="copyShareInviteLink:" destination="3sh-01-h5r" eventType="touchUpInside" id="0B6-bt-QZ6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,16 +182,18 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="6SF-a3-uwD" firstAttribute="leading" secondItem="jJO-YA-HJO" secondAttribute="leading" id="4nf-uf-tgN"/>
-                                    <constraint firstItem="jJO-YA-HJO" firstAttribute="bottom" secondItem="PRA-6t-haQ" secondAttribute="bottom" constant="33" id="Eiu-Kj-CBz"/>
+                                    <constraint firstItem="XYE-ub-JQ0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SMi-4a-cz0" secondAttribute="bottom" constant="20" id="6NG-se-wwy"/>
                                     <constraint firstItem="HXc-k0-TNU" firstAttribute="leading" secondItem="jJO-YA-HJO" secondAttribute="leading" constant="20" id="JVn-v9-9IC"/>
                                     <constraint firstItem="jJO-YA-HJO" firstAttribute="trailing" secondItem="SMi-4a-cz0" secondAttribute="trailing" constant="20" id="Lxb-f3-Ch6"/>
                                     <constraint firstItem="jJO-YA-HJO" firstAttribute="trailing" secondItem="HXc-k0-TNU" secondAttribute="trailing" constant="100" id="NYz-FC-i5d"/>
-                                    <constraint firstItem="PRA-6t-haQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SMi-4a-cz0" secondAttribute="bottom" constant="20" id="OuG-5a-whL"/>
                                     <constraint firstItem="6SF-a3-uwD" firstAttribute="top" secondItem="jJO-YA-HJO" secondAttribute="top" id="P1p-bK-zag"/>
                                     <constraint firstItem="jJO-YA-HJO" firstAttribute="trailing" secondItem="6SF-a3-uwD" secondAttribute="trailing" id="XJb-Ae-xnP"/>
                                     <constraint firstItem="SMi-4a-cz0" firstAttribute="top" secondItem="HXc-k0-TNU" secondAttribute="bottom" constant="10" id="ald-FI-yCn"/>
+                                    <constraint firstItem="PRA-6t-haQ" firstAttribute="top" secondItem="XYE-ub-JQ0" secondAttribute="bottom" constant="29" id="eI7-aW-pdS"/>
                                     <constraint firstItem="PRA-6t-haQ" firstAttribute="centerX" secondItem="jJO-YA-HJO" secondAttribute="centerX" id="gBe-D4-2Tx"/>
                                     <constraint firstItem="SMi-4a-cz0" firstAttribute="leading" secondItem="jJO-YA-HJO" secondAttribute="leading" constant="20" id="iCY-Ry-gcK"/>
+                                    <constraint firstItem="XYE-ub-JQ0" firstAttribute="centerX" secondItem="jJO-YA-HJO" secondAttribute="centerX" id="lyw-Oy-ATF"/>
+                                    <constraint firstItem="jJO-YA-HJO" firstAttribute="bottom" secondItem="PRA-6t-haQ" secondAttribute="bottom" constant="11" id="nqP-vZ-zPH"/>
                                     <constraint firstItem="HXc-k0-TNU" firstAttribute="top" secondItem="6SF-a3-uwD" secondAttribute="bottom" constant="30" id="sjY-ft-tl8"/>
                                 </constraints>
                             </view>
@@ -192,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgJ-X8-kai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="847"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="846.42857142857144"/>
         </scene>
         <!--Conversion Data View Controller-->
         <scene sceneID="8Gt-PQ-Qe6">
@@ -264,14 +280,28 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRs-gu-9QO">
-                                <rect key="frame" x="110.66666666666669" y="739" width="193" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Show conversion data">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRs-gu-9QO">
+                                <rect key="frame" x="-123.66666666666669" y="739" width="661.33333333333348" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="661" id="QZz-lt-ukA"/>
+                                    <constraint firstAttribute="height" constant="58" id="iov-0g-RGr"/>
+                                </constraints>
+                                <state key="normal" image="Conversion data button">
                                     <color key="titleColor" systemColor="linkColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="EC2-w1-0jT" kind="show" id="klf-89-Zuj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va2-fz-r4m">
+                                <rect key="frame" x="140.66666666666666" y="673" width="132.99999999999997" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="HPA-Uv-dbW"/>
+                                    <constraint firstAttribute="width" constant="133" id="uWl-6N-bOE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="copy link button"/>
+                                <connections>
+                                    <action selector="copyShareInviteLink:" destination="FqQ-Uo-4R4" eventType="touchUpInside" id="WGW-lb-f59"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -285,9 +315,11 @@
                             <constraint firstItem="uWb-8K-y5i" firstAttribute="trailing" secondItem="uHh-gP-DpG" secondAttribute="trailing" constant="30" id="ESB-tJ-xSi"/>
                             <constraint firstItem="uHh-gP-DpG" firstAttribute="top" secondItem="i62-NY-ul5" secondAttribute="bottom" constant="10" id="QEz-ez-omV"/>
                             <constraint firstItem="uWb-8K-y5i" firstAttribute="trailing" secondItem="i62-NY-ul5" secondAttribute="trailing" constant="100" id="Rfc-iy-58v"/>
-                            <constraint firstItem="uWb-8K-y5i" firstAttribute="bottom" secondItem="YRs-gu-9QO" secondAttribute="bottom" constant="33" id="Yup-78-Dzf"/>
+                            <constraint firstItem="va2-fz-r4m" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uHh-gP-DpG" secondAttribute="bottom" constant="20" id="Ygu-vW-P6C"/>
+                            <constraint firstItem="uWb-8K-y5i" firstAttribute="bottom" secondItem="YRs-gu-9QO" secondAttribute="bottom" constant="11" id="Yup-78-Dzf"/>
                             <constraint firstItem="JSq-d4-e5Z" firstAttribute="leading" secondItem="uWb-8K-y5i" secondAttribute="leading" id="asj-YU-aT4"/>
-                            <constraint firstItem="YRs-gu-9QO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uHh-gP-DpG" secondAttribute="bottom" constant="20" id="gbp-VR-wXU"/>
+                            <constraint firstItem="YRs-gu-9QO" firstAttribute="top" secondItem="va2-fz-r4m" secondAttribute="bottom" constant="29" id="bwb-5I-hVj"/>
+                            <constraint firstItem="va2-fz-r4m" firstAttribute="centerX" secondItem="uWb-8K-y5i" secondAttribute="centerX" id="pMN-SW-pcx"/>
                             <constraint firstItem="i62-NY-ul5" firstAttribute="top" secondItem="JSq-d4-e5Z" secondAttribute="bottom" constant="30" id="stX-Rx-Wnf"/>
                             <constraint firstItem="YRs-gu-9QO" firstAttribute="centerX" secondItem="uWb-8K-y5i" secondAttribute="centerX" id="uEn-AI-ijH"/>
                             <constraint firstItem="JSq-d4-e5Z" firstAttribute="top" secondItem="uWb-8K-y5i" secondAttribute="top" id="yvS-e5-KN9"/>
@@ -300,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNp-Fp-7Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034.7826086956522" y="105.97826086956522"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="105.80357142857143"/>
         </scene>
         <!--Bananas View Controller-->
         <scene sceneID="w1S-cW-Rmt">
@@ -322,10 +354,13 @@
                                     <constraint firstAttribute="height" constant="220" id="lln-aB-VXD"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-cm-wpm">
-                                <rect key="frame" x="110.66666666666669" y="739" width="193" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Show conversion data"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-cm-wpm">
+                                <rect key="frame" x="-123.66666666666669" y="739" width="661.33333333333348" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="0mc-PY-V5D"/>
+                                    <constraint firstAttribute="width" constant="661" id="eCW-s3-Job"/>
+                                </constraints>
+                                <state key="normal" image="Conversion data button"/>
                                 <connections>
                                     <segue destination="EC2-w1-0jT" kind="show" id="RZS-dA-gs6"/>
                                 </connections>
@@ -336,21 +371,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by3-U5-Aou">
+                                <rect key="frame" x="140.66666666666666" y="673" width="132.99999999999997" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="C5J-g3-oyD"/>
+                                    <constraint firstAttribute="height" constant="37" id="eDA-gX-3b9"/>
+                                </constraints>
+                                <state key="normal" image="copy link button"/>
+                                <connections>
+                                    <action selector="copyShareInviteLink:" destination="nBy-tN-JyD" eventType="touchUpInside" id="kTd-7C-qRk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Ay-rq-nZB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lNe-yN-HQ6" firstAttribute="top" secondItem="TBS-sJ-qeb" secondAttribute="bottom" constant="30" id="00H-Le-iXs"/>
                             <constraint firstItem="0Ay-rq-nZB" firstAttribute="trailing" secondItem="7yJ-Kp-zh5" secondAttribute="trailing" constant="30" id="5yv-qL-cTa"/>
+                            <constraint firstItem="t0f-cm-wpm" firstAttribute="top" secondItem="by3-U5-Aou" secondAttribute="bottom" constant="29" id="9mL-ae-6ge"/>
                             <constraint firstItem="TBS-sJ-qeb" firstAttribute="top" secondItem="0Ay-rq-nZB" secondAttribute="top" id="9oh-iI-4Za"/>
                             <constraint firstItem="7yJ-Kp-zh5" firstAttribute="top" secondItem="lNe-yN-HQ6" secondAttribute="bottom" constant="10" id="DGL-dj-net"/>
                             <constraint firstItem="7yJ-Kp-zh5" firstAttribute="leading" secondItem="0Ay-rq-nZB" secondAttribute="leading" constant="30" id="LH0-H5-8WZ"/>
                             <constraint firstItem="0Ay-rq-nZB" firstAttribute="trailing" secondItem="lNe-yN-HQ6" secondAttribute="trailing" constant="100" id="Lla-R3-jGq"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="t0f-cm-wpm" secondAttribute="bottom" constant="33" id="MEW-kB-31g"/>
                             <constraint firstItem="t0f-cm-wpm" firstAttribute="centerX" secondItem="0Ay-rq-nZB" secondAttribute="centerX" id="Mee-yP-g5F"/>
-                            <constraint firstItem="t0f-cm-wpm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7yJ-Kp-zh5" secondAttribute="bottom" constant="20" id="OK7-2p-iim"/>
                             <constraint firstItem="0Ay-rq-nZB" firstAttribute="trailing" secondItem="TBS-sJ-qeb" secondAttribute="trailing" id="Z2T-rE-kHh"/>
                             <constraint firstItem="lNe-yN-HQ6" firstAttribute="leading" secondItem="7yJ-Kp-zh5" secondAttribute="leading" id="fhJ-Y5-6Ah"/>
+                            <constraint firstItem="by3-U5-Aou" firstAttribute="centerX" secondItem="0Ay-rq-nZB" secondAttribute="centerX" id="gQx-Ex-rtJ"/>
+                            <constraint firstItem="0Ay-rq-nZB" firstAttribute="bottom" secondItem="t0f-cm-wpm" secondAttribute="bottom" constant="11" id="iDW-1Z-QaD"/>
+                            <constraint firstItem="by3-U5-Aou" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7yJ-Kp-zh5" secondAttribute="bottom" constant="20" id="mfa-Ot-Pqc"/>
                             <constraint firstItem="0Ay-rq-nZB" firstAttribute="trailing" secondItem="TBS-sJ-qeb" secondAttribute="trailing" id="of4-hp-kEh"/>
                             <constraint firstItem="TBS-sJ-qeb" firstAttribute="leading" secondItem="nZe-CP-9Ia" secondAttribute="leading" id="w7T-tf-OPf"/>
                         </constraints>
@@ -362,18 +410,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2R-QQ-K90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="-640"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="-640.17857142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="klf-89-Zuj"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Conversion data button" width="1440" height="128"/>
         <image name="apples_cover" width="720" height="440"/>
         <image name="apples_hp" width="600" height="194"/>
         <image name="appsflyerlogo" width="659" height="193"/>
         <image name="bananas_cover" width="720" height="440"/>
         <image name="bananas_hp" width="600" height="194"/>
+        <image name="copy link button" width="460" height="144"/>
         <image name="onelinklogo" width="577" height="204"/>
         <image name="peaches_cover" width="720" height="440"/>
         <image name="peaches_hp" width="600" height="194"/>
