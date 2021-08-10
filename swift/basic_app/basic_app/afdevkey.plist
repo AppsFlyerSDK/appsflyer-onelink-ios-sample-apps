@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>appsFlyerDevKey</key>
-    <string>sQ84wpdxRTR4RMCaE9YqS4</string>
-    <key>appleAppID</key>
-    <string>id1512793879</string>
+	<key>appsFlyerDevKey</key>
+	<string>sQ84wpdxRTR4RMCaE9YqS4</string>
+	<key>appleAppID</key>
+	<string>id1512793879</string>
 </dict>
 </plist>
