@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // 1 - Get AppsFlyer preferences from .plist file
-        guard let propertiesPath = Bundle.main.path(forResource: "afdevkey_donotpush", ofType: "plist"),
+        guard let propertiesPath = Bundle.main.path(forResource: "afdevkey", ofType: "plist"),
             let properties = NSDictionary(contentsOfFile: propertiesPath) as? [String:String] else {
-                fatalError("Cannot find `afdevkey_donotpush`")
+                fatalError("Cannot find `afdevkey`")
         }
         guard let appsFlyerDevKey = properties["appsFlyerDevKey"],
                    let appleAppID = properties["appleAppID"] else {
