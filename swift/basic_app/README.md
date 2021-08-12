@@ -36,8 +36,8 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 </dict>
 </plist>
 ```
-5. Add the file into your Xcode project
-> The file `basic_app/basic_app.xcodeproj/project.pbxproj` will have some changes. **Do not commit them!**
+3. Add the file into your Xcode project
+> The file `basic_app/basic_app.xcodeproj/project.pbxproj` will have some changes. **Do not push them to a public repo!**
 
 [get_af_devkey]: https://support.appsflyer.com/hc/en-us/articles/207032066-iOS-SDK-integration-for-developers#integration-31-retrieving-your-dev-key
-6. Ask your marketer to create some OneLink links and start running fruit campaigns 🍎
+4. Ask your marketer to create some OneLink links and start running fruit campaigns 🍎
