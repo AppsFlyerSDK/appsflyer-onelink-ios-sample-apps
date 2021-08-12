@@ -15,8 +15,16 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 ## How to use this app?
 1. Clone the repository
 2. ** Make sure to open the work environment via Xcode workspace `basic_app.xcworkspace` **
-3. Get your AppsFlyer Dev Key using [these instructions][get_af_devkey].
-4. Create the file `basic_app\afdevkey_donotpush.plist` with the following content:
+3. Run the app, preferebly on a real device, as emulators has a few issues.
+
+## How to make the app your own?
+> ‼️ Important 
+> This app runs by default with a devkey of a demo account.
+> If you would like to see the app's data in the AppsFlyer dashboard, you need to create a demo app in your AppsFlyer account and follow the instructions below.
+
+1. Get your AppsFlyer Dev Key using [these instructions][get_af_devkey].
+
+2. Create the file `basic_app\afdevkey_donotpush.plist` with the following content:
 ```xml
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
