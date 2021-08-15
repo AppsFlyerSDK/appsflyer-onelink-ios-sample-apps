@@ -22,7 +22,7 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 > This app runs by default with a devkey of a demo account.
 > If you would like to see the app's data in the AppsFlyer dashboard, you need to create a demo app in your AppsFlyer account and follow the instructions below.
 
-1. Get your AppsFlyer Dev Key using [these instructions][get_af_devkey].
+1. Get your AppsFlyer Dev Key using [these instructions](https://support.appsflyer.com/hc/en-us/articles/207032066-iOS-SDK-integration-for-developers#integration-31-retrieving-your-dev-key)
 
 2. Change the keys `appsFlyerDevKey` and `appleAppID` in the file `basic_app\afdevkey.plist`:
 ```xml
@@ -37,5 +37,5 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 </plist>
 ```
 3.  **Do not push the keys to a public repo!**
-[get_af_devkey]: https://support.appsflyer.com/hc/en-us/articles/207032066-iOS-SDK-integration-for-developers#integration-31-retrieving-your-dev-key
+
 4. Ask your marketer to create some OneLink links and start running fruit campaigns 🍎
