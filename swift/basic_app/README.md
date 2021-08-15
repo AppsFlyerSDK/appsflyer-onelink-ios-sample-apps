@@ -15,7 +15,7 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 ## How to use this app?
 1. Clone the repository
 2. ** Make sure to open the work environment via Xcode workspace `basic_app.xcworkspace` **
-3. Run the app, preferebly on a real device, as emulators has a few issues.
+3. Run the app, preferebly on a real device, as emulators might have a few issues.
 
 ## How to make the app your own?
 > ‼️ Important 
@@ -24,7 +24,7 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 
 1. Get your AppsFlyer Dev Key using [these instructions][get_af_devkey].
 
-2. Create the file `basic_app\afdevkey_donotpush.plist` with the following content:
+2. Change the keys `appsFlyerDevKey` and `appleAppID` in the file `basic_app\afdevkey.plist`:
 ```xml
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36,8 +36,6 @@ The app will be able to register it in AppsFlyer's dashboard, create real OneLin
 </dict>
 </plist>
 ```
-3. Add the file into your Xcode project
-> The file `basic_app/basic_app.xcodeproj/project.pbxproj` will have some changes. **Do not push them to a public repo!**
-
+3.  **Do not push the keys to a public repo!**
 [get_af_devkey]: https://support.appsflyer.com/hc/en-us/articles/207032066-iOS-SDK-integration-for-developers#integration-31-retrieving-your-dev-key
 4. Ask your marketer to create some OneLink links and start running fruit campaigns 🍎
