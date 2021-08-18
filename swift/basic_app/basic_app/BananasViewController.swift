@@ -22,7 +22,7 @@ class BananasViewController: DLViewController {
 
     @IBAction func copyShareInviteLink(_ sender: UIButton) {
         let parameters : [AnyHashable: Any] = [
-            "af_og_image" : "https://img.wallpapersafari.com/desktop/1024/576/88/63/1tsk2v.jpg",
+            "deep_link_value" : "bananas",
             "af_campaign" : "Shared link",
             "deep_link_sub1" : "This app was opened using a link shared from 'Bananas' activity",
             "fruit_amount" : "15"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="716-bw-iXQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aq4-2H-KQF">
-                                <rect key="frame" x="30" y="492" width="354" height="340"/>
+                                <rect key="frame" x="30" y="440" width="330" height="340"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="applesButton" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-p6-iUf">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="UUG-tE-4hq"/>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="bananasButton" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDo-g2-BkT">
-                                        <rect key="frame" x="0.0" y="120" width="354" height="100"/>
+                                        <rect key="frame" x="0.0" y="120" width="330" height="100"/>
                                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="22"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-7"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="orangesButton" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-3d-RN4">
-                                        <rect key="frame" x="0.0" y="240" width="354" height="100"/>
+                                        <rect key="frame" x="0.0" y="240" width="330" height="100"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="22"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-7"/>
@@ -67,13 +67,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5DJ-oz-ACu">
-                                <rect key="frame" x="30" y="54" width="354" height="60"/>
+                                <rect key="frame" x="30" y="54" width="330" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsflyerlogo" translatesAutoresizingMaskIntoConstraints="NO" id="jvs-fV-G9G">
-                                        <rect key="frame" x="0.0" y="0.0" width="157" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="60"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onelinklogo" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-le-ISy">
-                                        <rect key="frame" x="197" y="0.0" width="157" height="60"/>
+                                        <rect key="frame" x="185" y="0.0" width="145" height="60"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -96,7 +96,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the magic of deep link parameters" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuD-kq-Vme">
-                                <rect key="frame" x="30" y="253.99999999999997" width="284" height="48.666666666666657"/>
+                                <rect key="frame" x="30" y="253.99999999999997" width="260" height="48.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -128,33 +128,33 @@
             <objects>
                 <viewController storyboardIdentifier="peaches_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3sh-01-h5r" customClass="PeachesViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lTY-Bp-5Mx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="4KJ-bu-bLi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Link parameters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-k0-TNU">
-                                        <rect key="frame" x="20" y="250" width="294" height="17"/>
+                                        <rect key="frame" x="20" y="250" width="270" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peaches_cover" translatesAutoresizingMaskIntoConstraints="NO" id="6SF-a3-uwD">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="C4t-3v-42w"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="peachesDlText" text="No Deep Linking happened" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMi-4a-cz0">
-                                        <rect key="frame" x="20" y="277" width="374" height="20.333333333333314"/>
+                                        <rect key="frame" x="20" y="277" width="350" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-6t-haQ">
-                                        <rect key="frame" x="-123.66666666666669" y="740" width="661.33333333333348" height="57"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-6t-haQ" userLabel="Show conversion data">
+                                        <rect key="frame" x="-135.66666666666666" y="688" width="661.33333333333337" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="LBS-X8-rij"/>
                                             <constraint firstAttribute="width" constant="661" id="Z2N-aA-HJ9"/>
@@ -166,8 +166,8 @@
                                             <segue destination="EC2-w1-0jT" kind="show" id="4ta-tK-FDn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-ub-JQ0">
-                                        <rect key="frame" x="140.66666666666666" y="674" width="132.99999999999997" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-ub-JQ0" userLabel="Share invite button">
+                                        <rect key="frame" x="128.66666666666666" y="622" width="132.99999999999997" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="Qko-Mp-zlo"/>
                                             <constraint firstAttribute="height" constant="37" id="ccn-TD-H2j"/>
@@ -215,17 +215,17 @@
             <objects>
                 <viewController id="EC2-w1-0jT" customClass="ConversionDataViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lBA-QX-V7y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion data parameters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGd-nD-VLJ">
-                                <rect key="frame" x="56.999999999999986" y="47" width="221.66666666666663" height="17"/>
+                                <rect key="frame" x="56.999999999999986" y="47" width="197.66666666666663" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Conversion data not available at the moment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Srz-hG-kRZ">
-                                <rect key="frame" x="51" y="84" width="313" height="640"/>
+                                <rect key="frame" x="47" y="84" width="297" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -258,30 +258,30 @@
             <objects>
                 <viewController storyboardIdentifier="apples_vc" title="Apples" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FqQ-Uo-4R4" customClass="ApplesViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1q-zj-hBr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="applesDlText" text="No Deep Linking happened" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHh-gP-DpG">
-                                <rect key="frame" x="30" y="277" width="354" height="20.333333333333314"/>
+                                <rect key="frame" x="30" y="277" width="330" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="applesImage" image="apples_cover" translatesAutoresizingMaskIntoConstraints="NO" id="JSq-d4-e5Z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="9W2-hk-65i"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Link parameters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i62-NY-ul5">
-                                <rect key="frame" x="30" y="250" width="284" height="17"/>
+                                <rect key="frame" x="30" y="250" width="260" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRs-gu-9QO">
-                                <rect key="frame" x="-123.66666666666669" y="739" width="661.33333333333348" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRs-gu-9QO" userLabel="Show conversion data">
+                                <rect key="frame" x="-135.66666666666666" y="687" width="661.33333333333337" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="661" id="QZz-lt-ukA"/>
                                     <constraint firstAttribute="height" constant="58" id="iov-0g-RGr"/>
@@ -293,8 +293,8 @@
                                     <segue destination="EC2-w1-0jT" kind="show" id="klf-89-Zuj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va2-fz-r4m">
-                                <rect key="frame" x="140.66666666666666" y="673" width="132.99999999999997" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va2-fz-r4m" userLabel="Share invite button">
+                                <rect key="frame" x="128.66666666666666" y="621" width="132.99999999999997" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="HPA-Uv-dbW"/>
                                     <constraint firstAttribute="width" constant="133" id="uWl-6N-bOE"/>
@@ -339,23 +339,23 @@
             <objects>
                 <viewController storyboardIdentifier="bananas_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBy-tN-JyD" customClass="BananasViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZe-CP-9Ia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Link parameters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNe-yN-HQ6">
-                                <rect key="frame" x="30" y="250" width="284" height="17"/>
+                                <rect key="frame" x="30" y="250" width="260" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bananas_cover" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-sJ-qeb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="lln-aB-VXD"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-cm-wpm">
-                                <rect key="frame" x="-123.66666666666669" y="739" width="661.33333333333348" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-cm-wpm" userLabel="Show conversion data">
+                                <rect key="frame" x="-135.66666666666666" y="687" width="661.33333333333337" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="0mc-PY-V5D"/>
                                     <constraint firstAttribute="width" constant="661" id="eCW-s3-Job"/>
@@ -366,13 +366,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="bananasDlText" text="No Deep Linking happened" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-Kp-zh5">
-                                <rect key="frame" x="30" y="277" width="354" height="20.333333333333314"/>
+                                <rect key="frame" x="30" y="277" width="330" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by3-U5-Aou">
-                                <rect key="frame" x="140.66666666666666" y="673" width="132.99999999999997" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by3-U5-Aou" userLabel="Share invite button">
+                                <rect key="frame" x="128.66666666666666" y="621" width="132.99999999999997" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="C5J-g3-oyD"/>
                                     <constraint firstAttribute="height" constant="37" id="eDA-gX-3b9"/>
