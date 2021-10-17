@@ -18,6 +18,7 @@ class ApplesViewController: DLViewController {
 
         if (deepLinkData != nil) {
             applesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            applesDlTextView.textColor = .label
         }
         
     }
