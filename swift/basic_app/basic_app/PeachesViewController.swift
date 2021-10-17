@@ -10,13 +10,13 @@ import UIKit
 
 class PeachesViewController: DLViewController {
     
-    @IBOutlet weak var peachesDlLabel: UILabel!
+    @IBOutlet weak var peachesDlTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if (deepLinkData != nil) {
-            peachesDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            peachesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
         }
     }
     

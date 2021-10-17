@@ -10,14 +10,14 @@ import UIKit
 
 class ApplesViewController: DLViewController {
     
-    @IBOutlet weak var applesDlLabel: UILabel!
+    @IBOutlet weak var applesDlTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.     
 
         if (deepLinkData != nil) {
-            applesDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            applesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
         }
         
     }
