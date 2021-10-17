@@ -20,10 +20,10 @@ class DLViewController: UIViewController {
     func attributionDataToString(data : [String: Any]) -> NSMutableAttributedString {
         let newString = NSMutableAttributedString()
         let boldAttribute = [
-           NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+           NSAttributedString.Key.font: UIFont(name: "Avenir Next Bold", size: 18.0)!
         ]
         let regularAttribute = [
-           NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+           NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 18.0)!
         ]
         let sortedKeys = Array(data.keys).sorted(by: <)
         for key in sortedKeys {
@@ -68,7 +68,9 @@ class DLViewController: UIViewController {
     }
     
     func copyShareInviteLink(parameters: [AnyHashable: Any]?){
+        //Set the desired template
         AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
+
         AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
             if parameters != nil {

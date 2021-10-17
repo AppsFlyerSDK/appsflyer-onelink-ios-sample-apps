@@ -26,8 +26,8 @@ class ApplesViewController: DLViewController {
         let parameters : [AnyHashable: Any] = [
             "deep_link_value" : "apples",
             "af_campaign" : "Shared link",
-            "deep_link_sub1" : "This app was opened using a link shared from 'Apples' activity",
-            "fruit_amount" : "20"
+            "deep_link_sub2" : "This app was opened using a link shared from 'Apples' activity",
+            "deep_link_sub1" : "20"
         ]
         super.copyShareInviteLink(parameters: parameters)
     }
