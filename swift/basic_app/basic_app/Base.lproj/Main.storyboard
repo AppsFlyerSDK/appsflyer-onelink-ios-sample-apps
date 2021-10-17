@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -159,7 +159,8 @@
                                             <constraint firstAttribute="height" constant="57" id="LBS-X8-rij"/>
                                             <constraint firstAttribute="width" constant="661" id="Z2N-aA-HJ9"/>
                                         </constraints>
-                                        <state key="normal" image="Conversion data button">
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Show conversion data">
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                         <connections>
@@ -167,10 +168,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-ub-JQ0" userLabel="Share invite button">
-                                        <rect key="frame" x="128.66666666666666" y="622" width="132.99999999999997" height="37"/>
+                                        <rect key="frame" x="128.66666666666666" y="633" width="132.99999999999997" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="Qko-Mp-zlo"/>
-                                            <constraint firstAttribute="height" constant="37" id="ccn-TD-H2j"/>
+                                            <constraint firstAttribute="height" constant="43" id="ccn-TD-H2j"/>
                                         </constraints>
                                         <state key="normal" image="copy link button"/>
                                         <connections>
@@ -189,7 +190,7 @@
                                     <constraint firstItem="6SF-a3-uwD" firstAttribute="top" secondItem="jJO-YA-HJO" secondAttribute="top" id="P1p-bK-zag"/>
                                     <constraint firstItem="jJO-YA-HJO" firstAttribute="trailing" secondItem="6SF-a3-uwD" secondAttribute="trailing" id="XJb-Ae-xnP"/>
                                     <constraint firstItem="SMi-4a-cz0" firstAttribute="top" secondItem="HXc-k0-TNU" secondAttribute="bottom" constant="10" id="ald-FI-yCn"/>
-                                    <constraint firstItem="PRA-6t-haQ" firstAttribute="top" secondItem="XYE-ub-JQ0" secondAttribute="bottom" constant="29" id="eI7-aW-pdS"/>
+                                    <constraint firstItem="PRA-6t-haQ" firstAttribute="top" secondItem="XYE-ub-JQ0" secondAttribute="bottom" constant="12" id="eI7-aW-pdS"/>
                                     <constraint firstItem="PRA-6t-haQ" firstAttribute="centerX" secondItem="jJO-YA-HJO" secondAttribute="centerX" id="gBe-D4-2Tx"/>
                                     <constraint firstItem="SMi-4a-cz0" firstAttribute="leading" secondItem="jJO-YA-HJO" secondAttribute="leading" constant="20" id="iCY-Ry-gcK"/>
                                     <constraint firstItem="XYE-ub-JQ0" firstAttribute="centerX" secondItem="jJO-YA-HJO" secondAttribute="centerX" id="lyw-Oy-ATF"/>
@@ -286,7 +287,8 @@
                                     <constraint firstAttribute="width" constant="661" id="QZz-lt-ukA"/>
                                     <constraint firstAttribute="height" constant="58" id="iov-0g-RGr"/>
                                 </constraints>
-                                <state key="normal" image="Conversion data button">
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Show conversion data">
                                     <color key="titleColor" systemColor="linkColor"/>
                                 </state>
                                 <connections>
@@ -294,9 +296,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va2-fz-r4m" userLabel="Share invite button">
-                                <rect key="frame" x="128.66666666666666" y="621" width="132.99999999999997" height="37"/>
+                                <rect key="frame" x="128.66666666666666" y="632" width="132.99999999999997" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="HPA-Uv-dbW"/>
+                                    <constraint firstAttribute="height" constant="43" id="HPA-Uv-dbW"/>
                                     <constraint firstAttribute="width" constant="133" id="uWl-6N-bOE"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="copy link button"/>
@@ -318,7 +320,7 @@
                             <constraint firstItem="va2-fz-r4m" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uHh-gP-DpG" secondAttribute="bottom" constant="20" id="Ygu-vW-P6C"/>
                             <constraint firstItem="uWb-8K-y5i" firstAttribute="bottom" secondItem="YRs-gu-9QO" secondAttribute="bottom" constant="11" id="Yup-78-Dzf"/>
                             <constraint firstItem="JSq-d4-e5Z" firstAttribute="leading" secondItem="uWb-8K-y5i" secondAttribute="leading" id="asj-YU-aT4"/>
-                            <constraint firstItem="YRs-gu-9QO" firstAttribute="top" secondItem="va2-fz-r4m" secondAttribute="bottom" constant="29" id="bwb-5I-hVj"/>
+                            <constraint firstItem="YRs-gu-9QO" firstAttribute="top" secondItem="va2-fz-r4m" secondAttribute="bottom" constant="12" id="bwb-5I-hVj"/>
                             <constraint firstItem="va2-fz-r4m" firstAttribute="centerX" secondItem="uWb-8K-y5i" secondAttribute="centerX" id="pMN-SW-pcx"/>
                             <constraint firstItem="i62-NY-ul5" firstAttribute="top" secondItem="JSq-d4-e5Z" secondAttribute="bottom" constant="30" id="stX-Rx-Wnf"/>
                             <constraint firstItem="YRs-gu-9QO" firstAttribute="centerX" secondItem="uWb-8K-y5i" secondAttribute="centerX" id="uEn-AI-ijH"/>
@@ -360,7 +362,10 @@
                                     <constraint firstAttribute="height" constant="58" id="0mc-PY-V5D"/>
                                     <constraint firstAttribute="width" constant="661" id="eCW-s3-Job"/>
                                 </constraints>
-                                <state key="normal" image="Conversion data button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Show conversion data">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="EC2-w1-0jT" kind="show" id="RZS-dA-gs6"/>
                                 </connections>
@@ -372,10 +377,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by3-U5-Aou" userLabel="Share invite button">
-                                <rect key="frame" x="128.66666666666666" y="621" width="132.99999999999997" height="37"/>
+                                <rect key="frame" x="128.66666666666666" y="632" width="132.99999999999997" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="C5J-g3-oyD"/>
-                                    <constraint firstAttribute="height" constant="37" id="eDA-gX-3b9"/>
+                                    <constraint firstAttribute="height" constant="43" id="eDA-gX-3b9"/>
                                 </constraints>
                                 <state key="normal" image="copy link button"/>
                                 <connections>
@@ -388,7 +393,7 @@
                         <constraints>
                             <constraint firstItem="lNe-yN-HQ6" firstAttribute="top" secondItem="TBS-sJ-qeb" secondAttribute="bottom" constant="30" id="00H-Le-iXs"/>
                             <constraint firstItem="0Ay-rq-nZB" firstAttribute="trailing" secondItem="7yJ-Kp-zh5" secondAttribute="trailing" constant="30" id="5yv-qL-cTa"/>
-                            <constraint firstItem="t0f-cm-wpm" firstAttribute="top" secondItem="by3-U5-Aou" secondAttribute="bottom" constant="29" id="9mL-ae-6ge"/>
+                            <constraint firstItem="t0f-cm-wpm" firstAttribute="top" secondItem="by3-U5-Aou" secondAttribute="bottom" constant="12" id="9mL-ae-6ge"/>
                             <constraint firstItem="TBS-sJ-qeb" firstAttribute="top" secondItem="0Ay-rq-nZB" secondAttribute="top" id="9oh-iI-4Za"/>
                             <constraint firstItem="7yJ-Kp-zh5" firstAttribute="top" secondItem="lNe-yN-HQ6" secondAttribute="bottom" constant="10" id="DGL-dj-net"/>
                             <constraint firstItem="7yJ-Kp-zh5" firstAttribute="leading" secondItem="0Ay-rq-nZB" secondAttribute="leading" constant="30" id="LH0-H5-8WZ"/>
@@ -414,10 +419,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="klf-89-Zuj"/>
+        <segue reference="RZS-dA-gs6"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Conversion data button" width="1440" height="128"/>
         <image name="apples_cover" width="720" height="440"/>
         <image name="apples_hp" width="600" height="194"/>
         <image name="appsflyerlogo" width="659" height="193"/>
