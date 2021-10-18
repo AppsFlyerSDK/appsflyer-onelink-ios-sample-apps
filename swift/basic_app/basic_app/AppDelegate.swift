@@ -8,6 +8,7 @@
 
 import UIKit
 import AppsFlyerLib
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -50,6 +51,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc func didBecomeActiveNotification() {
         AppsFlyerLib.shared().start()
+        if #available(iOS 14, *) {
+          ATTrackingManager.requestTrackingAuthorization { (status) in
+            switch status {
+            case .denied:
+                print("AuthorizationSatus is denied")
+            case .notDetermined:
+                print("AuthorizationSatus is notDetermined")
+            case .restricted:
+                print("AuthorizationSatus is restricted")
+            case .authorized:
+                print("AuthorizationSatus is authorized")
+            @unknown default:
+                fatalError("Invalid authorization status")
+            }
+          }
+        }
     }
     
     // Open Universal Links
