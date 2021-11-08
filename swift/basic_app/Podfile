@@ -8,3 +8,10 @@ target 'basic_app' do
 pod 'AppsFlyerFramework','6.4.3'
 
 end
+
+target 'basic_app_AppClip' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'AppsFlyerFramework','6.4.0'
+end
