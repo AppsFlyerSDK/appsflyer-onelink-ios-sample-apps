@@ -10,15 +10,25 @@ import UIKit
 
 class PeachesViewController: DLViewController {
     
-    @IBOutlet weak var peachesDlLabel: UILabel!
+    @IBOutlet weak var peachesDlTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.      
 
         if (deepLinkData != nil) {
-            peachesDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            peachesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            peachesDlTextView.textColor = .label
         }
-        
+    }
+    
+    @IBAction func copyShareInviteLink(_ sender: UIButton) {
+        let parameters : [AnyHashable: Any] = [
+            "deep_link_value" : "peaches",
+            "af_campaign" : "Shared link",
+            "deep_link_sub2" : "This app was opened using a link shared from 'Peaches' activity",
+            "deep_link_sub1" : "30"
+        ]
+        super.copyShareInviteLink(parameters: parameters)
     }
 }
+

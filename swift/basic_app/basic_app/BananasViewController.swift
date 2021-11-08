@@ -10,16 +10,25 @@ import UIKit
 
 class BananasViewController: DLViewController {
     
-    @IBOutlet weak var bananasDlLabel: UILabel!
+    @IBOutlet weak var bananasDlTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.     
 
         if (deepLinkData != nil) {
-            bananasDlLabel.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            bananasDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            bananasDlTextView.textColor = .label
         }
     }
 
-
+    @IBAction func copyShareInviteLink(_ sender: UIButton) {
+        let parameters : [AnyHashable: Any] = [
+            "deep_link_value" : "bananas",
+            "af_campaign" : "Shared link",
+            "deep_link_sub2" : "This app was opened using a link shared from 'Bananas' activity",
+            "deep_link_sub1" : "15"
+        ]
+        super.copyShareInviteLink(parameters: parameters)
+    }
+    
 }
