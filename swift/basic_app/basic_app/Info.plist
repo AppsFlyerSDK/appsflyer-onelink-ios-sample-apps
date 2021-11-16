@@ -71,5 +71,7 @@
 	</array>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Allowing app tracking will improve the customization of ads</string>
+	<key>AppsFlyerAppGroupName</key>
+	<string>group.basic_app.appClipToFullApp</string>
 </dict>
 </plist>

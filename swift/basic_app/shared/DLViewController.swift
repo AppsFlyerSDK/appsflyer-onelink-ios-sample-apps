@@ -12,11 +12,12 @@ import AppsFlyerLib
 class DLViewController: UIViewController {
     
     var deepLinkData: DeepLink? = nil
-
+    var viewControllerFirstLaunch: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    //Prepare deep link data to be presented as a formatted string
     func attributionDataToString(data : [String: Any]) -> NSMutableAttributedString {
         let newString = NSMutableAttributedString()
         let boldAttribute = [
@@ -66,8 +67,11 @@ class DLViewController: UIViewController {
             toastLabel.removeFromSuperview()
         })
     }
-    
-    func copyShareInviteLink(fruitName: String){
+    //Generate a short link with given parameters and copy the shortlink to clipboard
+    func copyShareInviteLink(parameters: [AnyHashable: Any]?){
+        //Set the desired template
+        AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
+
         AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
             generator.addParameterValue(fruitName, forKey: "deep_link_value")
@@ -84,7 +88,7 @@ class DLViewController: UIViewController {
                 }
             }
             else{
-                print("url is nil")
+                NSLog("url is nil")
             }
         })
     }

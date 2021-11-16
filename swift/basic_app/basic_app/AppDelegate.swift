@@ -14,6 +14,7 @@ import AppTrackingTransparency
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var ConversionData: [AnyHashable: Any]? = nil
     var window: UIWindow?
+    var dlHappened = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -48,6 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // For Swift version < 4.2 replace name argument with the commented out code
         name: UIApplication.didBecomeActiveNotification, //.UIApplicationDidBecomeActive for Swift < 4.2
         object: nil)
+        
+        //Use deepLinkFromAppClip's code to get the last invocation link used to open an app clip
+        if (deepLinkFromAppClip()) {
+            NSLog("[AFSDK] Deep linking originated from app clip")
+        }
         
         return true
     }
@@ -93,11 +99,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // User logic
-    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkObj: DeepLink) {
+    fileprivate func walkToSceneWithParams(deepLinkObj: DeepLink) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
                
-        let destVC = fruitName + "_vc"
+        guard let fruitNameStr = deepLinkObj.clickEvent["deep_link_value"] as? String else {
+             NSLog("[AFSDK] Could not extract query params from link")
+             return
+         }
+                
+        let destVC = fruitNameStr + "_vc"
         if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
             
             NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
@@ -108,6 +119,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("[AFSDK] AppsFlyer: could not find section: \(destVC)")
         }
     }
+
+    func deepLinkFromAppClip() -> Bool {
+        //Use the app group name you defined in Project-> Target-> Signing & Capabilities (for more information, go to https://dev.appsflyer.com/hc/docs/app-clip-to-full-app-install)
+        guard let sharedUserDefaults = UserDefaults(suiteName: "group.basic_app.appClipToFullApp"),
+          let dlUrl = sharedUserDefaults.url(forKey: "dl_url")
+                else {
+                    NSLog("Could not find the App Group or the deep link URL from the app clip")
+                    return false
+                }
+        AppsFlyerLib.shared().performOnAppAttribution(with: dlUrl)
+        sharedUserDefaults.removeObject(forKey: "dl_url")
+        return true
+    }
 }
 
 extension AppDelegate: DeepLinkDelegate {
@@ -116,34 +140,26 @@ extension AppDelegate: DeepLinkDelegate {
         switch result.status {
         case .notFound:
             NSLog("[AFSDK] Deep link not found")
-            return
-        case .failure:
-            print("Error %@", result.error!)
-            return
         case .found:
-            NSLog("[AFSDK] Deep link found")
+                let deepLinkStr:String = result.deepLink!.toString()
+                NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
+                
+                if( result.deepLink?.isDeferred == true) {
+                    NSLog("[AFSDK] This is a deferred deep link")
+                    if (dlHappened){
+                        NSLog("Deferred deep link after direct deep link. Skipping")
+                        return
+                    }
+                } else {
+                    NSLog("[AFSDK] This is a direct deep link")
+                }
+                dlHappened = true
+                walkToSceneWithParams(deepLinkObj: result.deepLink!)
+
+        case .failure:
+            NSLog("[AFSDK] Failed to perform Deep Link operation")
+            print("Error %@", result.error ?? "<nil>")
         }
-        
-        guard let deepLinkObj:DeepLink = result.deepLink else {
-            NSLog("[AFSDK] Could not extract deep link object")
-            return
-        }
-        
-        let deepLinkStr:String = deepLinkObj.toString()
-        NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
-        
-        if( deepLinkObj.isDeferred == true) {
-            NSLog("[AFSDK] This is a deferred deep link")
-        } else {
-            NSLog("[AFSDK] This is a direct deep link")
-        }
-        
-        guard let fruitNameStr = deepLinkObj.deeplinkValue else {
-            print("Could not extract deep_link_value from deep link object")
-            return
-        }
-        
-        walkToSceneWithParams(fruitName: fruitNameStr, deepLinkObj: deepLinkObj)
     }
 }
 

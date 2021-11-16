@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import AppsFlyerLib
+import os.log
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        // Must for AppsFlyer attrib
+        NSLog("[AFSDK] Scene continue userActivity")
+        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+        //Get the invocation URL from the userActivity in order to add it to the shared user default
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+              let invocationURL = userActivity.webpageURL else {
+            return
+            }
+        NSLog("[AFSDK] Scene add to SharedUserDefaults \(invocationURL)")
+        addDlUrlToSharedUserDefaults(invocationURL)
+        }
+        
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+            
         guard let _ = (scene as? UIWindowScene) else { return }
+        NSLog("[AFSDK] Scene willConnectTo")
+            
+        if let userActivity = connectionOptions.userActivities.first {
+            NSLog("[AFSDK] Scene willConnectTo continue userActivity")
+            self.scene(scene, continue: userActivity)
+        }
+        return
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +66,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    func addDlUrlToSharedUserDefaults(_ url: URL){
+        guard let sharedUserDefaults = UserDefaults(suiteName: "group.basic_app.appClipToFullApp") else {
+            return
+        }
+        //Add invocation URL to the app group
+           sharedUserDefaults.set(url, forKey: "dl_url")
+        //Enable sending events
+        sharedUserDefaults.set(true, forKey: "AppsFlyerReadyToSendEvents")
+    }
+    
 }
 

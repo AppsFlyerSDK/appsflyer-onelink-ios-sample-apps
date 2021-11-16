@@ -28,5 +28,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>AppsFlyerAppClip</key>
+	<true/>
+	<key>AppsFlyerAppGroupName</key>
+	<string>group.basic_app.appClipToFullApp</string>
 </dict>
 </plist>

@@ -14,7 +14,6 @@ class BananasViewController: DLViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if (deepLinkData != nil) {
             bananasDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
             bananasDlTextView.textColor = .label

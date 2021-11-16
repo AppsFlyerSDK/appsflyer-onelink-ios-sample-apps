@@ -15,7 +15,6 @@ class ApplesViewController: DLViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.     
-
         if (deepLinkData != nil) {
             applesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
             applesDlTextView.textColor = .label
