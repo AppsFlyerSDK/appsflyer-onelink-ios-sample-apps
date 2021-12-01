@@ -39,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().deepLinkDelegate = self
         
+        //set the OneLink template id for share invite links
+        AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
+        
         // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
         // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
