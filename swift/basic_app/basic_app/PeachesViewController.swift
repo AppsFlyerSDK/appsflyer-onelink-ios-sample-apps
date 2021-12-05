@@ -22,13 +22,7 @@ class PeachesViewController: DLViewController {
     }
     
     @IBAction func copyShareInviteLink(_ sender: UIButton) {
-        let parameters : [AnyHashable: Any] = [
-            "deep_link_value" : "peaches",
-            "af_campaign" : "Shared link",
-            "deep_link_sub2" : "This app was opened using a link shared from 'Peaches' activity",
-            "deep_link_sub1" : "30"
-        ]
-        super.copyShareInviteLink(parameters: parameters)
+        super.copyShareInviteLink(fruitName: "peaches")
     }
 }
 

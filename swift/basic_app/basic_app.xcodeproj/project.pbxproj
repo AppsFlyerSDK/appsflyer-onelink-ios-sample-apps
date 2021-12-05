@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		246ED43126BABD4E00A9685F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246ED43026BABD4E00A9685F /* MainViewController.swift */; };
 		247EED7526C2901A00795519 /* afdevkey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 247EED7426C2901A00795519 /* afdevkey.plist */; };
 		2484DE5E2668FD8800FBBC9B /* ConversionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */; };
 		7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45A4CB2468A42100E88BCA /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		246ED43026BABD4E00A9685F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		247EED7426C2901A00795519 /* afdevkey.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = afdevkey.plist; sourceTree = "<group>"; };
 		2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDataViewController.swift; sourceTree = "<group>"; };
 		2F40088F2E198447C891F0A6 /* Pods-basic_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basic_app.debug.xcconfig"; path = "Target Support Files/Pods-basic_app/Pods-basic_app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,13 +90,11 @@
 				7B760F17248556740074DB26 /* DLViewController.swift */,
 				7B760F152485455F0074DB26 /* BananasViewController.swift */,
 				7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */,
+				2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */,
 				7B45A4D12468A42100E88BCA /* Main.storyboard */,
 				7B45A4D42468A42300E88BCA /* Assets.xcassets */,
 				7B45A4D62468A42300E88BCA /* LaunchScreen.storyboard */,
 				7B45A4D92468A42300E88BCA /* Info.plist */,
-				2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */,
-				246ED43026BABD4E00A9685F /* MainViewController.swift */,
-				247EED7626C3F18500795519 /* afdevkey.plist */,
 			);
 			path = basic_app;
 			sourceTree = "<group>";
@@ -175,7 +171,6 @@
 				7B45A4D82468A42300E88BCA /* LaunchScreen.storyboard in Resources */,
 				7B45A4D52468A42300E88BCA /* Assets.xcassets in Resources */,
 				7B45A4D32468A42100E88BCA /* Main.storyboard in Resources */,
-				247EED7726C3F18500795519 /* afdevkey.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +213,6 @@
 				7B45A4CC2468A42100E88BCA /* AppDelegate.swift in Sources */,
 				7B45A4CE2468A42100E88BCA /* SceneDelegate.swift in Sources */,
 				7B760F18248556740074DB26 /* DLViewController.swift in Sources */,
-				246ED43126BABD4E00A9685F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,43 +67,26 @@ class DLViewController: UIViewController {
         })
     }
     
-    func copyShareInviteLink(parameters: [AnyHashable: Any]?){
-        //Set the desired template
-        AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
-
+    func copyShareInviteLink(fruitName: String){
         AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
-            if parameters != nil {
-                for (key, value) in parameters!{
-                    let encodedValue = String(describing: value).stringByAddingPercentEncoding()
-                    let keyStr = String(describing: key)
-                    generator.addParameterValue(encodedValue!, forKey: keyStr)
-                }
-                
-            }
+            generator.addParameterValue(fruitName, forKey: "deep_link_value")
+            generator.addParameterValue("user_referrer", forKey: "deep_link_sub1")
+            generator.setCampaign("share_invite")
           return generator },
         completionHandler: {(_ url: URL?) -> Void in
             if url != nil{
+                //Copy url to clipboard
                 UIPasteboard.general.string = (url!.absoluteString)
+                //Show toast to let the user know link has been copied to clipboard
                 DispatchQueue.main.async {
                     self.showToast(message: "Link copied to clipboard", font: .systemFont(ofSize: 12.0))
                 }
             }
             else{
                 print("url is nil")
-                //self.showToast(message: "Error", font: .systemFont(ofSize: 12.0))
             }
         })
     }
-}
-
-extension String {
-    //A helper function meant to encode the parameter values befor adding them to the link
-  func stringByAddingPercentEncoding() -> String? {
-    let unreserved = "-._~/?"
-    let allowed = NSMutableCharacterSet.alphanumeric()
-    allowed.addCharacters(in: unreserved)
-    return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
-  }
 }
 

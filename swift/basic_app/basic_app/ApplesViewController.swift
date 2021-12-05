@@ -20,17 +20,10 @@ class ApplesViewController: DLViewController {
             applesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
             applesDlTextView.textColor = .label
         }
-        
     }
     
     @IBAction func copyShareInviteLink(_ sender: UIButton) {
-        let parameters : [AnyHashable: Any] = [
-            "deep_link_value" : "apples",
-            "af_campaign" : "Shared link",
-            "deep_link_sub2" : "This app was opened using a link shared from 'Apples' activity",
-            "deep_link_sub1" : "20"
-        ]
-        super.copyShareInviteLink(parameters: parameters)
+        super.copyShareInviteLink(fruitName: "apples")
     }
     
 }
