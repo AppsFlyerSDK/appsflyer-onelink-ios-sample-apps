@@ -68,7 +68,7 @@ class DLViewController: UIViewController {
         })
     }
     //Generate a short link with given parameters and copy the shortlink to clipboard
-    func copyShareInviteLink(parameters: [AnyHashable: Any]?){
+    func copyShareInviteLink(fruitName: String){
         //Set the desired template
         AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
 
