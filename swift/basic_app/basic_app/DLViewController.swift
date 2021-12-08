@@ -11,7 +11,7 @@ import AppsFlyerLib
 
 class DLViewController: UIViewController {
     
-    var deepLinkData: DeepLink? = nil
+    var deepLinkData: [String: Any]? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

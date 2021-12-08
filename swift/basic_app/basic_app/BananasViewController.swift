@@ -17,9 +17,9 @@ class BananasViewController: DLViewController {
         super.viewDidLoad()
 
         if (deepLinkData != nil) {
-            bananasDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            bananasDlTextView.attributedText = attributionDataToString(data: deepLinkData!)
             bananasDlTextView.textColor = .label
-            fruitAmount.text = getFruitAmount(data: (self.deepLinkData?.clickEvent)!)
+            fruitAmount.text = getFruitAmount(data: deepLinkData!)
         }
     }
 

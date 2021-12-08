@@ -17,9 +17,9 @@ class PeachesViewController: DLViewController {
         super.viewDidLoad()
 
         if (deepLinkData != nil) {
-            peachesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            peachesDlTextView.attributedText = attributionDataToString(data: deepLinkData!)
             peachesDlTextView.textColor = .label
-            fruitAmount.text = getFruitAmount(data: (self.deepLinkData?.clickEvent)!)
+            fruitAmount.text = getFruitAmount(data: deepLinkData!)
         }
     }
     
