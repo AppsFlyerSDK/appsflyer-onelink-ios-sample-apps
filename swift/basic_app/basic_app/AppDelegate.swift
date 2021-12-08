@@ -113,6 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: DeepLinkDelegate {
      
     func didResolveDeepLink(_ result: DeepLinkResult) {
+        var fruitNameStr: String?
         switch result.status {
         case .notFound:
             NSLog("[AFSDK] Deep link not found")
@@ -132,18 +133,27 @@ extension AppDelegate: DeepLinkDelegate {
         let deepLinkStr:String = deepLinkObj.toString()
         NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
         
+        fruitNameStr = deepLinkObj.deeplinkValue
         if( deepLinkObj.isDeferred == true) {
             NSLog("[AFSDK] This is a deferred deep link")
-        } else {
+            if fruitNameStr == nil{
+                print("Could not extract deep_link_value from deep link object")
+                return
+            }
+        }
+        else {
             NSLog("[AFSDK] This is a direct deep link")
+            if fruitNameStr == nil {
+                switch deepLinkObj.clickEvent["fruit_name"] {
+                    case let s as String:
+                        fruitNameStr = s
+                    default:
+                        print("Could not extract deep_link_value or fruit_name from deep link object")
+                        return
+                }
+            }
         }
-        
-        guard let fruitNameStr = deepLinkObj.deeplinkValue else {
-            print("Could not extract deep_link_value from deep link object")
-            return
-        }
-        
-        walkToSceneWithParams(fruitName: fruitNameStr, deepLinkObj: deepLinkObj)
+        walkToSceneWithParams(fruitName: fruitNameStr!, deepLinkObj: deepLinkObj)
     }
 }
 
