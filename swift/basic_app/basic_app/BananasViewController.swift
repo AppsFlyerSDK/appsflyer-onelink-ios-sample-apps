@@ -10,6 +10,7 @@ import UIKit
 
 class BananasViewController: DLViewController {
     
+    @IBOutlet weak var fruitAmount: UILabel!
     @IBOutlet weak var bananasDlTextView: UITextView!
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class BananasViewController: DLViewController {
         if (deepLinkData != nil) {
             bananasDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
             bananasDlTextView.textColor = .label
+            fruitAmount.text = getFruitAmount(data: (self.deepLinkData?.clickEvent)!)
         }
     }
 

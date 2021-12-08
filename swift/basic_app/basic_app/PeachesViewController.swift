@@ -10,14 +10,16 @@ import UIKit
 
 class PeachesViewController: DLViewController {
     
+    @IBOutlet weak var fruitAmount: UILabel!
     @IBOutlet weak var peachesDlTextView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if (deepLinkData != nil) {
             peachesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
             peachesDlTextView.textColor = .label
+            fruitAmount.text = getFruitAmount(data: (self.deepLinkData?.clickEvent)!)
         }
     }
     
