@@ -88,5 +88,30 @@ class DLViewController: UIViewController {
             }
         })
     }
+    
+    func getFruitAmount(data : [String: Any]) -> String? {
+        //Make sure either deep_link_sub1 or fruit_amount exists
+        let keys = data.keys
+        var fruitAmount: Any?
+        if keys.contains("deep_link_value") && keys.contains("deep_link_sub1"){
+            fruitAmount = data["deep_link_sub1"]
+            NSLog("deep_link_sub1 found and is \(fruitAmount!)")
+        }
+        else if keys.contains("fruit_name") && keys.contains("fruit_amount"){
+            fruitAmount = data["fruit_amount"]
+            NSLog("fruit_amount found and is \(fruitAmount!)")
+        }
+        else {
+            NSLog("deep_link_sub1/fruit_amount not found")
+            return nil
+        }
+
+        //Make sure fruitAmount is a valid number
+        guard CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: fruitAmount as! String)) else {
+            NSLog("[AFSDK] Fruit amount is not a whole number")
+            return nil
+        }
+        return fruitAmount as? String
+    }
 }
 
