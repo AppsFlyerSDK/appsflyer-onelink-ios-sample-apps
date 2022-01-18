@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // User logic
-    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkObj: DeepLink) {
+    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkData: [String: Any]?) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
                
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
             
             NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
-            newVC.deepLinkData = deepLinkObj
+            newVC.deepLinkData = deepLinkData
             
              UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
         } else {
@@ -113,6 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: DeepLinkDelegate {
      
     func didResolveDeepLink(_ result: DeepLinkResult) {
+        var fruitNameStr: String?
         switch result.status {
         case .notFound:
             NSLog("[AFSDK] Deep link not found")
@@ -132,18 +133,29 @@ extension AppDelegate: DeepLinkDelegate {
         let deepLinkStr:String = deepLinkObj.toString()
         NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
         
-        if( deepLinkObj.isDeferred == true) {
-            NSLog("[AFSDK] This is a deferred deep link")
-        } else {
-            NSLog("[AFSDK] This is a direct deep link")
+        
+            if( deepLinkObj.isDeferred == true) {
+                NSLog("[AFSDK] This is a deferred deep link")
+            }
+            else {
+                NSLog("[AFSDK] This is a direct deep link")
+            }
+        
+        fruitNameStr = deepLinkObj.deeplinkValue
+        
+        //If deep_link_value doesn't exist
+        if fruitNameStr == nil || fruitNameStr == "" {
+            //check if fruit_name exists
+            switch deepLinkObj.clickEvent["fruit_name"] {
+                case let s as String:
+                    fruitNameStr = s
+                default:
+                    print("[AFSDK] Could not extract deep_link_value or fruit_name from deep link object with unified deep linking")
+                    return
+            }
         }
         
-        guard let fruitNameStr = deepLinkObj.deeplinkValue else {
-            print("Could not extract deep_link_value from deep link object")
-            return
-        }
-        
-        walkToSceneWithParams(fruitName: fruitNameStr, deepLinkObj: deepLinkObj)
+        walkToSceneWithParams(fruitName: fruitNameStr!, deepLinkData: deepLinkObj.clickEvent)
     }
 }
 
@@ -156,21 +168,34 @@ extension AppDelegate: AppsFlyerLibDelegate {
         for (key, value) in data {
             print(key, ":", value)
         }
+        if let conversionData = data as NSDictionary? as! [String:Any]? {
         
-        if let status = data["af_status"] as? String {
-            if (status == "Non-organic") {
-                if let sourceID = data["media_source"],
-                    let campaign = data["campaign"] {
-                    NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+            if let status = conversionData["af_status"] as? String {
+                if (status == "Non-organic") {
+                    if let sourceID = conversionData["media_source"],
+                        let campaign = conversionData["campaign"] {
+                        NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                    }
+                } else {
+                    NSLog("[AFSDK] This is an organic install.")
                 }
-            } else {
-                NSLog("[AFSDK] This is an organic install.")
-            }
-            if let is_first_launch = data["is_first_launch"] as? Bool,
-                is_first_launch {
-                NSLog("[AFSDK] First Launch")
-            } else {
-                NSLog("[AFSDK] Not First Launch")
+                
+                if let is_first_launch = conversionData["is_first_launch"] as? Bool,
+                    is_first_launch {
+                    NSLog("[AFSDK] First Launch")
+                    if !conversionData.keys.contains("deep_link_value") && conversionData.keys.contains("fruit_name"){
+                        switch conversionData["fruit_name"] {
+                            case let fruitNameStr as String:
+                            NSLog("This is a deferred deep link opened using conversion data")
+                            walkToSceneWithParams(fruitName: fruitNameStr, deepLinkData: conversionData)
+                            default:
+                                NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
+                                return
+                        }
+                    }
+                } else {
+                    NSLog("[AFSDK] Not First Launch")
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class ApplesViewController: DLViewController {
     
+    @IBOutlet weak var fruitAmount: UILabel!
     @IBOutlet weak var applesDlTextView: UITextView!
     
     override func viewDidLoad() {
@@ -17,8 +18,9 @@ class ApplesViewController: DLViewController {
         // Do any additional setup after loading the view.     
 
         if (deepLinkData != nil) {
-            applesDlTextView.attributedText = attributionDataToString(data: (deepLinkData?.clickEvent)!)
+            applesDlTextView.attributedText = attributionDataToString(data: deepLinkData!)
             applesDlTextView.textColor = .label
+            fruitAmount.text = getFruitAmount(data: deepLinkData!)
         }
     }
     
