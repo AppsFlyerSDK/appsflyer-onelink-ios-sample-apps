@@ -12,6 +12,7 @@ import AppsFlyerLib
 class DLViewController: UIViewController {
     
     var deepLinkData: [String: Any]? = nil
+    var fruitAmountStr: String = "000"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +72,10 @@ class DLViewController: UIViewController {
         AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
             generator.addParameterValue(fruitName, forKey: "deep_link_value")
-            generator.addParameterValue("user_referrer", forKey: "deep_link_sub1")
-            generator.setCampaign("share_invite")
+            generator.addParameterValue(self.fruitAmountStr, forKey: "deep_link_sub1")
+            generator.addParameterValue("THIS_USER_ID", forKey: "deep_link_sub2")
+            generator.setCampaign("summer_fruits")
+            generator.setChannel("mobile_share")
           return generator },
         completionHandler: {(_ url: URL?) -> Void in
             if url != nil{
@@ -111,6 +114,7 @@ class DLViewController: UIViewController {
             NSLog("[AFSDK] Fruit amount is not a whole number")
             return nil
         }
+        fruitAmountStr = fruitAmount as? String ?? "000"
         return fruitAmount as? String
     }
 }
