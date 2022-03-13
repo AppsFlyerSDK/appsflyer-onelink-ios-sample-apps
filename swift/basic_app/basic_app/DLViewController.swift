@@ -74,7 +74,7 @@ class DLViewController: UIViewController {
             generator.addParameterValue(fruitName, forKey: "deep_link_value")
             generator.addParameterValue(self.fruitAmountStr, forKey: "deep_link_sub1")
             generator.addParameterValue("THIS_USER_ID", forKey: "deep_link_sub2")
-            generator.setCampaign("summer_fruits")
+            generator.setCampaign("share_invite")
             generator.setChannel("mobile_share")
           return generator },
         completionHandler: {(_ url: URL?) -> Void in
