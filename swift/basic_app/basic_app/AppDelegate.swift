@@ -139,14 +139,13 @@ extension AppDelegate: DeepLinkDelegate {
         
         let deepLinkStr:String = deepLinkObj.toString()
         NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
-        
-        
-            if( deepLinkObj.isDeferred == true) {
-                NSLog("[AFSDK] This is a deferred deep link")
-            }
-            else {
-                NSLog("[AFSDK] This is a direct deep link")
-            }
+            
+        if( deepLinkObj.isDeferred == true) {
+            NSLog("[AFSDK] This is a deferred deep link")
+        }
+        else {
+            NSLog("[AFSDK] This is a direct deep link")
+        }
         
         fruitNameStr = deepLinkObj.deeplinkValue
         
