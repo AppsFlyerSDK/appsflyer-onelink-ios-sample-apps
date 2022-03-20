@@ -85,6 +85,9 @@ class DLViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.showToast(message: "Link copied to clipboard", font: .systemFont(ofSize: 12.0))
                 }
+                AppsFlyerShareInviteHelper.logInvite("mobile_share",
+                                                     parameters: ["referrerId": "THIS_USER_ID",
+                                                                  "campaign": "share_invite"])
             }
             else{
                 print("url is nil")
