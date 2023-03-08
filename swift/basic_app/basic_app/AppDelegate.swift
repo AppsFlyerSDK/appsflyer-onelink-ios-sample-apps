@@ -14,6 +14,7 @@ import AppTrackingTransparency
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var ConversionData: [AnyHashable: Any]? = nil
     var window: UIWindow?
+    var deferred_deep_link_processed_flag:Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -142,6 +143,11 @@ extension AppDelegate: DeepLinkDelegate {
             
         if( deepLinkObj.isDeferred == true) {
             NSLog("[AFSDK] This is a deferred deep link")
+            if (deferred_deep_link_processed_flag == true) {
+                NSLog("Deferred deep link was already processed by GCD. This iteration can be skipped.")
+                deferred_deep_link_processed_flag = false
+                return
+            }
         }
         else {
             NSLog("[AFSDK] This is a direct deep link")
@@ -160,6 +166,10 @@ extension AppDelegate: DeepLinkDelegate {
                     return
             }
         }
+        
+        // This marks to GCD that UDL already processed this deep link.
+        // It is marked to both DL and DDL, but GCD is relevant only for DDL
+        deferred_deep_link_processed_flag = true
         
         walkToSceneWithParams(fruitName: fruitNameStr!, deepLinkData: deepLinkObj.clickEvent)
     }
@@ -189,16 +199,27 @@ extension AppDelegate: AppsFlyerLibDelegate {
                 if let is_first_launch = conversionData["is_first_launch"] as? Bool,
                     is_first_launch {
                     NSLog("[AFSDK] First Launch")
-                    if !conversionData.keys.contains("deep_link_value") && conversionData.keys.contains("fruit_name"){
-                        switch conversionData["fruit_name"] {
-                            case let fruitNameStr as String:
-                            NSLog("This is a deferred deep link opened using conversion data")
-                            walkToSceneWithParams(fruitName: fruitNameStr, deepLinkData: conversionData)
-                            default:
-                                NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
-                                return
-                        }
+                    if (deferred_deep_link_processed_flag == true) {
+                        NSLog("Deferred deep link was already processed by UDL. The DDL processing in GCD can be skipped.")
+                        deferred_deep_link_processed_flag = false
+                        return
                     }
+                    
+                    deferred_deep_link_processed_flag = true
+                    
+                    var fruitNameStr:String
+                    
+                    if conversionData.keys.contains("deep_link_value") {
+                        fruitNameStr = conversionData["deep_link_value"] as! String
+                    } else if conversionData.keys.contains("fruit_name") {
+                        fruitNameStr = conversionData["fruit_name"] as! String
+                    } else {
+                        NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
+                        return
+                    }
+                    
+                    NSLog("This is a deferred deep link opened using conversion data")
+                    walkToSceneWithParams(fruitName: fruitNameStr, deepLinkData: conversionData)
                 } else {
                     NSLog("[AFSDK] Not First Launch")
                 }
