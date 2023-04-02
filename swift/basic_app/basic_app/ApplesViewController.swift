@@ -31,7 +31,21 @@ class ApplesViewController: DLViewController {
     }
     
     private func sendEvent(){
-        //Add Event
-    }
+        AppsFlyerLib.shared().logEvent(name: AFEventPurchase,
+                                       values: [
+                                           AFEventParamContentId:"1234567",
+                                           AFEventParamContentType : "category_a",
+                                           AFEventParamRevenue: 200,
+                                           AFEventParamCurrency:"USD"
+                                       ],
+                                       completionHandler: { (response: [String : Any]?, error: Error?) in
+                     if let response = response {
+                       print("In app event callback Success: ", response)
+                     }
+                     if let error = error {
+                       print("In app event callback ERROR:", error)
+                     }
+                   })
+                }
     
 }

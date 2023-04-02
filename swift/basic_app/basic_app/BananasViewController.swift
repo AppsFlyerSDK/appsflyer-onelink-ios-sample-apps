@@ -30,6 +30,12 @@ class BananasViewController: DLViewController {
     }
     
     private func sendEvent(){
-        //Add Event
+        AppsFlyerLib.shared().logEvent(AFEventPurchase,
+        withValues: [
+            AFEventParamContentId:"1234567",
+            AFEventParamContentType : "category_a",
+            AFEventParamRevenue: 200,
+            AFEventParamCurrency:"USD"
+        ]);
     }
 }
