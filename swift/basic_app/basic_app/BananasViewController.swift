@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppsFlyerLib
 
 class BananasViewController: DLViewController {
     
@@ -21,10 +22,14 @@ class BananasViewController: DLViewController {
             bananasDlTextView.textColor = .label
             fruitAmount.text = getFruitAmount(data: deepLinkData!)
         }
+        sendEvent()
     }
 
     @IBAction func copyShareInviteLink(_ sender: UIButton) {
         super.copyShareInviteLink(fruitName: "bananas")
     }
     
+    private func sendEvent(){
+        //Add Event
+    }
 }
