@@ -18,22 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // 1 - Get AppsFlyer preferences from .plist file
-        guard let propertiesPath = Bundle.main.path(forResource: "afdevkey", ofType: "plist"),
-            let properties = NSDictionary(contentsOfFile: propertiesPath) as? [String:String] else {
-                fatalError("Cannot find `afdevkey`")
-        }
-        guard let appsFlyerDevKey = properties["appsFlyerDevKey"],
-                   let appleAppID = properties["appleAppID"] else {
-            fatalError("Cannot find `appsFlyerDevKey` or `appleAppID` key")
-        }
-        
         //  Set isDebug to true to see AppsFlyer debug logs
         AppsFlyerLib.shared().isDebug = true
         
         // Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
-        AppsFlyerLib.shared().appsFlyerDevKey = appsFlyerDevKey
-        AppsFlyerLib.shared().appleAppID = appleAppID
+        AppsFlyerLib.shared().appsFlyerDevKey = "sQ84wpdxRTR4RMCaE9YqS4"
+        AppsFlyerLib.shared().appleAppID = "1512793879"
         
         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
                
