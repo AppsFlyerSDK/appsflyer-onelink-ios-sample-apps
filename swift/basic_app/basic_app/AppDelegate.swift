@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
+        AppsFlyerLib.shared().appsFlyerDevKey = "sQ84wpdxRTR4RMCaE9YqS4"
+        AppsFlyerLib.shared().appleAppID = "1512793879"
+        
+        //  Set isDebug to true to see AppsFlyer debug logs
+        AppsFlyerLib.shared().isDebug = true
+        
+        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
         
         // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
         // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
@@ -29,6 +37,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     @objc func didBecomeActiveNotification() {
+        AppsFlyerLib.shared().start()
+        if #available(iOS 14, *) {
+          ATTrackingManager.requestTrackingAuthorization { (status) in
+            switch status {
+            case .denied:
+                print("AuthorizationSatus is denied")
+            case .notDetermined:
+                print("AuthorizationSatus is notDetermined")
+            case .restricted:
+                print("AuthorizationSatus is restricted")
+            case .authorized:
+                print("AuthorizationSatus is authorized")
+            @unknown default:
+                fatalError("Invalid authorization status")
+            }
+          }
+        }
     }
     
     // Open Universal Links
