@@ -15,21 +15,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        
+        NSLog("[AFSDK] 1. %@", "scene with Universal Link")
+        // Universal Link - Background -> foreground
+        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         // Background -> foreground
+        NSLog("[AFSDK] 2. %@", "scene with URI scheme")
+        if let url = URLContexts.first?.url {
+            AppsFlyerLib.shared().handleOpen(url, options: nil)
+        }
     } 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-                
+        NSLog("[AFSDK] 3. %@", "Deep Linking from killed state")
+        
         // URI scheme - killed -> foreground
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+//        // Processing Universal Link from the killed state
+        if let userActivity = connectionOptions.userActivities.first {
+            NSLog("[AFSDK] 4. Processing Universal Link from the killed state")
+            AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+        } else if let url = connectionOptions.urlContexts.first?.url {
+            NSLog("[AFSDK] 5. Processing URI scheme from the killed state")
+            AppsFlyerLib.shared().handleOpen(url, options: nil)
+        }
 //        // Processing URI-scheme from the killed state
 //        self.scene(scene, openURLContexts: connectionOptions.urlContexts)
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -62,6 +77,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+
 
 }
 

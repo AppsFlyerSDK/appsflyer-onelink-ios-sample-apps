@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
         
         AppsFlyerLib.shared().delegate = self
+        AppsFlyerLib.shared().deepLinkDelegate = self
         
         // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
         // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
@@ -63,18 +64,93 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // For Swift version < 4.2 replace function signature with the commented out code
     // func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool { // this line for Swift < 4.2
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
         return true
     }
             
     // Open URI-scheme for iOS 9 and above
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        AppsFlyerLib.shared().handleOpen(url, options: options)
         return true
     }
     
     // Report Push Notification attribution data for re-engagements
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        AppsFlyerLib.shared().handlePushNotification(userInfo)
     }
     
+    // User logic
+    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkData: [String: Any]?) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
+               
+        let destVC = fruitName + "_vc"
+        if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
+            
+            NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
+            newVC.deepLinkData = deepLinkData
+            
+             UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
+        } else {
+            NSLog("[AFSDK] AppsFlyer: could not find section: \(destVC)")
+        }
+    }
+    
+}
+
+extension AppDelegate: DeepLinkDelegate {
+     
+    func didResolveDeepLink(_ result: DeepLinkResult) {
+        var fruitNameStr: String?
+        switch result.status {
+        case .notFound:
+            NSLog("[AFSDK] Deep link not found")
+            return
+        case .failure:
+            print("Error %@", result.error!)
+            return
+        case .found:
+            NSLog("[AFSDK] Deep link found")
+        }
+        
+        guard let deepLinkObj:DeepLink = result.deepLink else {
+            NSLog("[AFSDK] Could not extract deep link object")
+            return
+        }
+        
+        if deepLinkObj.clickEvent.keys.contains("deep_link_sub2") {
+            let ReferrerId:String = deepLinkObj.clickEvent["deep_link_sub2"] as! String
+            NSLog("[AFSDK] AppsFlyer: Referrer ID: \(ReferrerId)")
+        } else {
+            NSLog("[AFSDK] Could not extract referrerId")
+        }
+        
+        let deepLinkStr:String = deepLinkObj.toString()
+        NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
+            
+        if( deepLinkObj.isDeferred == true) {
+            NSLog("[AFSDK] This is a deferred deep link")
+        }
+        else {
+            NSLog("[AFSDK] This is a direct deep link")
+        }
+        
+        fruitNameStr = deepLinkObj.deeplinkValue
+        
+        //If deep_link_value doesn't exist
+        if fruitNameStr == nil || fruitNameStr == "" {
+            //check if fruit_name exists
+            switch deepLinkObj.clickEvent["fruit_name"] {
+                case let s as String:
+                    fruitNameStr = s
+                default:
+                    print("[AFSDK] Could not extract deep_link_value or fruit_name from deep link object with unified deep linking")
+                    return
+            }
+        }
+        
+        walkToSceneWithParams(fruitName: fruitNameStr!, deepLinkData: deepLinkObj.clickEvent)
+    }
 }
 
 extension AppDelegate: AppsFlyerLibDelegate {
