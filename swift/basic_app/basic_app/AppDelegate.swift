@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
         
+        AppsFlyerLib.shared().delegate = self
+        
         // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
         // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
@@ -73,6 +75,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     }
     
+}
+
+extension AppDelegate: AppsFlyerLibDelegate {
+     
+    // Handle Organic/Non-organic installation
+    func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
+        ConversionData = data
+        print("onConversionDataSuccess data:")
+        for (key, value) in data {
+            print(key, ":", value)
+        }
+        
+        if let status = data["af_status"] as? String {
+            if (status == "Non-organic") {
+                if let sourceID = data["media_source"],
+                    let campaign = data["campaign"] {
+                    NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                }
+            } else {
+                NSLog("[AFSDK] This is an organic install.")
+            }
+            if let is_first_launch = data["is_first_launch"] as? Bool,
+                is_first_launch {
+                NSLog("[AFSDK] First Launch")
+            } else {
+                NSLog("[AFSDK] Not First Launch")
+            }
+        }
+    }
+    
+    func onConversionDataFail(_ error: Error) {
+        NSLog("[AFSDK] \(error)")
+    }
 }
 
 extension UIStoryboard {
