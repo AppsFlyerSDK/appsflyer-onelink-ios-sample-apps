@@ -13,12 +13,11 @@ class ConversionDataViewController: DLViewController {
     @IBOutlet weak var ConversionDataParams: UITextView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let conversionData = appDelegate.ConversionData
+        super.viewDidLoad()        
+        // TODO: Pass ConversionData from Login VC here
+        let conversionData : [String:Any]? = nil
         if conversionData != nil{
-            if let conversionData = conversionData as! [String:Any]? {
-                
+            if let conversionData = conversionData {
                 ConversionDataParams.attributedText = attributionDataToString(data: conversionData)
                 ConversionDataParams.textColor = .label
             }
