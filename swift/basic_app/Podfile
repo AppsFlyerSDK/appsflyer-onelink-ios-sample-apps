@@ -5,6 +5,6 @@ target 'basic_app' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-pod 'AppsFlyerFramework','6.4.3'
+pod 'AppsFlyerFramework','6.11.1'
 
 end
