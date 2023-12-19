@@ -1,16 +1,8 @@
-//
-//  ConversionDataViewController.h
-//  obj-c
-//
-//  Created by Test1 on 19/12/2023.
-//
-
 #import <UIKit/UIKit.h>
+#import "DLViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@interface ConversionDataViewController : DLViewController
 
-@interface ConversionDataViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *conversionDataParams;
 
 @end
-
-NS_ASSUME_NONNULL_END

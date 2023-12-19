@@ -1,31 +1,31 @@
-//
-//  ConversionDataViewController.m
-//  obj-c
-//
-//  Created by Test1 on 19/12/2023.
-//
-
 #import "ConversionDataViewController.h"
-
-@interface ConversionDataViewController ()
-
-@end
+#import "AppDelegate.h"
 
 @implementation ConversionDataViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"aaa from CDA");
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    id conversionData = appDelegate.conversionData;
+    NSLog(@"aaa from CDA %@",conversionData);
+    
+    NSLog(@"aaa from CDA %@",[self attributionDataToStringWithData:conversionData]);
+
+
+    if (conversionData != nil && [conversionData isKindOfClass:[NSDictionary class]]) {
+        self.conversionDataParams.attributedText = [self attributionDataToStringWithData:conversionData];
+        self.conversionDataParams.textColor = [UIColor blackColor]; // Available in iOS 13.0 and later
+
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSAttributedString *)attributionDataToStringWithData:(NSDictionary *)data {
+    // Implement your conversion logic here
+    // For example, you can create an NSAttributedString with data
+    NSString *string = [NSString stringWithFormat:@"%@", data];
+    return [[NSAttributedString alloc] initWithString:string];
 }
-*/
 
 @end
