@@ -160,6 +160,63 @@
     [self walkToSceneWithParams:fruitNameStr deepLinkData:deepLinkObj.clickEvent];
 }
 
+#pragma mark - AppsFlyerLibDelegate
+
+- (void)onConversionDataSuccess:(NSDictionary *)data {
+    self.conversionData = data;
+    NSLog(@"onConversionDataSuccess data:");
+    for (NSString *key in data.allKeys) {
+        NSLog(@"%@: %@", key, data[key]);
+    }
+    
+    NSString *status = data[@"af_status"];
+    
+    if ([status isEqualToString:@"Non-organic"]) {
+        NSString *sourceID = data[@"media_source"];
+        NSString *campaign = data[@"campaign"];
+        NSLog(@"[AFSDK] This is a Non-Organic install. Media source: %@ Campaign: %@", sourceID, campaign);
+    } else {
+        NSLog(@"[AFSDK] This is an organic install.");
+    }
+    
+    NSNumber *isFirstLaunch = data[@"is_first_launch"];
+    
+    if (isFirstLaunch.boolValue) {
+        NSLog(@"[AFSDK] First Launch");
+        
+        if (self.deferredDeepLinkProcessedFlag) {
+            NSLog(@"Deferred deep link was already processed by UDL. The DDL processing in GCD can be skipped.");
+            self.deferredDeepLinkProcessedFlag = NO;
+            return;
+        }
+        
+        self.deferredDeepLinkProcessedFlag = YES;
+        
+        NSString *fruitNameStr = data[@"deep_link_value"];
+        
+        if (!fruitNameStr) {
+            fruitNameStr = data[@"fruit_name"];
+        }
+        
+        if (!fruitNameStr) {
+            NSLog(@"Could not extract deep_link_value or fruit_name from deep link object using conversion data");
+            return;
+        }
+        
+        NSLog(@"This is a deferred deep link opened using conversion data");
+        [self walkToSceneWithParams:fruitNameStr deepLinkData:data];
+    } else {
+        NSLog(@"[AFSDK] Not First Launch");
+    }
+}
+
+- (void)onConversionDataFail:(NSError *)error {
+    NSLog(@"[AFSDK] %@", error);
+}
+
+
+
+
 @end
 
 
