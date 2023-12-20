@@ -99,7 +99,66 @@
     [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:newVC animated:YES completion:nil];
 }
 
+#pragma mark - DeepLinkDelegate
 
+- (void)didResolveDeepLink:(AppsFlyerDeepLinkResult *)result {
+    NSString *fruitNameStr;
+   NSLog(@"[AFSDK] Deep link lowkehy");
+    switch (result.status) {
+        case AFSDKDeepLinkResultStatusNotFound:
+            NSLog(@"[AFSDK] Deep link not found");
+            return;
+        case AFSDKDeepLinkResultStatusFailure:
+            NSLog(@"Error %@", result.error);
+            return;
+        case AFSDKDeepLinkResultStatusFound:
+            NSLog(@"[AFSDK] Deep link found");
+            break;
+    }
+    
+    AppsFlyerDeepLink *deepLinkObj = result.deepLink;
+    
+    if ([deepLinkObj.clickEvent.allKeys containsObject:@"deep_link_sub2"]) {
+        NSString *referrerId = deepLinkObj.clickEvent[@"deep_link_sub2"];
+        NSLog(@"[AFSDK] AppsFlyer: Referrer ID: %@", referrerId);
+    } else {
+        NSLog(@"[AFSDK] Could not extract referrerId");
+    }
+    
+    NSString *deepLinkStr = [deepLinkObj toString];
+    NSLog(@"[AFSDK] DeepLink data is: %@", deepLinkStr);
+    
+    if (deepLinkObj.isDeferred) {
+        NSLog(@"[AFSDK] This is a deferred deep link");
+        if (self.deferredDeepLinkProcessedFlag) {
+            NSLog(@"Deferred deep link was already processed by GCD. This iteration can be skipped.");
+            self.deferredDeepLinkProcessedFlag = NO;
+            return;
+        }
+    } else {
+        NSLog(@"[AFSDK] This is a direct deep link");
+    }
+    
+    fruitNameStr = deepLinkObj.deeplinkValue;
+    
+    // If deep_link_value doesn't exist
+    if (!fruitNameStr || [fruitNameStr isEqualToString:@""]) {
+        // Check if fruit_name exists
+        id fruitNameValue = deepLinkObj.clickEvent[@"fruit_name"];
+        if ([fruitNameValue isKindOfClass:[NSString class]]) {
+            fruitNameStr = (NSString *)fruitNameValue;
+        } else {
+            NSLog(@"[AFSDK] Could not extract deep_link_value or fruit_name from deep link object with unified deep linking");
+            return;
+        }
+    }
+    
+    // This marks to GCD that UDL already processed this deep link.
+    // It is marked to both DL and DDL, but GCD is relevant only for DDL
+    self.deferredDeepLinkProcessedFlag = YES;
+    
+    [self walkToSceneWithParams:fruitNameStr deepLinkData:deepLinkObj.clickEvent];
+}
 
 @end
 
