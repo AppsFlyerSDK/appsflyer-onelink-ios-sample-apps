@@ -49,13 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           ATTrackingManager.requestTrackingAuthorization { (status) in
             switch status {
             case .denied:
-                print("AuthorizationSatus is denied")
+                print("AuthorizationStatus is denied")
             case .notDetermined:
-                print("AuthorizationSatus is notDetermined")
+                print("AuthorizationStatus is notDetermined")
             case .restricted:
-                print("AuthorizationSatus is restricted")
+                print("AuthorizationStatus is restricted")
             case .authorized:
-                print("AuthorizationSatus is authorized")
+                print("AuthorizationStatus is authorized")
             @unknown default:
                 fatalError("Invalid authorization status")
             }
