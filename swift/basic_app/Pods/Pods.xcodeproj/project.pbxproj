@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -17,6 +17,7 @@
 				E34636818F08D5E85E932E2A0C0ECBC4 /* PBXTargetDependency */,
 			);
 			name = AppsFlyerFramework;
+			productName = AppsFlyerFramework;
 		};
 /* End PBXAggregateTarget section */
 
@@ -45,23 +46,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07B067DCAF4F61F54C41CE9B9DA2B177 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppsFlyerLib.xcframework; path = binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		07B067DCAF4F61F54C41CE9B9DA2B177 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
 		0871595435DDCDCF122E97AC8A28A0E9 /* Pods-basic_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-basic_app.debug.xcconfig"; sourceTree = "<group>"; };
 		0F6A95D258718B06236098D57FAB1DB7 /* Pods-basic_app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-basic_app-dummy.m"; sourceTree = "<group>"; };
 		14A0E4087B29EAF624586FB6A272D350 /* Pods-basic_app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-basic_app-acknowledgements.markdown"; sourceTree = "<group>"; };
 		39B61534E7922D12F2D6396D414D9E5A /* Pods-basic_app-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-basic_app-resources.sh"; sourceTree = "<group>"; };
-		3BC357C8BF0C5D33E7F087F6BF21E168 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = binaries/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3BC357C8BF0C5D33E7F087F6BF21E168 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = binaries/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5A56247F3409B0DA37F1DF6E1E12BC16 /* AppsFlyerFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppsFlyerFramework.debug.xcconfig; sourceTree = "<group>"; };
-		62DFE431D91E9110F349AF576E550A4F /* Pods-basic_app */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-basic_app"; path = Pods_basic_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DFE431D91E9110F349AF576E550A4F /* Pods_basic_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basic_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64109BD66960EDE27702DFC34511DA68 /* Pods-basic_app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-basic_app-umbrella.h"; sourceTree = "<group>"; };
 		6CE6DFB084BB1A049C57B0BFD5C8C239 /* ResourceBundle-AppsFlyerLib_Privacy-AppsFlyerFramework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AppsFlyerLib_Privacy-AppsFlyerFramework-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		81F848E52F801D68CF0FEB0653FDA466 /* AppsFlyerFramework-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AppsFlyerFramework-xcframeworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1B3E68FFC94BDA62C4DD2BE731CD220 /* Pods-basic_app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-basic_app-Info.plist"; sourceTree = "<group>"; };
 		CDA1309C420D4BECA110B717210BFEED /* Pods-basic_app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-basic_app-acknowledgements.plist"; sourceTree = "<group>"; };
 		D2D974BAC54A34EF84CBE35291A15742 /* Pods-basic_app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-basic_app.modulemap"; sourceTree = "<group>"; };
-		DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerFramework-AppsFlyerLib_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "AppsFlyerFramework-AppsFlyerLib_Privacy"; path = AppsFlyerLib_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerLib_Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsFlyerLib_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA8C86FD89256F3DCE8C150791D6F6E /* Pods-basic_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-basic_app.release.xcconfig"; sourceTree = "<group>"; };
 		FAC9674D60ACDCA5E171D969111EBBE5 /* AppsFlyerFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppsFlyerFramework.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,8 +122,8 @@
 		583A1449C5C2957DF1281496A21A7F30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerFramework-AppsFlyerLib_Privacy */,
-				62DFE431D91E9110F349AF576E550A4F /* Pods-basic_app */,
+				DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerLib_Privacy.bundle */,
+				62DFE431D91E9110F349AF576E550A4F /* Pods_basic_app.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,7 +182,6 @@
 				F39A7BB4F0BD82DAF869CDD06B5EA0C5 /* Resources */,
 				5B2B6C82030AC55F6157DB7206A0F721 /* Support Files */,
 			);
-			name = AppsFlyerFramework;
 			path = AppsFlyerFramework;
 			sourceTree = "<group>";
 		};
@@ -229,7 +229,7 @@
 			);
 			name = "AppsFlyerFramework-AppsFlyerLib_Privacy";
 			productName = AppsFlyerLib_Privacy;
-			productReference = DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerFramework-AppsFlyerLib_Privacy */;
+			productReference = DDEAD447247DFA15F1E4DB584614F80C /* AppsFlyerLib_Privacy.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		CFC355FF18F0529D4F3D34A9A2CE6E7F /* Pods-basic_app */ = {
@@ -248,7 +248,7 @@
 			);
 			name = "Pods-basic_app";
 			productName = Pods_basic_app;
-			productReference = 62DFE431D91E9110F349AF576E550A4F /* Pods-basic_app */;
+			productReference = 62DFE431D91E9110F349AF576E550A4F /* Pods_basic_app.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -357,6 +357,7 @@
 			baseConfigurationReference = FAC9674D60ACDCA5E171D969111EBBE5 /* AppsFlyerFramework.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppsFlyerFramework";
+				DEVELOPMENT_TEAM = 6UQAD4B3U2;
 				IBSC_MODULE = AppsFlyerFramework;
 				INFOPLIST_FILE = "Target Support Files/AppsFlyerFramework/ResourceBundle-AppsFlyerLib_Privacy-AppsFlyerFramework-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -593,6 +594,7 @@
 			baseConfigurationReference = 5A56247F3409B0DA37F1DF6E1E12BC16 /* AppsFlyerFramework.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppsFlyerFramework";
+				DEVELOPMENT_TEAM = 6UQAD4B3U2;
 				IBSC_MODULE = AppsFlyerFramework;
 				INFOPLIST_FILE = "Target Support Files/AppsFlyerFramework/ResourceBundle-AppsFlyerLib_Privacy-AppsFlyerFramework-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
