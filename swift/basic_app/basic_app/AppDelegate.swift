@@ -10,6 +10,8 @@ import UIKit
 import AppsFlyerLib
 import AppTrackingTransparency
 
+import BranchSDK
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var ConversionData: [AnyHashable: Any]? = nil
@@ -40,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         name: UIApplication.didBecomeActiveNotification, //.UIApplicationDidBecomeActive for Swift < 4.2
         object: nil)
         
+        
+        Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
+            print(params as? [String: AnyObject] ?? {})
+            // Access and use deep link data here (nav to page, display content, etc.)
+        }
+        
         return true
     }
     
@@ -69,6 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool { // this line for Swift < 4.2
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+        
+        // Handler for Universal Links
+        Branch.getInstance().continue(userActivity)
+        
         return true
     }
             

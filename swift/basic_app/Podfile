@@ -7,4 +7,7 @@ target 'basic_app' do
 
 pod 'AppsFlyerFramework','6.14.3'
 
+# For Branch iOS SDK 2.0.0+
+pod 'BranchSDK'
+
 end

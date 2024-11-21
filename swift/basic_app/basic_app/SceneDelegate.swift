@@ -9,6 +9,8 @@
 import UIKit
 import AppsFlyerLib
 
+import BranchSDK
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         NSLog("[AFSDK] 1. %@", "scene with Universal Link")
         // Universal Link - Background -> foreground
         AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+        
+        BranchScene.shared().scene(scene, continue: userActivity)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
@@ -26,7 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let url = URLContexts.first?.url {
             AppsFlyerLib.shared().handleOpen(url, options: nil)
         }
-    } 
+        
+        BranchScene.shared().scene(scene, openURLContexts: URLContexts)
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         NSLog("[AFSDK] 3. %@", "Deep Linking from killed state")
@@ -41,13 +47,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let userActivity = connectionOptions.userActivities.first {
             NSLog("[AFSDK] 4. Processing Universal Link from the killed state")
             AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
+            
+            BranchScene.shared().scene(scene, continue: userActivity)
+            
+            
         } else if let url = connectionOptions.urlContexts.first?.url {
             NSLog("[AFSDK] 5. Processing URI scheme from the killed state")
             AppsFlyerLib.shared().handleOpen(url, options: nil)
+            
+            BranchScene.shared().scene(scene, openURLContexts: connectionOptions.urlContexts)
         }
-//        // Processing URI-scheme from the killed state
-//        self.scene(scene, openURLContexts: connectionOptions.urlContexts)
+//      // Processing URI-scheme from the killed state
+//      self.scene(scene, openURLContexts: connectionOptions.urlContexts)
         guard let _ = (scene as? UIWindowScene) else { return }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
