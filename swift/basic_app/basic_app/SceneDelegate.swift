@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AppsFlyerLib
 
 import BranchSDK
 
@@ -18,18 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         NSLog("[AFSDK] 1. %@", "scene with Universal Link")
-        // Universal Link - Background -> foreground
-        AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
-        
         BranchScene.shared().scene(scene, continue: userActivity)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         // Background -> foreground
         NSLog("[AFSDK] 2. %@", "scene with URI scheme")
-        if let url = URLContexts.first?.url {
-            AppsFlyerLib.shared().handleOpen(url, options: nil)
-        }
+//        if let url = URLContexts.first?.url {
+//            AppsFlyerLib.shared().handleOpen(url, options: nil)
+//        }
         
         BranchScene.shared().scene(scene, openURLContexts: URLContexts)
     }
@@ -46,15 +42,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        // Processing Universal Link from the killed state
         if let userActivity = connectionOptions.userActivities.first {
             NSLog("[AFSDK] 4. Processing Universal Link from the killed state")
-            AppsFlyerLib.shared().continue(userActivity, restorationHandler: nil)
-            
             BranchScene.shared().scene(scene, continue: userActivity)
             
             
         } else if let url = connectionOptions.urlContexts.first?.url {
-            NSLog("[AFSDK] 5. Processing URI scheme from the killed state")
-            AppsFlyerLib.shared().handleOpen(url, options: nil)
-            
+            NSLog("[AFSDK] 5. Processing URI scheme from the killed state")            
             BranchScene.shared().scene(scene, openURLContexts: connectionOptions.urlContexts)
         }
 //      // Processing URI-scheme from the killed state
