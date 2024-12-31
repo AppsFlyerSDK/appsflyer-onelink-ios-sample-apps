@@ -2,17 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="716-bw-iXQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +125,7 @@
         <!--Peaches View Controller-->
         <scene sceneID="Atr-8v-vmM">
             <objects>
-                <viewController storyboardIdentifier="peaches_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3sh-01-h5r" customClass="PeachesViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peaches_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3sh-01-h5r" customClass="PeachesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lTY-Bp-5Mx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +157,7 @@
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="EC2-w1-0jT" kind="show" id="4ta-tK-FDn"/>
+                                            <segue destination="EC2-w1-0jT" kind="show" id="Jx2-DR-YwB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-ub-JQ0" userLabel="Share invite button">
@@ -229,7 +228,7 @@
         <!--Conversion Data View Controller-->
         <scene sceneID="8Gt-PQ-Qe6">
             <objects>
-                <viewController id="EC2-w1-0jT" customClass="ConversionDataViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EC2-w1-0jT" customClass="ConversionDataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lBA-QX-V7y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,7 +261,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ntn-g1-Lmh"/>
                     <connections>
-                        <outlet property="ConversionDataParams" destination="Srz-hG-kRZ" id="mmE-5f-z5q"/>
+                        <outlet property="conversionDataParams" destination="Srz-hG-kRZ" id="dMA-z1-XKt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAP-tj-OHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,7 +271,7 @@
         <!--Apples-->
         <scene sceneID="2qP-j7-Kry">
             <objects>
-                <viewController storyboardIdentifier="apples_vc" title="Apples" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FqQ-Uo-4R4" customClass="ApplesViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="apples_vc" title="Apples" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FqQ-Uo-4R4" customClass="ApplesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1q-zj-hBr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,7 +367,7 @@
         <!--Bananas View Controller-->
         <scene sceneID="w1S-cW-Rmt">
             <objects>
-                <viewController storyboardIdentifier="bananas_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBy-tN-JyD" customClass="BananasViewController" customModule="basic_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bananas_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBy-tN-JyD" customClass="BananasViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZe-CP-9Ia">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -463,7 +462,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RZS-dA-gs6"/>
+        <segue reference="Jx2-DR-YwB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="apples_cover" width="720" height="440"/>

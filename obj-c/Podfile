@@ -1,0 +1,4 @@
+platform :ios, '17.0'
+target 'obj-c' do   
+pod 'AppsFlyerFramework'
+end 
