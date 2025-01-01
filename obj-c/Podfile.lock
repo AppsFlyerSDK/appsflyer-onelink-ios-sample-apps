@@ -1,7 +1,7 @@
 PODS:
-  - AppsFlyerFramework (6.12.2):
-    - AppsFlyerFramework/Main (= 6.12.2)
-  - AppsFlyerFramework/Main (6.12.2)
+  - AppsFlyerFramework (6.15.3):
+    - AppsFlyerFramework/Main (= 6.15.3)
+  - AppsFlyerFramework/Main (6.15.3)
 
 DEPENDENCIES:
   - AppsFlyerFramework
@@ -11,8 +11,8 @@ SPEC REPOS:
     - AppsFlyerFramework
 
 SPEC CHECKSUMS:
-  AppsFlyerFramework: 6eb4d89d2eb9a6632317f1055b359d9fd85fd5ff
+  AppsFlyerFramework: ad7ff0d22aa36c7f8cc4f71a5424e19b89ccb8ae
 
-PODFILE CHECKSUM: cb147e516662abc3ebe19c7aaadb2bedb3f3564a
+PODFILE CHECKSUM: f2dc8a56b8d0313063f04a2b605485a986d154c3
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.16.2

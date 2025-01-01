@@ -1,0 +1,458 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AFSDKConnectorCommunication",
+        "printedName": "AFSDKConnectorCommunication",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setPurchaseDataSendingDelegate",
+            "printedName": "setPurchaseDataSendingDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AFSDKPurchaseDataSendingDelegate",
+                "printedName": "AppsFlyerLib.AFSDKPurchaseDataSendingDelegate",
+                "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKConnectorCommunication(im)setPurchaseDataSendingDelegateWithDelegate:",
+            "mangledName": "$s12AppsFlyerLib27AFSDKConnectorCommunicationP30setPurchaseDataSendingDelegate8delegateyAA013AFSDKPurchasehiJ0_p_tF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKConnectorCommunication>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKConnectorCommunication>",
+            "protocolReq": true,
+            "objc_name": "setPurchaseDataSendingDelegateWithDelegate:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKConnectorCommunication",
+        "mangledName": "$s12AppsFlyerLib27AFSDKConnectorCommunicationP",
+        "moduleName": "AppsFlyerLib",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AFSDKPurchaseDataSendingDelegate",
+        "printedName": "AFSDKPurchaseDataSendingDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendDecryptReceiptRequest",
+            "printedName": "sendDecryptReceiptRequest(environment:receipt:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendDecryptReceiptRequestWithEnvironment:receipt:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP25sendDecryptReceiptRequest11environment7receipt17completionHandlerySS_SSySDys11AnyHashableVypGSg_s5Error_pSgtctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendDecryptReceiptRequestWithEnvironment:receipt:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendARSRequest",
+            "printedName": "sendARSRequest(with:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendARSRequestWith:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP14sendARSRequest4with17completionHandlerySDys11AnyHashableVypG_yAISg_s5Error_pSgSitctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendARSRequestWith:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendVIAPRequest",
+            "printedName": "sendVIAPRequest(with:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendVIAPRequestWith:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP15sendVIAPRequest4with17completionHandlerySDys11AnyHashableVypG_yAISg_s5Error_pSgSitctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendVIAPRequestWith:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendCachedPurchaseConnectorEvents",
+            "printedName": "sendCachedPurchaseConnectorEvents(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendCachedPurchaseConnectorEventsWithCompletionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP33sendCachedPurchaseConnectorEvents17completionHandleryyyc_tF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendCachedPurchaseConnectorEventsWithCompletionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate",
+        "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP",
+        "moduleName": "AppsFlyerLib",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "ObjC"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
