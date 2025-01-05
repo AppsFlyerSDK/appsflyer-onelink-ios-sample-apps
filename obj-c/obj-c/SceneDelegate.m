@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import <AppsFlyerLib/AppsFlyerLib.h>
 
 @interface SceneDelegate ()
 
@@ -18,8 +19,39 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    // Processing Universal Link from the killed state
+        NSUserActivity *userActivity = connectionOptions.userActivities.anyObject;
+        if (userActivity) {
+            [[AppsFlyerLib shared] continueUserActivity:userActivity restorationHandler:nil];
+        } else {
+            UIOpenURLContext *urlContext = connectionOptions.URLContexts.anyObject;
+            if (urlContext) {
+                NSURL *url = urlContext.URL;
+                [[AppsFlyerLib shared] handleOpenUrl:url options:nil];
+            }
+        }
+        
+        // Use this method to optionally configure and attach the UIWindow 'window' to the provided UIWindowScene 'scene'.
+        // Ensure the window property is initialized and attached if needed.
+        if (![scene isKindOfClass:[UIWindowScene class]]) {
+            return;
+        }
 }
 
+- (void)scene:(UIScene *)scene continueUserActivity:(NSUserActivity *)userActivity {
+    // Universal Link - Background -> foreground
+    [[AppsFlyerLib shared] continueUserActivity:userActivity restorationHandler:nil];
+}
+
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
+    // URI scheme - Background -> foreground
+    UIOpenURLContext *urlContext = URLContexts.anyObject;
+    if (urlContext) {
+        NSURL *url = urlContext.URL;
+        [[AppsFlyerLib shared] handleOpenUrl:url options:nil];
+    }
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
@@ -52,6 +84,8 @@
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
 }
+
+
 
 
 @end
