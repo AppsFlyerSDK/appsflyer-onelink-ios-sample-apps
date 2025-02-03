@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../appsflyer.sdk.ios/AppsFlyerMigrationHelper/AppsFlyerMigrationHelper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:../appsflyer.sdk.ios/AppsFlyerLib/AppsFlyerLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:basic_app.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,41 +1,41 @@
-# appsflyer-onelink-ios-sample-apps
-iOS sample app which demonstrate the usage of Appsflyer Onelink - A unified deep-linking solution.
-This repository gives you sample apps to get you started easily with OneLink.
+# FEED.ME fruit store sample app
+<img src="https://user-images.githubusercontent.com/61788924/97542099-d906f000-19ce-11eb-8fe3-911d616ea953.jpg" height="400">
 
-## Table of Contents
-| Sample app | Use-case | Features | Technology |
-| ---        | ---      | ---      | ---        |
-| [Fruit Store] | e-commerce | Basic OneLink Sample | <ul><li>Universal Links</li><li>URI scheme</li></ul> | 
+## What is it for?
+This app demonstrates the basic functionality of AppsFlyer's OneLink deep-linking solution.
+The app will be able to register it in AppsFlyer's dashboard, create real OneLink link and 'test-drive' them.
 
-[Fruit Store]: ./swift/basic_app
+> You can read more in our Developer Hub for iOS [here](https://afonelink.readme.io/docs/ios).
 
-# Getting Started with OneLink
-Deep linking is the act of launching a mobile app while serving personalized content and/or sending the users to specific activities within the app. By doing so you provide users with superior user experience, greatly enhancing their engagement with the apps.
+## Compatability
+- **iOS version >= 13**
 
-![Deep link example](https://user-images.githubusercontent.com/61788924/85711992-864fbb80-b6f0-11ea-8549-6df8841c21b1.png "Deep-linking examples")
+- **AppsFlyer SDK versions >= 5.4.1**
 
-## Two types of deep linking
-Since users may or may not have the mobile app installed, there are two types of deep linking:
+## How to use this app?
+1. Clone the repository
+2. ** Make sure to open the work environment via Xcode workspace `basic_app.xcworkspace` **
+3. Run the app, preferebly on a real device, as emulators might have a few issues.
 
-| **Deep Linking**	 | Directly serves personalized content to existing users, which already have the mobile app installed |
-| --- | --- |
-| **Deferred Deep Linking**	 | **Serving personalized content to new or former users, directly after the installation and first application launch** |
+## How to make the app your own?
+> ‼️ Important 
+> This app runs by default with a devkey of a demo account.
+> If you would like to see the app's data in the AppsFlyer dashboard, you need to create a demo app in your AppsFlyer account and follow the instructions below.
 
-**AppsFlyer supports both deep linking and deferred deep linking methods using its unique device detecting attribution link - OneLink.**
+1. Get your AppsFlyer Dev Key using [these instructions](https://support.appsflyer.com/hc/en-us/articles/207032066-iOS-SDK-integration-for-developers#integration-31-retrieving-your-dev-key)
 
-![Deep link flows](https://user-images.githubusercontent.com/61788924/85712009-8a7bd900-b6f0-11ea-94c1-f4c17b8cc52a.png "Deep-linking flows")
+2. Change the keys `appsFlyerDevKey` and `appleAppID` in the file `basic_app\afdevkey.plist`:
+```xml
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>appsFlyerDevKey</key>
+        <string>YOUR_AF_DEV_KEY_HERE</string>
+        <key>appleAppID</key>
+        <string>YOUR_APPLE_APP_ID_HERE</string>
+</dict>
+</plist>
+```
+3.  **Do not push the keys to a public repo!**
 
-## Deep linking and OneLink
-OneLink operates as a "bridge" between the advertisement and the mobile app. It can launch the app and provide the mobile developer with the data required to personalize the user experience. To do so develop the mobile app with deep linking capabilities and infrastructure.
-
-## Deep linking and retargeting
-Deep linking and OneLink are used to re-engage existing or past users, meaning to retarget them. This subject is covered in the retargeting guide, which should be reviewed after this deep linking guide.
-
-## Contributing
-** We would love to hear from you! **
-Feel free to submit comments or questions in the discussion section.
-PRs will be very much appreciated.
-
-We are also available here: *liaz.kamper@appsflyer.com*
-
-## If you found this repository useful ❤️ please Star us ⭐️☝🏽 
+4. Ask your marketer to create some OneLink links and start running fruit campaigns 🍎

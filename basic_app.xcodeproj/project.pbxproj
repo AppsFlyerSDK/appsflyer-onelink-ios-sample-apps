@@ -17,8 +17,27 @@
 		7B4B5EB524BF33F600A06437 /* PeachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */; };
 		7B760F162485455F0074DB26 /* BananasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B760F152485455F0074DB26 /* BananasViewController.swift */; };
 		7B760F18248556740074DB26 /* DLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B760F17248556740074DB26 /* DLViewController.swift */; };
+		7E42320C2D4FB2D500F086D0 /* AppsFlyerLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42320A2D4FB2D500F086D0 /* AppsFlyerLib.framework */; };
+		7E42320D2D4FB2D500F086D0 /* AppsFlyerLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42320A2D4FB2D500F086D0 /* AppsFlyerLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E42320E2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42320B2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework */; };
+		7E42320F2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42320B2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D2AE63D76FC2E3F78C9FEF8 /* Pods_basic_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E1A1E5659155DBED7985A5 /* Pods_basic_app.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E4232102D4FB2D500F086D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7E42320F2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework in Embed Frameworks */,
+				7E42320D2D4FB2D500F086D0 /* AppsFlyerLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2484DE5D2668FD8800FBBC9B /* ConversionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDataViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +55,8 @@
 		7B4B5EB424BF33F600A06437 /* PeachesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachesViewController.swift; sourceTree = "<group>"; };
 		7B760F152485455F0074DB26 /* BananasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananasViewController.swift; sourceTree = "<group>"; };
 		7B760F17248556740074DB26 /* DLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLViewController.swift; sourceTree = "<group>"; };
+		7E42320A2D4FB2D500F086D0 /* AppsFlyerLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppsFlyerLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E42320B2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppsFlyerMigrationHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E1A1E5659155DBED7985A5 /* Pods_basic_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basic_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -44,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E42320E2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework in Frameworks */,
 				8D2AE63D76FC2E3F78C9FEF8 /* Pods_basic_app.framework in Frameworks */,
+				7E42320C2D4FB2D500F086D0 /* AppsFlyerLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +77,8 @@
 		0DCB51219CAB5451074E3B4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E42320A2D4FB2D500F086D0 /* AppsFlyerLib.framework */,
+				7E42320B2D4FB2D500F086D0 /* AppsFlyerMigrationHelper.framework */,
 				B9E1A1E5659155DBED7985A5 /* Pods_basic_app.framework */,
 			);
 			name = Frameworks;
@@ -118,6 +143,7 @@
 				7B45A4C62468A42100E88BCA /* Resources */,
 				7E82F01E48D4877DDA6DF689 /* [CP] Copy Pods Resources */,
 				31FBE58689D2DB87B78CF1B8 /* [CP] Embed Pods Frameworks */,
+				7E4232102D4FB2D500F086D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
