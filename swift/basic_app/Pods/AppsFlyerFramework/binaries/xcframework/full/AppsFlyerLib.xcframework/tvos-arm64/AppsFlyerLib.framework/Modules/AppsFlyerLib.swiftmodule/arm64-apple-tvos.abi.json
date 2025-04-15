@@ -1,0 +1,2830 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppsFlyerDMADataMapper",
+        "printedName": "AppsFlyerDMADataMapper",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "DMAConstants",
+            "printedName": "DMAConstants",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "dmaCmpSdkId",
+                "printedName": "dmaCmpSdkId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO11dmaCmpSdkIdSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO11dmaCmpSdkIdSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO11dmaCmpSdkIdSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO11dmaCmpSdkIdSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "dmaCmpSdkIdKey",
+                "printedName": "dmaCmpSdkIdKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpSdkIdKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpSdkIdKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpSdkIdKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpSdkIdKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpSdkVersion",
+                "printedName": "cmpSdkVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO13cmpSdkVersionSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO13cmpSdkVersionSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO13cmpSdkVersionSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO13cmpSdkVersionSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpSdkVersionKey",
+                "printedName": "cmpSdkVersionKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpSdkVersionKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpSdkVersionKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpSdkVersionKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpSdkVersionKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpPolicyVersion",
+                "printedName": "cmpPolicyVersion",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpPolicyVersionSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpPolicyVersionSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpPolicyVersionSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16cmpPolicyVersionSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpPolicyVersionKey",
+                "printedName": "cmpPolicyVersionKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO19cmpPolicyVersionKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO19cmpPolicyVersionKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO19cmpPolicyVersionKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO19cmpPolicyVersionKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpGdprApplies",
+                "printedName": "cmpGdprApplies",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14cmpGdprAppliesSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14cmpGdprAppliesSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14cmpGdprAppliesSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14cmpGdprAppliesSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "cmpGdprAppliesKey",
+                "printedName": "cmpGdprAppliesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17cmpGdprAppliesKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17cmpGdprAppliesKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17cmpGdprAppliesKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17cmpGdprAppliesKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "dmaCmpTcString",
+                "printedName": "dmaCmpTcString",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpTcStringSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpTcStringSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpTcStringSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14dmaCmpTcStringSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "dmaCmpTcStringKey",
+                "printedName": "dmaCmpTcStringKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17dmaCmpTcStringKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17dmaCmpTcStringKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17dmaCmpTcStringKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO17dmaCmpTcStringKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "gdprAppliesKey",
+                "printedName": "gdprAppliesKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14gdprAppliesKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14gdprAppliesKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14gdprAppliesKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO14gdprAppliesKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "adUserDataEnabledKey",
+                "printedName": "adUserDataEnabledKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO20adUserDataEnabledKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO20adUserDataEnabledKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO20adUserDataEnabledKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO20adUserDataEnabledKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "adPersonalizationEnabledKey",
+                "printedName": "adPersonalizationEnabledKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO27adPersonalizationEnabledKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO27adPersonalizationEnabledKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO27adPersonalizationEnabledKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO27adPersonalizationEnabledKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "adStorageEnabled",
+                "printedName": "adStorageEnabled",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16adStorageEnabledSSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16adStorageEnabledSSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16adStorageEnabledSSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO16adStorageEnabledSSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "tcfKey",
+                "printedName": "tcfKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO6tcfKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO6tcfKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO6tcfKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO6tcfKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "manualKey",
+                "printedName": "manualKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO9manualKeySSvpZ",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO9manualKeySSvpZ",
+                "moduleName": "AppsFlyerLib",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO9manualKeySSvgZ",
+                    "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO9manualKeySSvgZ",
+                    "moduleName": "AppsFlyerLib",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Transparent"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12DMAConstantsO",
+            "moduleName": "AppsFlyerLib",
+            "isEnumExhaustive": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userDefaults",
+            "printedName": "userDefaults",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC12userDefaults33_136B2211F4FDEE93A46D89206478F6DELLSo06NSUserG0Cvp",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC12userDefaults33_136B2211F4FDEE93A46D89206478F6DELLSo06NSUserG0Cvp",
+            "moduleName": "AppsFlyerLib",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "consentData",
+            "printedName": "consentData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppsFlyerConsent",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                    "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvp",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppsFlyerConsent",
+                        "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                        "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvg",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvg",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent",
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppsFlyerConsent",
+                        "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                        "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvs",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvs",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent",
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvM",
+                "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC11consentDataAA0aB7ConsentCSgvM",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent",
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(consentData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerDMADataMapper",
+                "printedName": "AppsFlyerLib.AppsFlyerDMADataMapper",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppsFlyerConsent",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                    "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC11consentDataAcA0aB7ConsentCSg_tcfc",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC11consentDataAcA0aB7ConsentCSg_tcfc",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setConsentData",
+            "printedName": "setConsentData(consentData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppsFlyerConsent",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                    "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC14setConsentData07consentH0yAA0abG0CSg_tF",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC14setConsentData07consentH0yAA0abG0CSg_tF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDmaData",
+            "printedName": "getDmaData(shouldCollectConsentData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC10getDmaData020shouldCollectConsentH0SDySSypGSgSb_tF",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC10getDmaData020shouldCollectConsentH0SDySSypGSgSb_tF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getManualDataTestable",
+            "printedName": "getManualDataTestable()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC21getManualDataTestableSDySSypGSgyF",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC21getManualDataTestableSDySSypGSgyF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dmaUserDefaultsValuesTestable",
+            "printedName": "dmaUserDefaultsValuesTestable()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12AppsFlyerLib0aB13DMADataMapperC29dmaUserDefaultsValuesTestableSDySSypGSgyF",
+            "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC29dmaUserDefaultsValuesTestableSDySSypGSgyF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12AppsFlyerLib0aB13DMADataMapperC",
+        "mangledName": "$s12AppsFlyerLib0aB13DMADataMapperC",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "Final"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AFSDKConnectorCommunication",
+        "printedName": "AFSDKConnectorCommunication",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setPurchaseDataSendingDelegate",
+            "printedName": "setPurchaseDataSendingDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AFSDKPurchaseDataSendingDelegate",
+                "printedName": "AppsFlyerLib.AFSDKPurchaseDataSendingDelegate",
+                "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKConnectorCommunication(im)setPurchaseDataSendingDelegateWithDelegate:",
+            "mangledName": "$s12AppsFlyerLib27AFSDKConnectorCommunicationP30setPurchaseDataSendingDelegate8delegateyAA013AFSDKPurchasehiJ0_p_tF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKConnectorCommunication>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKConnectorCommunication>",
+            "protocolReq": true,
+            "objc_name": "setPurchaseDataSendingDelegateWithDelegate:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKConnectorCommunication",
+        "mangledName": "$s12AppsFlyerLib27AFSDKConnectorCommunicationP",
+        "moduleName": "AppsFlyerLib",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppsFlyerDMAService",
+        "printedName": "AppsFlyerDMAService",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dmaDataMapper",
+            "printedName": "dmaDataMapper",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerDMADataMapper",
+                "printedName": "AppsFlyerLib.AppsFlyerDMADataMapper",
+                "usr": "s:12AppsFlyerLib0aB13DMADataMapperC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12AppsFlyerLib0aB10DMAServiceC13dmaDataMapper33_C51063E2D6AC817DE79F1A4B13AE5344LLAA0ab7DMADataG0Cvp",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC13dmaDataMapper33_C51063E2D6AC817DE79F1A4B13AE5344LLAA0ab7DMADataG0Cvp",
+            "moduleName": "AppsFlyerLib",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "shouldCollectConsentData",
+            "printedName": "shouldCollectConsentData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(py)shouldCollectConsentData",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC24shouldCollectConsentDataSbvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)shouldCollectConsentData",
+                "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC24shouldCollectConsentDataSbvg",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dmaData",
+            "printedName": "dmaData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(py)dmaData",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC7dmaDataSDySSypGSgvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)dmaData",
+                "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC7dmaDataSDySSypGSgvg",
+                "moduleName": "AppsFlyerLib",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(consentData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerDMAService",
+                "printedName": "AppsFlyerLib.AppsFlyerDMAService",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppsFlyerConsent",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                    "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)initWithConsentData:",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC11consentDataAcA0aB7ConsentCSg_tcfc",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setCollectConsentData",
+            "printedName": "setCollectConsentData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)setCollectConsentData:",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC21setCollectConsentDatayySbF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setManualConsentData",
+            "printedName": "setManualConsentData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerConsent",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)setManualConsentData:",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC20setManualConsentDatayyAA0abG0CF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerDMAService",
+                "printedName": "AppsFlyerLib.AppsFlyerDMAService",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService(im)init",
+            "mangledName": "$s12AppsFlyerLib0aB10DMAServiceCACycfc",
+            "moduleName": "AppsFlyerLib",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerDMAService",
+        "mangledName": "$s12AppsFlyerLib0aB10DMAServiceC",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "Final",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppsFlyerConsent",
+        "printedName": "AppsFlyerConsent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isUserSubjectToGDPR",
+            "printedName": "isUserSubjectToGDPR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(py)isUserSubjectToGDPR",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC19isUserSubjectToGDPRSbvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)isUserSubjectToGDPR",
+                "mangledName": "$s12AppsFlyerLib0aB7ConsentC19isUserSubjectToGDPRSbvg",
+                "moduleName": "AppsFlyerLib",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasConsentForDataUsage",
+            "printedName": "hasConsentForDataUsage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(py)hasConsentForDataUsage",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD12ForDataUsageSbvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)hasConsentForDataUsage",
+                "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD12ForDataUsageSbvg",
+                "moduleName": "AppsFlyerLib",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasConsentForAdsPersonalization",
+            "printedName": "hasConsentForAdsPersonalization",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(py)hasConsentForAdsPersonalization",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD21ForAdsPersonalizationSbvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)hasConsentForAdsPersonalization",
+                "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD21ForAdsPersonalizationSbvg",
+                "moduleName": "AppsFlyerLib",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasConsentForAdStorage",
+            "printedName": "hasConsentForAdStorage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(py)hasConsentForAdStorage",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD12ForAdStorageSo8NSNumberCSgvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)hasConsentForAdStorage",
+                "mangledName": "$s12AppsFlyerLib0aB7ConsentC03hasD12ForAdStorageSo8NSNumberCSgvg",
+                "moduleName": "AppsFlyerLib",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nonGDPRUser:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerConsent",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)initWithNonGDPRUser",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC11nonGDPRUserACyt_tcfc",
+            "moduleName": "AppsFlyerLib",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Convenience",
+              "Available",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isUserSubjectToGDPR:hasConsentForDataUsage:hasConsentForAdsPersonalization:hasConsentForAdStorage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerConsent",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)initWithIsUserSubjectToGDPR:hasConsentForDataUsage:hasConsentForAdsPersonalization:hasConsentForAdStorage:",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC19isUserSubjectToGDPR03hasD12ForDataUsage0jdK18AdsPersonalization0jdK9AdStorageACSo8NSNumberCSg_A3Jtcfc",
+            "moduleName": "AppsFlyerLib",
+            "objc_name": "initWithIsUserSubjectToGDPR:hasConsentForDataUsage:hasConsentForAdsPersonalization:hasConsentForAdStorage:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(forGDPRUserWithHasConsentForDataUsage:hasConsentForAdsPersonalization:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppsFlyerConsent",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)initForGDPRUserWithHasConsentForDataUsage:hasConsentForAdsPersonalization:",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC018forGDPRUserWithHasD12ForDataUsage03hasdI18AdsPersonalizationACSb_Sbtcfc",
+            "moduleName": "AppsFlyerLib",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Convenience",
+              "Available",
+              "ObjC"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "getManualConsentData",
+            "printedName": "getManualConsentData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)getManualConsentData",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC09getManualD4DataSDySSypGyF",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "Final",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)encodeWithCoder:",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC6encode4withySo7NSCoderC_tF",
+            "moduleName": "AppsFlyerLib",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppsFlyerLib.AppsFlyerConsent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppsFlyerConsent",
+                    "printedName": "AppsFlyerLib.AppsFlyerConsent",
+                    "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent(im)initWithCoder:",
+            "mangledName": "$s12AppsFlyerLib0aB7ConsentC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "AppsFlyerLib",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Convenience"
+            ],
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AppsFlyerLib@objc(cs)AppsFlyerConsent",
+        "mangledName": "$s12AppsFlyerLib0aB7ConsentC",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppsFlyerLib",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AFSDKPurchaseDataSendingDelegate",
+        "printedName": "AFSDKPurchaseDataSendingDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendDecryptReceiptRequest",
+            "printedName": "sendDecryptReceiptRequest(environment:receipt:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendDecryptReceiptRequestWithEnvironment:receipt:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP25sendDecryptReceiptRequest11environment7receipt17completionHandlerySS_SSySDys11AnyHashableVypGSg_s5Error_pSgtctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendDecryptReceiptRequestWithEnvironment:receipt:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendARSRequest",
+            "printedName": "sendARSRequest(with:withStoreKitVersion:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendARSRequestWith:withStoreKitVersion:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP14sendARSRequest4with0J15StoreKitVersion17completionHandlerySDys11AnyHashableVypG_SiyAJSg_s5Error_pSgSitctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendARSRequestWith:withStoreKitVersion:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendVIAPRequest",
+            "printedName": "sendVIAPRequest(with:withStoreKitVersion:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([Swift.AnyHashable : Any]?, Swift.Error?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.AnyHashable : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendVIAPRequestWith:withStoreKitVersion:completionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP15sendVIAPRequest4with0J15StoreKitVersion17completionHandlerySDys11AnyHashableVypG_SiyAJSg_s5Error_pSgSitctF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendVIAPRequestWith:withStoreKitVersion:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendCachedPurchaseConnectorEvents",
+            "printedName": "sendCachedPurchaseConnectorEvents(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate(im)sendCachedPurchaseConnectorEventsWithCompletionHandler:",
+            "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP33sendCachedPurchaseConnectorEvents17completionHandleryyyc_tF",
+            "moduleName": "AppsFlyerLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "sugared_genericSig": "<Self where Self : AppsFlyerLib.AFSDKPurchaseDataSendingDelegate>",
+            "protocolReq": true,
+            "objc_name": "sendCachedPurchaseConnectorEventsWithCompletionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@AppsFlyerLib@objc(pl)AFSDKPurchaseDataSendingDelegate",
+        "mangledName": "$s12AppsFlyerLib32AFSDKPurchaseDataSendingDelegateP",
+        "moduleName": "AppsFlyerLib",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "ObjC"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 225,
+      "length": 17,
+      "value": "\"IABTCF_CmpSdkID\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 280,
+      "length": 12,
+      "value": "\"cmp_sdk_id\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 328,
+      "length": 22,
+      "value": "\"IABTCF_CmpSdkVersion\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 17,
+      "value": "\"cmp_sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 445,
+      "length": 22,
+      "value": "\"IABTCF_PolicyVersion\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 509,
+      "length": 16,
+      "value": "\"policy_version\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 562,
+      "length": 20,
+      "value": "\"IABTCF_gdprApplies\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 622,
+      "length": 14,
+      "value": "\"gdpr_applies\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 673,
+      "length": 17,
+      "value": "\"IABTCF_TCString\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 730,
+      "length": 10,
+      "value": "\"tcstring\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
+      "length": 14,
+      "value": "\"gdpr_applies\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 848,
+      "length": 22,
+      "value": "\"ad_user_data_enabled\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 28,
+      "value": "\"ad_personalization_enabled\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 1001,
+      "length": 20,
+      "value": "\"ad_storage_enabled\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 1050,
+      "length": 5,
+      "value": "\"tcf\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 1087,
+      "length": 8,
+      "value": "\"manual\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1491,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "Dictionary",
+      "offset": 1553,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1605,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2217,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 2291,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "StringLiteral",
+      "offset": 2296,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3043,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMAService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 300,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMAService.swift",
+      "kind": "StringLiteral",
+      "offset": 148,
+      "length": 19,
+      "value": "\"AppsFlyerLib.AppsFlyerDMAService\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 265,
+      "length": 21,
+      "value": "\"isUserSubjectToGDPR\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 24,
+      "value": "\"hasConsentForDataUsage\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 409,
+      "length": 33,
+      "value": "\"hasConsentForAdsPersonalization\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 487,
+      "length": 24,
+      "value": "\"hasConsentForAdStorage\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 674,
+      "length": 52,
+      "value": "\"Appsflyer Consent Data: isUserSubjectToGDPR is nil\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 751,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 1009,
+      "length": 55,
+      "value": "\"Appsflyer Consent Data: hasConsentForDataUsage is nil\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1089,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "StringLiteral",
+      "offset": 1377,
+      "length": 64,
+      "value": "\"Appsflyer Consent Data: hasConsentForAdsPersonalization is nil\""
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1466,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2125,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3985,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amit.levy\/Old-BM\/build-machine-sdk\/workspace\/ios_sdk_framework_test\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "kind": "Dictionary",
+      "offset": 4309,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

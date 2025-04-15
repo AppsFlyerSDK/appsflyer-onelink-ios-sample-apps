@@ -6,7 +6,11 @@
 	<dict>
 		<key>ios-arm64/AppsFlyerLib.framework/AppsFlyerLib</key>
 		<data>
-		PErfTG6GSxh+ITW/XXaOvctX2xY=
+		M/1E5NfUoVY7/jLhxZrL1YZ4eHE=
+		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -15,10 +19,6 @@
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -32,9 +32,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		FyHavLzfPzrJLtHZfClI6Yfi9pU=
+		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -46,11 +50,27 @@
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Info.plist</key>
 		<data>
-		w0LjIwCOk+glF8lw3Hg8TojQkoU=
+		LGYmCBmVkPfsdJrIW+Ubmf7n8Qo=
+		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		PWgAZ9P+aihfyE2l+zfRrOk3xEQ=
+		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<data>
+		qX+vB3HYjhfeR+yYvTyWlQkOwZc=
+		</data>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		PWgAZ9P+aihfyE2l+zfRrOk3xEQ=
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>ios-arm64/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -58,7 +78,11 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/AppsFlyerLib</key>
 		<data>
-		HJSu/FWE28Fu0TxG9VkkdOwKCeQ=
+		/5cWL3yXvv6LjXFUQSlqfuLWhpU=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -67,10 +91,6 @@
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -84,9 +104,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		+3efZHwff+klT9+WxpNLSXo1yto=
+		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -96,13 +120,45 @@
 		<data>
 		LysKB9CL90x+MWXOuuRPixmiVJo=
 		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
+		<data>
+		VOUQ/lWlA8/bJ911lLvDHK3U2gM=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
+		<data>
+		5UPC6XX2gy8G07NGFlCVurGlB6A=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
+		<data>
+		VOUQ/lWlA8/bJ911lLvDHK3U2gM=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
+		<data>
+		UB4oT/i3xPl+oi8COyhZgkYixhc=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
+		<data>
+		iOcM1DMbtCLp0RucjdqB5EQS1cQ=
+		</data>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
+		<data>
+		UB4oT/i3xPl+oi8COyhZgkYixhc=
+		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Resources/Info.plist</key>
 		<data>
-		p08bEWmEcIQ3pmm+poJ/tO74gL4=
+		TqHzEChNEf03doG+GFOsdlb3/7U=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -110,7 +166,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/AppsFlyerLib</key>
 		<data>
-		kQJf/hZVlf8kZjKx3DR/uX5WM9Q=
+		sYe8a+VcqMzpvZFtubRfC3oRPAE=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -119,10 +179,6 @@
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -136,9 +192,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		+3efZHwff+klT9+WxpNLSXo1yto=
+		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -150,11 +210,43 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Info.plist</key>
 		<data>
-		gCwLp6YK0vuMON3A6EzuWWi1lfU=
+		6E9F4RTZq+03xhfNWYVAflvfmsI=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		+Ousx3RR44wg2etzzliwvXbWgpE=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		/gtIRVFsHXn3J452tiAe9T8yl7w=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		+Ousx3RR44wg2etzzliwvXbWgpE=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		5XjpegZ9zdxjERzV6Un3y/g7wEI=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		cl0bUKOx4CWj8MsgtvNBuYC+6g0=
+		</data>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		5XjpegZ9zdxjERzV6Un3y/g7wEI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -162,7 +254,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		YtgulFDhOR1GqLwNNzseetOvvvs=
+		M7N6iGmROmUQ++EW9AGxGGfOIXg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -170,11 +262,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		9LgWljn+662L4wFrmthy4JZ8Pos=
+		t52zQswEbkcI93hgth9Yg1a+uFE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeResources</key>
 		<data>
-		aRHVMweq1oF41Hyof7w76efW/rA=
+		DuXy3h0xlTlc1bTePwfOZElKvQM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -182,7 +274,11 @@
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/AppsFlyerLib</key>
 		<data>
-		2itfyDlF4Cex3eT2d+5O2A53AYY=
+		4BLK/svWXSqeL4+Ze27os6xcXhs=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -191,10 +287,6 @@
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -208,9 +300,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		+3efZHwff+klT9+WxpNLSXo1yto=
+		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -220,13 +316,45 @@
 		<data>
 		LysKB9CL90x+MWXOuuRPixmiVJo=
 		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
+		<data>
+		VE1A5JvKaCecxMxoqNeoRy+KtjI=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.swiftdoc</key>
+		<data>
+		y8Vx/MXY6l/NIgQ7tbUzkcJzhqA=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.swiftinterface</key>
+		<data>
+		VE1A5JvKaCecxMxoqNeoRy+KtjI=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
+		<data>
+		HhbXgSUwojVQHWxZFZYUsTQAquo=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.swiftdoc</key>
+		<data>
+		0U0CeuicBX5DvxmYhbFQGxFgLuw=
+		</data>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.swiftinterface</key>
+		<data>
+		HhbXgSUwojVQHWxZFZYUsTQAquo=
+		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Resources/Info.plist</key>
 		<data>
-		vMVGQ02Po+Eh5yFoANdVn8rYvMQ=
+		+HcyT7SI+/KwGV6+bZ45sCb8Q+E=
 		</data>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -234,7 +362,11 @@
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/AppsFlyerLib</key>
 		<data>
-		Efq7gjG7LDh1IHMCnfhJjHhso20=
+		cHh5Y7mqjlV+gj+Hs9mMJbvI3L0=
+		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -243,10 +375,6 @@
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -260,9 +388,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		FyHavLzfPzrJLtHZfClI6Yfi9pU=
+		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -274,11 +406,27 @@
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Info.plist</key>
 		<data>
-		s3mNpfexQSIzoyj4DGLCMVO+A2M=
+		d/28mfFMcEcm99F7CZ+/cXRlXr4=
+		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
+		<data>
+		rauPHghxkpHCbMiJrrfA2yfmQJA=
+		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.swiftdoc</key>
+		<data>
+		L4khRMwr0ufxiRF969FEacJpKVM=
+		</data>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.swiftinterface</key>
+		<data>
+		rauPHghxkpHCbMiJrrfA2yfmQJA=
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>tvos-arm64/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -286,7 +434,11 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/AppsFlyerLib</key>
 		<data>
-		TNY3rNdThjdoY0tYmmefjsBrOTk=
+		N7zyMQ4kVyrtFeygoEagLTeH+Ws=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<data>
+		sZe23Bbg0H2WgHLIqHQe0g++6Mo=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
 		<data>
@@ -295,10 +447,6 @@
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKValidateAndLogResult.h</key>
 		<data>
 		h3cMtJeCvFHGPKBZbeqwFQic6m0=
-		</data>
-		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<data>
-		Bx0db1e1DLeeuq3va7QJCITQH2k=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
 		<data>
@@ -312,9 +460,13 @@
 		<data>
 		3J9juDAkVB2LUxC7/NDmKqgrzyQ=
 		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<data>
+		+3efZHwff+klT9+WxpNLSXo1yto=
+		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<data>
-		UiUMGVez8MooDYM0HKct6KJuBzs=
+		aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
 		<data>
@@ -326,11 +478,43 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Info.plist</key>
 		<data>
-		2oZEZ2EC976OG2X2xbMrdeePNB0=
+		ngtwxefRfuB5qCfcX2RqdkgBKxQ=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
+		<data>
+		9QhxDHSEnzPEP7DcQOrLopQX4Ng=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
+		<data>
+		auLSYrRIxjkBMGw+CAgTbvLd9yU=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
+		<data>
+		9QhxDHSEnzPEP7DcQOrLopQX4Ng=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
+		<data>
+		te2dHy7IvbaIGLLtXDFsBmqryQ4=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
+		<data>
+		z0DNni4mqnIsYZ9AYVRPT81spZs=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
+		<data>
+		vv8hIe9a03+ijni0HM6lhydHn1g=
+		</data>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
+		<data>
+		z0DNni4mqnIsYZ9AYVRPT81spZs=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<data>
-		r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+		0DEMhZAlM33ORMbvU0M8spnqShI=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -338,7 +522,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		d3L3VVXjTqAeBj4u3HqH1kig61M=
+		p02wR7ceoBxMTNSavo/asC1evU0=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -346,11 +530,11 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		mOkDaIJdtvTrS9ojPb1WXQucT9g=
+		SSSzjC7X9eBlmzD7hH416c6lQRo=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeResources</key>
 		<data>
-		BIi0P0mdVgcU+eWkSEWpDeSjBGs=
+		6cajJzovVO8P6roJ9I9h5vLqsSs=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -363,11 +547,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PErfTG6GSxh+ITW/XXaOvctX2xY=
+			M/1E5NfUoVY7/jLhxZrL1YZ4eHE=
 			</data>
 			<key>hash2</key>
 			<data>
-			/bxsY+r9o9uqzzts6u5I3SqJWnzWfcWr2voVr+boKEk=
+			UFlz0OEAAPu+hD5uGWnYWDWDndHT9K0iyIuqbi3gEoA=
+			</data>
+		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
@@ -390,17 +585,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -436,15 +620,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FyHavLzfPzrJLtHZfClI6Yfi9pU=
+			</data>
+			<key>hash2</key>
+			<data>
+			jvaOU8Bpn5KvyFIaY8I/ACxn+1Fmpt4W0XVufQuwHzI=
+			</data>
+		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
@@ -473,22 +668,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w0LjIwCOk+glF8lw3Hg8TojQkoU=
+			LGYmCBmVkPfsdJrIW+Ubmf7n8Qo=
 			</data>
 			<key>hash2</key>
 			<data>
-			449UTd/KJqwlcPWfO0p0R9c5d7NJDlqr58qjoXgtYzU=
+			mYfcehlikHE1BBBf4eRX6weObx2qWQd9x2ilfHLSsOY=
+			</data>
+		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PWgAZ9P+aihfyE2l+zfRrOk3xEQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			lqxGzgL4qwfaxbecAhET5Sqh1P/juiTEYG4J3NIzLdM=
+			</data>
+		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qX+vB3HYjhfeR+yYvTyWlQkOwZc=
+			</data>
+			<key>hash2</key>
+			<data>
+			zVKGqjhPlCDc1A/esa6n2yobumY9bkWtxA6Y1E+8OiI=
+			</data>
+		</dict>
+		<key>ios-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PWgAZ9P+aihfyE2l+zfRrOk3xEQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			lqxGzgL4qwfaxbecAhET5Sqh1P/juiTEYG4J3NIzLdM=
 			</data>
 		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>ios-arm64/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
@@ -526,11 +765,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HJSu/FWE28Fu0TxG9VkkdOwKCeQ=
+			/5cWL3yXvv6LjXFUQSlqfuLWhpU=
 			</data>
 			<key>hash2</key>
 			<data>
-			OtffJr5++Ddf6MFB+aJ6ud3CmB/C9kLF5ArIHry2oT4=
+			c21VXeOcMo4UlwKWLI+pa1CyQ03bkDytLIgl96Xbdh8=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AFSDKPurchaseDetails.h</key>
@@ -553,17 +803,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -599,15 +838,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+3efZHwff+klT9+WxpNLSXo1yto=
+			</data>
+			<key>hash2</key>
+			<data>
+			qnssTwJrZtIDeyMBE1BfsXnl8XS/fgn8s6Let6FfKMw=
+			</data>
+		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLinkGenerator.h</key>
@@ -632,26 +882,114 @@
 			PPGAG29u7O6ly0pq4HZsZxW1zcqL/viEKKBfZ6qzfdE=
 			</data>
 		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VOUQ/lWlA8/bJ911lLvDHK3U2gM=
+			</data>
+			<key>hash2</key>
+			<data>
+			pcV54b2KF3PfRnEe0zo02n+rt6z9tkOp41OQm+cuQ5c=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5UPC6XX2gy8G07NGFlCVurGlB6A=
+			</data>
+			<key>hash2</key>
+			<data>
+			q6VbcALJy07vHHa2RVyDXAywhVVsUv+Zvm/HzsUGiCQ=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VOUQ/lWlA8/bJ911lLvDHK3U2gM=
+			</data>
+			<key>hash2</key>
+			<data>
+			pcV54b2KF3PfRnEe0zo02n+rt6z9tkOp41OQm+cuQ5c=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UB4oT/i3xPl+oi8COyhZgkYixhc=
+			</data>
+			<key>hash2</key>
+			<data>
+			jyo9B8YEBBWrbtYldC3/jdqlmIiNQFlRXG5eEoaw1BQ=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iOcM1DMbtCLp0RucjdqB5EQS1cQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			4wX5/yFQPhb1Be1hU7jGnJKQv7q8OHYXTeua8Dw9oBs=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UB4oT/i3xPl+oi8COyhZgkYixhc=
+			</data>
+			<key>hash2</key>
+			<data>
+			jyo9B8YEBBWrbtYldC3/jdqlmIiNQFlRXG5eEoaw1BQ=
+			</data>
+		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p08bEWmEcIQ3pmm+poJ/tO74gL4=
+			TqHzEChNEf03doG+GFOsdlb3/7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			zzbLR3Ou4y3mZOEHDTsAUWrXeWR2lfrb3TnivUZ7yfo=
+			IlB/hZuXnC9FgWZdBOHhCLKjoDwv7wg0r8xmO0xCV4I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/AppsFlyerLib.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
@@ -674,11 +1012,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kQJf/hZVlf8kZjKx3DR/uX5WM9Q=
+			sYe8a+VcqMzpvZFtubRfC3oRPAE=
 			</data>
 			<key>hash2</key>
 			<data>
-			BRspeOzHoDRv/ikH7QEzDyivyoTs743IiOxSKAhIoN0=
+			VIwEFtaItZMUgr5gfcvCV7qktiQY7rmju8qyGO3UXz8=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
@@ -701,17 +1050,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -747,15 +1085,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+3efZHwff+klT9+WxpNLSXo1yto=
+			</data>
+			<key>hash2</key>
+			<data>
+			qnssTwJrZtIDeyMBE1BfsXnl8XS/fgn8s6Let6FfKMw=
+			</data>
+		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
@@ -784,22 +1133,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gCwLp6YK0vuMON3A6EzuWWi1lfU=
+			6E9F4RTZq+03xhfNWYVAflvfmsI=
 			</data>
 			<key>hash2</key>
 			<data>
-			cdoT2DmACNtFuIi4/DkrGsyuGt7mmglmkd8hub7GQv4=
+			9+B8C/x9b47lgEw07gDa6eAhmHPN4IroHDngc11SFso=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+Ousx3RR44wg2etzzliwvXbWgpE=
+			</data>
+			<key>hash2</key>
+			<data>
+			MMopU7+L5nNcnI7aDgqx13WsEX3Sik+LWjxdD+P3wtI=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/gtIRVFsHXn3J452tiAe9T8yl7w=
+			</data>
+			<key>hash2</key>
+			<data>
+			iCg5XHUpdT54X15ZhYFvucX2KzKUEbF7MIM38w1Jzh4=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+Ousx3RR44wg2etzzliwvXbWgpE=
+			</data>
+			<key>hash2</key>
+			<data>
+			MMopU7+L5nNcnI7aDgqx13WsEX3Sik+LWjxdD+P3wtI=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5XjpegZ9zdxjERzV6Un3y/g7wEI=
+			</data>
+			<key>hash2</key>
+			<data>
+			xAYn3VIzzW+1YLhXIaP+eGxo9qF7imZy1RX3VjZrLXY=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cl0bUKOx4CWj8MsgtvNBuYC+6g0=
+			</data>
+			<key>hash2</key>
+			<data>
+			tnwMjbnn/fkmlG43z2c8/rYNatQJ9s/ztlyg72JbY7Q=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5XjpegZ9zdxjERzV6Un3y/g7wEI=
+			</data>
+			<key>hash2</key>
+			<data>
+			xAYn3VIzzW+1YLhXIaP+eGxo9qF7imZy1RX3VjZrLXY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
@@ -817,11 +1254,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YtgulFDhOR1GqLwNNzseetOvvvs=
+			M7N6iGmROmUQ++EW9AGxGGfOIXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			EAYqMWTYPttWo/6wJfYk+7MCDBelehDuMEwqm6tLzZs=
+			wYhFtLDehPoZ3HiT9pg0qymWXDWVzl06nxmi6t8O6J0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements</key>
@@ -839,22 +1276,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9LgWljn+662L4wFrmthy4JZ8Pos=
+			t52zQswEbkcI93hgth9Yg1a+uFE=
 			</data>
 			<key>hash2</key>
 			<data>
-			b9ZGmVdPh7B58iTrLe6xuwrtcGmOK3f4T0FYFVtdx/g=
+			5mJqysY5Y3Dkkx8H7MGEvxi50pw8Qyt6OaajpFPHO4k=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aRHVMweq1oF41Hyof7w76efW/rA=
+			DuXy3h0xlTlc1bTePwfOZElKvQM=
 			</data>
 			<key>hash2</key>
 			<data>
-			+oWS4ZzrFf88bZHjA90k6Y+S6PaBiP7IHVgZOG/kqEI=
+			n7BhfR01IGcBMW2FgnVg5eW874FWDWdxqzZxSdTWHQA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeSignature</key>
@@ -892,11 +1329,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2itfyDlF4Cex3eT2d+5O2A53AYY=
+			4BLK/svWXSqeL4+Ze27os6xcXhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			a/j28IXI9G/081fEZZaGfN4Prs+WLdClwQAEmVdBKKY=
+			S5/A6eGyA85YPtB5VODgfoi8NMJnyrPrppUCOzUNh+0=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AFSDKPurchaseDetails.h</key>
@@ -919,17 +1367,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -965,15 +1402,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+3efZHwff+klT9+WxpNLSXo1yto=
+			</data>
+			<key>hash2</key>
+			<data>
+			qnssTwJrZtIDeyMBE1BfsXnl8XS/fgn8s6Let6FfKMw=
+			</data>
+		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Headers/AppsFlyerLinkGenerator.h</key>
@@ -998,26 +1446,114 @@
 			PPGAG29u7O6ly0pq4HZsZxW1zcqL/viEKKBfZ6qzfdE=
 			</data>
 		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VE1A5JvKaCecxMxoqNeoRy+KtjI=
+			</data>
+			<key>hash2</key>
+			<data>
+			xaM90w9LXtLmggmhjKVPamI3Pt8qPstZGZlVIcbImKg=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y8Vx/MXY6l/NIgQ7tbUzkcJzhqA=
+			</data>
+			<key>hash2</key>
+			<data>
+			l9ZGM3VfGKpIHL2eVSSa10CnQ29YD1uSZNvMC+ovEtI=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/arm64-apple-macos.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VE1A5JvKaCecxMxoqNeoRy+KtjI=
+			</data>
+			<key>hash2</key>
+			<data>
+			xaM90w9LXtLmggmhjKVPamI3Pt8qPstZGZlVIcbImKg=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HhbXgSUwojVQHWxZFZYUsTQAquo=
+			</data>
+			<key>hash2</key>
+			<data>
+			RA555/XYeG7XSwz3+7Bh1Sz/Z9Cems25KxSU5jthEvI=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0U0CeuicBX5DvxmYhbFQGxFgLuw=
+			</data>
+			<key>hash2</key>
+			<data>
+			uimpgBDrsuLqvZI4ksFSY0NwsyR97Vk/hDIb1NzoI2A=
+			</data>
+		</dict>
+		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-macos.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HhbXgSUwojVQHWxZFZYUsTQAquo=
+			</data>
+			<key>hash2</key>
+			<data>
+			RA555/XYeG7XSwz3+7Bh1Sz/Z9Cems25KxSU5jthEvI=
+			</data>
+		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vMVGQ02Po+Eh5yFoANdVn8rYvMQ=
+			+HcyT7SI+/KwGV6+bZ45sCb8Q+E=
 			</data>
 			<key>hash2</key>
 			<data>
-			nhr+n4q08VgrM5xLEA5AYBJ8ByF01QoD2pyrLa4ZSzM=
+			vliVkAkV0TfMXKO8OSeFjTivRXN9APex3wxOsuvJgCs=
 			</data>
 		</dict>
 		<key>macos-arm64_x86_64/AppsFlyerLib.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
@@ -1040,11 +1576,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Efq7gjG7LDh1IHMCnfhJjHhso20=
+			cHh5Y7mqjlV+gj+Hs9mMJbvI3L0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ir+pKqnP1MQ7X81BT/tERNul43m7LFaagfnVuD5nXTk=
+			kRRNgml1tiKMTcEMBFFAlpyYVhZiChvTbAVhq3YxIOw=
+			</data>
+		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
@@ -1067,17 +1614,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -1113,15 +1649,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FyHavLzfPzrJLtHZfClI6Yfi9pU=
+			</data>
+			<key>hash2</key>
+			<data>
+			jvaOU8Bpn5KvyFIaY8I/ACxn+1Fmpt4W0XVufQuwHzI=
+			</data>
+		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
@@ -1150,22 +1697,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			s3mNpfexQSIzoyj4DGLCMVO+A2M=
+			d/28mfFMcEcm99F7CZ+/cXRlXr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			kpd9lrzim6tbm8FqMLel0JOtwkj1u7bi/H+uqfbSny8=
+			bvRBx8qaSK3Tqtd7cpNYIbPRkzERL0XJl/N00/O3LEk=
+			</data>
+		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rauPHghxkpHCbMiJrrfA2yfmQJA=
+			</data>
+			<key>hash2</key>
+			<data>
+			zGi52okovoOTSFNsDB+9eQLdbwfUk39SNIHKsAKZRMU=
+			</data>
+		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			L4khRMwr0ufxiRF969FEacJpKVM=
+			</data>
+			<key>hash2</key>
+			<data>
+			gSPNqTMy4bVNGGQfu9dAtttSYW74h44RWMX4ILM9fko=
+			</data>
+		</dict>
+		<key>tvos-arm64/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rauPHghxkpHCbMiJrrfA2yfmQJA=
+			</data>
+			<key>hash2</key>
+			<data>
+			zGi52okovoOTSFNsDB+9eQLdbwfUk39SNIHKsAKZRMU=
 			</data>
 		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>tvos-arm64/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
@@ -1183,11 +1774,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TNY3rNdThjdoY0tYmmefjsBrOTk=
+			N7zyMQ4kVyrtFeygoEagLTeH+Ws=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Pqf3oL+07Q4Tg1WJtU5Z+n/4T9/4ojoGRK2YgOBEjo=
+			+TGGPjPnvhpplXkWkfBDYPk8Eghyvmn6clsCn98TNu4=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFAdRevenueData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sZe23Bbg0H2WgHLIqHQe0g++6Mo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yrAHizSHbgcNNFLOfLoHWfaZGyJOlAoDsri7G5c7ZiA=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AFSDKPurchaseDetails.h</key>
@@ -1210,17 +1812,6 @@
 			<key>hash2</key>
 			<data>
 			8B0SIW1N+hhdxvGum5eyxLMW5e/T797WSXOd2i+irv4=
-			</data>
-		</dict>
-		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerConsent.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bx0db1e1DLeeuq3va7QJCITQH2k=
-			</data>
-			<key>hash2</key>
-			<data>
-			VIYU7EyY+VmJF4vKtTem3hkI/fjGfSK7lYs2zq/9D4E=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerCrossPromotionHelper.h</key>
@@ -1256,15 +1847,26 @@
 			QsQGXKix5206DUBBUdDxfg5ykma/3V9MoHOxbz8NaOs=
 			</data>
 		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+3efZHwff+klT9+WxpNLSXo1yto=
+			</data>
+			<key>hash2</key>
+			<data>
+			qnssTwJrZtIDeyMBE1BfsXnl8XS/fgn8s6Let6FfKMw=
+			</data>
+		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UiUMGVez8MooDYM0HKct6KJuBzs=
+			aRvrYFwbGfgTOeKZeXKnQUiQHWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wv7pl9ohbAH2UiLYij72jBRY1it4ZwoBuq5dxZeHDQ=
+			tqMMk6M+RUKWdkuAJGLvIuRIJrWZMrtMmTh8KvqIQzo=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Headers/AppsFlyerLinkGenerator.h</key>
@@ -1293,22 +1895,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2oZEZ2EC976OG2X2xbMrdeePNB0=
+			ngtwxefRfuB5qCfcX2RqdkgBKxQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			hPOTpq8D0XRaV97x0ej/1DuFOVPHRX5/FRsHQjWlfZA=
+			UjBpwbRwAcguvYsmtyp4KciAvW6ElHKNSmuFi01LWfU=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9QhxDHSEnzPEP7DcQOrLopQX4Ng=
+			</data>
+			<key>hash2</key>
+			<data>
+			TAfbwR64HDc8w65FWXqRuomJ3UsgNZ6pyxzInFajSXA=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			auLSYrRIxjkBMGw+CAgTbvLd9yU=
+			</data>
+			<key>hash2</key>
+			<data>
+			300p7IN3z8uZ8VQ0iXlVecgZPrYXq1rS3OfRnfRA+2o=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9QhxDHSEnzPEP7DcQOrLopQX4Ng=
+			</data>
+			<key>hash2</key>
+			<data>
+			TAfbwR64HDc8w65FWXqRuomJ3UsgNZ6pyxzInFajSXA=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te2dHy7IvbaIGLLtXDFsBmqryQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fSeCk4+QA/us/NJK4ysFKxk+Hq70/Vr4KlAgEYTlAUA=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z0DNni4mqnIsYZ9AYVRPT81spZs=
+			</data>
+			<key>hash2</key>
+			<data>
+			2drMHrZqg/7ji4Z6Ch/hlxHxNn2PsJiooG4LXtiQBMg=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vv8hIe9a03+ijni0HM6lhydHn1g=
+			</data>
+			<key>hash2</key>
+			<data>
+			h2XrHvgeWoKQ0ng1EcPcsoXUF9FckmB5ggV3VAV9HAc=
+			</data>
+		</dict>
+		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/AppsFlyerLib.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z0DNni4mqnIsYZ9AYVRPT81spZs=
+			</data>
+			<key>hash2</key>
+			<data>
+			2drMHrZqg/7ji4Z6Ch/hlxHxNn2PsJiooG4LXtiQBMg=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r+QHVTsITCgZyCe0Vpvj+KSPIWc=
+			0DEMhZAlM33ORMbvU0M8spnqShI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZcaMjc66PAFkteksoe5Rzelk7opMMS8QdKiza/LgQwA=
+			uZJ3EIEDqGw+lkbzR0fNsIrgzthOwNUTrpyMAJQZFc8=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/PrivacyInfo.xcprivacy</key>
@@ -1326,11 +2016,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d3L3VVXjTqAeBj4u3HqH1kig61M=
+			p02wR7ceoBxMTNSavo/asC1evU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			NrdDEnaCJg0qT2K6Wtuwkez3XIwS+tEumV/oRBn57wQ=
+			G3Egu+MBAQiHJgfL6ieh8TIM4JvvILlVETBz5Bnuusc=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeRequirements</key>
@@ -1348,22 +2038,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mOkDaIJdtvTrS9ojPb1WXQucT9g=
+			SSSzjC7X9eBlmzD7hH416c6lQRo=
 			</data>
 			<key>hash2</key>
 			<data>
-			NYYDgZ+/A6/mYnGXVfqdSUem0fbRGKkGj2k2mr+03Z4=
+			7sRasyqP0a8lCDoxZmIEkqFDsxv4KQ/AKsnP/fHN2BM=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BIi0P0mdVgcU+eWkSEWpDeSjBGs=
+			6cajJzovVO8P6roJ9I9h5vLqsSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			5RQdi8vXlvvjX6ItyQnZGebuqOiGpgFkBttkwWzzSMQ=
+			NDSnY93obgzVCix5xGWrWipv/ZUa81Odcy3fy4PxMig=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/AppsFlyerLib.framework/_CodeSignature/CodeSignature</key>

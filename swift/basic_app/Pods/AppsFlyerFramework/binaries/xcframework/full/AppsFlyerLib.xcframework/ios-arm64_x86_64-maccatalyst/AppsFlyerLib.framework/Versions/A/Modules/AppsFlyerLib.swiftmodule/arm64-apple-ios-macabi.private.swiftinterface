@@ -1,0 +1,32 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AppsFlyerLib
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import AppsFlyerLib
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class AppsFlyerConsent : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc final public var isUserSubjectToGDPR: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForDataUsage: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForAdsPersonalization: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForAdStorage: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc @available(*, deprecated, message: "Use init(isUserSubjectToGDPR:, hasConsentForDataUsage:, hasConsentForAdsPersonalization:, hasConsentForAdStorage:) instead")
+  convenience public init(nonGDPRUser: Swift.Void)
+  @objc convenience public init(isUserSubjectToGDPR: Foundation.NSNumber? = nil, hasConsentForDataUsage: Foundation.NSNumber? = nil, hasConsentForAdsPersonalization: Foundation.NSNumber? = nil, hasConsentForAdStorage: Foundation.NSNumber? = nil)
+  @objc @available(*, deprecated, message: "Use init(isUserSubjectToGDPR:, hasConsentForDataUsage:, hasConsentForAdsPersonalization:, hasConsentForAdStorage:) instead")
+  convenience public init(forGDPRUserWithHasConsentForDataUsage: Swift.Bool, hasConsentForAdsPersonalization: Swift.Bool)
+  @objc final public func encode(with coder: Foundation.NSCoder)
+  @objc convenience public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}

@@ -17,15 +17,6 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "AppsFlyerLib.xcframework/macos-arm64_x86_64")
-    echo ""
-    ;;
-  "AppsFlyerLib.xcframework/tvos-arm64")
-    echo ""
-    ;;
-  "AppsFlyerLib.xcframework/tvos-arm64_x86_64-simulator")
-    echo "simulator"
-    ;;
   "AppsFlyerLib.xcframework/ios-arm64")
     echo ""
     ;;
@@ -35,21 +26,21 @@ variant_for_slice()
   "AppsFlyerLib.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "AppsFlyerLib.xcframework/macos-arm64_x86_64")
+    echo ""
+    ;;
+  "AppsFlyerLib.xcframework/tvos-arm64")
+    echo ""
+    ;;
+  "AppsFlyerLib.xcframework/tvos-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
   esac
 }
 
 archs_for_slice()
 {
   case "$1" in
-  "AppsFlyerLib.xcframework/macos-arm64_x86_64")
-    echo "arm64 x86_64"
-    ;;
-  "AppsFlyerLib.xcframework/tvos-arm64")
-    echo "arm64"
-    ;;
-  "AppsFlyerLib.xcframework/tvos-arm64_x86_64-simulator")
-    echo "arm64 x86_64"
-    ;;
   "AppsFlyerLib.xcframework/ios-arm64")
     echo "arm64"
     ;;
@@ -57,6 +48,15 @@ archs_for_slice()
     echo "arm64 x86_64"
     ;;
   "AppsFlyerLib.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "AppsFlyerLib.xcframework/macos-arm64_x86_64")
+    echo "arm64 x86_64"
+    ;;
+  "AppsFlyerLib.xcframework/tvos-arm64")
+    echo "arm64"
+    ;;
+  "AppsFlyerLib.xcframework/tvos-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   esac
