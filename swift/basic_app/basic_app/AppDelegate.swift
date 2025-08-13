@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AppsFlyerLib
 import AppTrackingTransparency
 
 @UIApplicationMain

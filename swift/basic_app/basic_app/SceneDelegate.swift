@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import AppsFlyerLib
-
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
