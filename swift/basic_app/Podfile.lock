@@ -1,18 +1,18 @@
 PODS:
-  - AppsFlyerFramework (6.16.2):
-    - AppsFlyerFramework/Main (= 6.16.2)
-  - AppsFlyerFramework/Main (6.16.2)
+  - appsflyer-apple-sdk-qa (7.0.0.35704255):
+    - appsflyer-apple-sdk-qa/Main (= 7.0.0.35704255)
+  - appsflyer-apple-sdk-qa/Main (7.0.0.35704255)
 
 DEPENDENCIES:
-  - AppsFlyerFramework
+  - appsflyer-apple-sdk-qa (= 7.0.0.35704255)
 
 SPEC REPOS:
   trunk:
-    - AppsFlyerFramework
+    - appsflyer-apple-sdk-qa
 
 SPEC CHECKSUMS:
-  AppsFlyerFramework: fe5303bffcdfd941d5f570c2d21eaaea982e7bdc
+  appsflyer-apple-sdk-qa: 8305ee27b951975812a06445f781448646358698
 
-PODFILE CHECKSUM: e4c2ca11293539348e2518eeeb12725441e073d7
+PODFILE CHECKSUM: 3eefdf4366c8e6195a700781ebea23be01e62b68
 
 COCOAPODS: 1.16.2

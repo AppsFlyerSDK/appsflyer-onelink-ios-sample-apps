@@ -1,0 +1,18 @@
+PODS:
+  - appsflyer-apple-sdk-qa (7.0.0.35704255):
+    - appsflyer-apple-sdk-qa/Main (= 7.0.0.35704255)
+  - appsflyer-apple-sdk-qa/Main (7.0.0.35704255)
+
+DEPENDENCIES:
+  - appsflyer-apple-sdk-qa (= 7.0.0.35704255)
+
+SPEC REPOS:
+  trunk:
+    - appsflyer-apple-sdk-qa
+
+SPEC CHECKSUMS:
+  appsflyer-apple-sdk-qa: 8305ee27b951975812a06445f781448646358698
+
+PODFILE CHECKSUM: 86cb6b3bb41f4cbbff46160ed85bcc1dc186b996
+
+COCOAPODS: 1.16.2

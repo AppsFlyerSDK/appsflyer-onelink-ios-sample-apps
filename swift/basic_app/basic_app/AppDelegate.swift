@@ -17,50 +17,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var deferred_deep_link_processed_flag:Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        //  Set isDebug to true to see AppsFlyer debug logs
+
+        // MARK: - [Matrix flag] Debug logs
         AppsFlyerLib.shared().isDebug = true
-        
+
         // Replace 'appsFlyerDevKey', `appleAppID` with your DevKey, Apple App ID
-        AppsFlyerLib.shared().appsFlyerDevKey = "sQ84wpdxRTR4RMCaE9YqS4"
-        AppsFlyerLib.shared().appleAppID = "1512793879"
-        
-        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
-               
+        AppsFlyerLib.shared().initialize(devKey: "sQ84wpdxRTR4RMCaE9YqS4", appId: "1512793879")
+
+        // MARK: - [Matrix flag] Customer User ID (CUID)
+        AppsFlyerLib.shared().customerUserID = "my user id"
+
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().deepLinkDelegate = self
-        
-        //set the OneLink template id for share invite links
         AppsFlyerLib.shared().appInviteOneLinkID = "H5hv"
-        
-        // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
-        // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
-        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
-        // For Swift version < 4.2 replace name argument with the commented out code
-        name: UIApplication.didBecomeActiveNotification, //.UIApplicationDidBecomeActive for Swift < 4.2
-        object: nil)
-        
-        return true
-    }
-    
-    @objc func didBecomeActiveNotification() {
-        AppsFlyerLib.shared().start()
-        if #available(iOS 14, *) {
-          ATTrackingManager.requestTrackingAuthorization { (status) in
-            switch status {
-            case .denied:
-                print("AuthorizationStatus is denied")
-            case .notDetermined:
-                print("AuthorizationStatus is notDetermined")
-            case .restricted:
-                print("AuthorizationStatus is restricted")
-            case .authorized:
-                print("AuthorizationStatus is authorized")
-            @unknown default:
-                fatalError("Invalid authorization status")
+
+        // Required before registerSessionReadyListener. In iOS 13+ scene apps,
+        // UL/URI cold-launch payloads are NOT in launchOptions — they arrive via
+        // connectionOptions in SceneDelegate, so the two paths don't double-fire.
+        AppsFlyerLib.shared().handleLaunchOptions(launchOptions)
+
+        // MARK: - [Matrix flag] Session-ready listener (v7 default spine)
+        AppsFlyerLib.shared().registerSessionReadyListener {
+            // MARK: - [Matrix flag] ATT
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization { _ in
+                    AppsFlyerLib.shared().start { (dictionary, error) in
+                        if let error = error {
+                            NSLog("[AFSDK] start failed: \(error)")
+                            return
+                        }
+                        NSLog("[AFSDK] start succeeded: \(dictionary ?? [:])")
+                    }
+                }
+            } else {
+                AppsFlyerLib.shared().start { (dictionary, error) in
+                    if let error = error {
+                        NSLog("[AFSDK] start failed: \(error)")
+                        return
+                    }
+                    NSLog("[AFSDK] start succeeded: \(dictionary ?? [:])")
+                }
             }
-          }
         }
+
+        return true
     }
     
     // Open Universal Links
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: DeepLinkDelegate {
+extension AppDelegate: AppsFlyerDeepLinkDelegate {
      
     func didResolveDeepLink(_ result: DeepLinkResult) {
         var fruitNameStr: String?
@@ -110,7 +110,7 @@ extension AppDelegate: DeepLinkDelegate {
             NSLog("[AFSDK] Deep link not found")
             return
         case .failure:
-            print("Error %@", result.error!)
+            NSLog("[AFSDK] Deep link error: \(String(describing: result.error))")
             return
         case .found:
             NSLog("[AFSDK] Deep link found")
@@ -121,12 +121,9 @@ extension AppDelegate: DeepLinkDelegate {
             return
         }
         
-        if deepLinkObj.clickEvent.keys.contains("deep_link_sub2") {
-            let ReferrerId:String = deepLinkObj.clickEvent["deep_link_sub2"] as! String
-            NSLog("[AFSDK] AppsFlyer: Referrer ID: \(ReferrerId)")
-        } else {
-            NSLog("[AFSDK] Could not extract referrerId")
-        }        
+        if let referrerId = deepLinkObj.clickEvent["deep_link_sub2"] as? String {
+            NSLog("[AFSDK] AppsFlyer: Referrer ID: \(referrerId)")
+        }
         
         let deepLinkStr:String = deepLinkObj.toString()
         NSLog("[AFSDK] DeepLink data is: \(deepLinkStr)")
@@ -197,14 +194,9 @@ extension AppDelegate: AppsFlyerLibDelegate {
                     
                     deferred_deep_link_processed_flag = true
                     
-                    var fruitNameStr:String
-                    
-                    if conversionData.keys.contains("deep_link_value") {
-                        fruitNameStr = conversionData["deep_link_value"] as! String
-                    } else if conversionData.keys.contains("fruit_name") {
-                        fruitNameStr = conversionData["fruit_name"] as! String
-                    } else {
-                        NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
+                    guard let fruitNameStr = (conversionData["deep_link_value"] as? String)
+                                          ?? (conversionData["fruit_name"] as? String) else {
+                        NSLog("[AFSDK] Could not extract deep_link_value or fruit_name from conversion data")
                         return
                     }
                     

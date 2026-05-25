@@ -3,5 +3,5 @@
 target 'obj-c' do
   # Comment the next line if you don't want to use dynamic frameworks
    use_frameworks!
-   pod 'AppsFlyerFramework'
+   pod 'appsflyer-apple-sdk-qa', '7.0.0.35704255'
 end 
