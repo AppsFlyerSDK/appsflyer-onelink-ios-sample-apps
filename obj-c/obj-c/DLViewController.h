@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *fruitAmountStr;
 
 - (void)copyShareInviteLinkWithFruitName:(NSString *)fruitName;
+- (NSMutableAttributedString *)attributionDataToStringWithData:(NSDictionary<NSString *, id> *)data;
+- (NSString *)getFruitAmountWithData:(NSDictionary<NSString *, id> *)data;
 @end
 
 NS_ASSUME_NONNULL_END

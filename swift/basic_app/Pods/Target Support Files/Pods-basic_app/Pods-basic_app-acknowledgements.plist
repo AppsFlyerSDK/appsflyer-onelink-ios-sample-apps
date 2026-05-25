@@ -18,7 +18,7 @@
 			<key>License</key>
 			<string>Proprietary</string>
 			<key>Title</key>
-			<string>AppsFlyerFramework</string>
+			<string>appsflyer-apple-sdk-qa</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

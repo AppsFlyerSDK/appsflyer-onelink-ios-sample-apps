@@ -14,10 +14,6 @@ class DLViewController: UIViewController {
     var deepLinkData: [String: Any]? = nil
     var fruitAmountStr: String = "000"
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     func attributionDataToString(data : [String: Any]) -> NSMutableAttributedString {
         let newString = NSMutableAttributedString()
         let boldAttribute = [
@@ -28,7 +24,6 @@ class DLViewController: UIViewController {
         ]
         let sortedKeys = Array(data.keys).sorted(by: <)
         for key in sortedKeys {
-            print("ViewController", key, ":",data[key] ?? "null")
             let keyStr = key
             let boldKeyStr = NSAttributedString(string: keyStr, attributes: boldAttribute)
             newString.append(boldKeyStr)
@@ -69,7 +64,7 @@ class DLViewController: UIViewController {
     }
     
     func copyShareInviteLink(fruitName: String){
-        AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
+        AppsFlyerShareInviteHelper.generateInviteLink(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
             generator.addParameterValue(fruitName, forKey: "deep_link_value")
             generator.addParameterValue(self.fruitAmountStr, forKey: "deep_link_sub1")
@@ -77,7 +72,11 @@ class DLViewController: UIViewController {
             generator.setCampaign("share_invite")
             generator.setChannel("mobile_share")
           return generator },
-        completionHandler: {(_ url: URL?) -> Void in
+        completionHandler: {(_ url: URL?, _ error: Error?) -> Void in
+            if let error = error {
+                NSLog("[AFSDK] generateInviteLink failed: \(error)")
+                return
+            }
             if url != nil{
                 //Copy url to clipboard
                 UIPasteboard.general.string = (url!.absoluteString)
@@ -86,7 +85,7 @@ class DLViewController: UIViewController {
                     self.showToast(message: "Link copied to clipboard", font: .systemFont(ofSize: 12.0))
                 }
                 AppsFlyerShareInviteHelper.logInvite("mobile_share",
-                                                     parameters: ["referrerId": "THIS_USER_ID",
+                                                     eventParameters: ["referrerId": "THIS_USER_ID",
                                                                   "campaign": "share_invite"])
             }
             else{
@@ -101,11 +100,9 @@ class DLViewController: UIViewController {
         var fruitAmount: Any?
         if keys.contains("deep_link_value") && keys.contains("deep_link_sub1"){
             fruitAmount = data["deep_link_sub1"]
-            NSLog("deep_link_sub1 found and is \(fruitAmount!)")
         }
         else if keys.contains("fruit_name") && keys.contains("fruit_amount"){
             fruitAmount = data["fruit_amount"]
-            NSLog("fruit_amount found and is \(fruitAmount!)")
         }
         else {
             NSLog("deep_link_sub1/fruit_amount not found")

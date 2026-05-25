@@ -1,0 +1,6 @@
+platform :ios, '17.0'
+
+target 'basic_app_swiftui' do
+  use_frameworks!
+  pod 'appsflyer-apple-sdk-qa', '7.0.0.35704255'
+end
