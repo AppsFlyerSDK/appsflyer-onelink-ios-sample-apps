@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.14.3 (177)
+//  AppsFlyer iOS SDK 6.12.2 (999)
 //  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 #import <AppsFlyerLib/AppsFlyerShareInviteHelper.h>
 #import <AppsFlyerLib/AppsFlyerDeepLinkResult.h>
 #import <AppsFlyerLib/AppsFlyerDeepLink.h>
-#import <AppsFlyerLib/AppsFlyerConsent.h>
+#import <AppsFlyerLib/AFSDKPurchaseType.h>
 #import <AppsFlyerLib/AFSDKPurchaseDetails.h>
 #import <AppsFlyerLib/AFSDKValidateAndLogResult.h>
+#import <AppsFlyerLib/AFAdRevenueData.h>
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -80,6 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParamValidated              @"af_validated"
 #define AFEventParamRevenue                @"af_revenue"
 #define AFEventProjectedParamRevenue       @"af_projected_revenue"
+#define AFEventParamNetRevenue             @"af_net_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
 #define AFEventParamTutorialId             @"af_tutorial_id"
 #define AFEventParamVirtualCurrencyName    @"af_virtual_currency_name"
@@ -100,6 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParam9                      @"af_param_9"
 #define AFEventParam10                     @"af_param_10"
 #define AFEventParamTouch                  @"af_touch_obj"
+#define AFEventParamNetworkToken           @"net_token"
 
 #define AFEventParamDepartingDepartureDate  @"af_departing_departure_date"
 #define AFEventParamReturningDepartureDate  @"af_returning_departure_date"
@@ -129,20 +132,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
 
-#define AFEventParamAdRevenueAdType              @"af_adrev_ad_type"
-#define AFEventParamAdRevenueNetworkName         @"af_adrev_network_name"
-#define AFEventParamAdRevenuePlacementId         @"af_adrev_placement_id"
-#define AFEventParamAdRevenueAdSize              @"af_adrev_ad_size"
-#define AFEventParamAdRevenueMediatedNetworkName @"af_adrev_mediated_network_name"
 
-
-/// Mail hashing type
-typedef enum  {
-    /// None
-    EmailCryptTypeNone = 0,
-    /// SHA256
-    EmailCryptTypeSHA256 = 3
-} EmailCryptType;
+@class AppsFlyerConsent;
 
 typedef NS_CLOSED_ENUM(NSInteger, AFSDKPlugin) {
     AFSDKPluginIOSNative,
@@ -164,7 +155,7 @@ typedef NS_CLOSED_ENUM(NSInteger, AFSDKPlugin) {
 } NS_SWIFT_NAME(Plugin);
 
 
-NS_SWIFT_NAME(DeepLinkDelegate)
+NS_SWIFT_NAME(AppsFlyerDeepLinkDelegate)
 @protocol AppsFlyerDeepLinkDelegate <NSObject>
 
 @optional
@@ -191,16 +182,6 @@ NS_SWIFT_NAME(DeepLinkDelegate)
 - (void)onConversionDataFail:(NSError *)error;
 
 @optional
-
-/**
- `attributionData` contains information about OneLink, deeplink.
- */
-- (void)onAppOpenAttribution:(NSDictionary *)attributionData;
-
-/**
- Any errors that occurred during the attribution request.
- */
-- (void)onAppOpenAttributionFailure:(NSError *)error;
 
 /**
  @abstract Sets the HTTP header fields of the ESP resolving to the given
@@ -233,6 +214,14 @@ NS_SWIFT_NAME(DeepLinkDelegate)
  */
 + (AppsFlyerLib *)shared;
 
+/// Use this method to initialize the SDK with your credentials.
+/// This must be called before calling `start`.
+///
+/// @param devKey Your AppsFlyer developer key.
+/// @param appId Your app's Apple App ID (e.g., "123456789").
+- (void)initWithDevKey:(NSString *)devKey appleAppId:(NSString *)appId
+NS_SWIFT_NAME(initialize(devKey:appId:));
+
 
 - (void)setUpInteroperabilityObject:(id)object;
 
@@ -247,17 +236,17 @@ NS_SWIFT_NAME(DeepLinkDelegate)
  
  @see [Setting additional custom data](https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS#setting-additional-custom-data) for more information.
  */
-@property(nonatomic, strong, nullable, setter = setAdditionalData:) NSDictionary * customData;
+@property(nonatomic, strong, nullable) NSDictionary * customData;
 
 /**
- Use this property to set your AppsFlyer's dev key
+ Use this property to get your AppsFlyer's dev key
  */
-@property(nonatomic, strong) NSString * appsFlyerDevKey;
+@property(nonatomic, readonly) NSString * appsFlyerDevKey;
 
 /**
- Use this property to set your app's Apple ID(taken from the app's page on iTunes Connect)
+ Use this property to get your app's Apple ID(taken from the app's page on iTunes Connect)
  */
-@property(nonatomic, strong) NSString * appleAppID;
+@property(nonatomic, readonly) NSString * appleAppID;
 
 #ifndef AFSDK_NO_IDFA
 /**
@@ -272,7 +261,8 @@ NS_SWIFT_NAME(DeepLinkDelegate)
  Waits for request user authorization to access app-related data
  */
 - (void)waitForATTUserAuthorizationWithTimeoutInterval:(NSTimeInterval)timeoutInterval
-NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
+    DEPRECATED_MSG_ATTRIBUTE("Use registerSessionReadyListener: instead. Register the listener in didFinishLaunching and call start() inside it. If ATT consent is needed before start, collect it inside the listener block. The SDK no longer manages ATT timing internally.")
+    NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
 
 #endif
 
@@ -300,7 +290,7 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  Prints SDK messages to the console log. This property should only be used in `DEBUG` mode.
  The default value is `NO`
  */
-@property(nonatomic) BOOL isDebug;
+@property(nonatomic, setter=isDebug:) BOOL isDebug;
 
 /**
  Set this flag to `YES`, to collect the current device name(e.g. "My iPhone"). Default value is `NO`
@@ -315,7 +305,7 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
 /**
  Opt-out logging for specific user
  */
-@property(atomic) BOOL anonymizeUser;
+@property(atomic, setter=anonymizeUser:) BOOL anonymizeUser;
 
 /**
  Opt-out for Apple Search Ads attributions
@@ -367,13 +357,6 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  */
 @property(nonatomic, nullable, copy) NSArray<NSString *> *oneLinkCustomDomains;
 
-/*
- * Set phone number for each `start` event. `phoneNumber` will be sent as SHA256 string
- */
-@property(nonatomic, nullable, copy) NSString *phoneNumber;
-
-- (NSString *)phoneNumber UNAVAILABLE_ATTRIBUTE;
-
 /**
  To disable app's vendor identifier(IDFV), set disableIDFVCollection to true
  */
@@ -424,21 +407,109 @@ NS_SWIFT_NAME(setPluginInfo(plugin:version:additionalParams:));
  */
 - (void)enableFacebookDeferredApplinksWithClass:(Class _Nullable)facebookAppLinkUtilityClass;
 
-/**
- Use this to send the user's emails
- 
- @param userEmails The list of strings that hold mails
- @param type Hash algoritm
- */
-- (void)setUserEmails:(NSArray<NSString *> * _Nullable)userEmails withCryptType:(EmailCryptType)type;
+#pragma mark - Hashed PII collection
 
 /**
- Start SDK session
- Add the following method at the `applicationDidBecomeActive` in AppDelegate class
+ Hashed PII setters. Values are normalized and SHA-256 hashed before being
+ appended to attribution and event payloads.
+
+ The integrating app must declare the relevant @c NSPrivacyCollectedDataTypes
+ entries in its own @c PrivacyInfo.xcprivacy manifest — the SDK does not.
+ */
+
+/// Sets the user's email. Sent as @c email_hashed.
+- (void)setUserEmail:(NSString *)email NS_SWIFT_NAME(setUserEmail(_:));
+
+/**
+ Sets the user's phone number. Sent as two variants:
+   - @c phone_number_hashed: digits-only, leading zeros stripped.
+   - @c phone_number_e164_hashed: '+' prefix followed by digits.
+ */
+- (void)setUserPhoneWithCountryCode:(NSString *)countryCode
+                        phoneNumber:(NSString *)phoneNumber
+    NS_SWIFT_NAME(setUserPhone(countryCode:phoneNumber:));
+
+/// Sets the user's first name. Sent as @c first_name_hashed.
+- (void)setUserFirstName:(NSString *)firstName NS_SWIFT_NAME(setUserFirstName(_:));
+
+/// Sets the user's last name. Sent as @c last_name_hashed.
+- (void)setUserLastName:(NSString *)lastName NS_SWIFT_NAME(setUserLastName(_:));
+
+/**
+ Sets the user's Facebook App-Scoped ID. Sent as @c fb_login_id (integer, not hashed).
+
+ @c 0 is the unset sentinel and suppresses the field — Facebook App-Scoped IDs
+ are never 0. Pass @c 0 to clear without calling @c clearUserPii.
+ */
+- (void)setUserFbLoginId:(int64_t)fbLoginId NS_SWIFT_NAME(setUserFbLoginId(_:));
+
+/// Clears all hashed-PII fields set via the @c setUser* APIs above.
+- (void)clearUserPii NS_SWIFT_NAME(clearUserPii());
+
+/**
+ Starts an SDK session.
+ Call this inside a @c registerSessionReadyListener: block, not directly in
+ @c applicationDidBecomeActive: — use the session readiness listener instead.
  */
 - (void)start;
 
 - (void)startWithCompletionHandler:(void (^ _Nullable)(NSDictionary<NSString *, id> * _Nullable dictionary, NSError * _Nullable error))completionHandler;
+
+#pragma mark - Session Readiness
+
+/// Block invoked on the main queue when all session-readiness conditions are satisfied.
+typedef void (^AppsFlyerSessionReadyListener)(void);
+
+/**
+ * Pre-registers a Universal Link deeplink from cold launch options.
+ *
+ * Call in @c application:didFinishLaunchingWithOptions: before @c registerSessionReadyListener:.
+ * If @c launchOptions contains a Universal Link, session readiness waits for it to resolve
+ * before firing. No-op if no Universal Link is present.
+ */
+- (void)handleLaunchOptions:(nullable NSDictionary *)launchOptions
+    NS_SWIFT_NAME(handleLaunchOptions(_:));
+
+/**
+ * Registers a block invoked once per foreground cycle when the SDK is ready for @c start.
+ *
+ * Call @c start inside the block. The SDK does not call @c start automatically.
+ *
+ * @code
+ * [[AppsFlyerLib shared] registerSessionReadyListener:^{
+ *     [[AppsFlyerLib shared] start];
+ * }];
+ * @endcode
+ *
+ * Call in @c application:didFinishLaunchingWithOptions:, after @c handleLaunchOptions:
+ * if you support Universal Links.
+ *
+ * Readiness conditions:
+ * - Config: @c devKey and @c appleAppID must be set before the listener fires.
+ * - Deeplink: evaluated for both cold-launch (@c handleLaunchOptions:) and warm-launch
+ *   (@c continueUserActivity:) Universal Links. Has a bounded timeout so the listener
+ *   always fires.
+ *
+ * Always dispatched on the main queue. Fires once per foreground cycle; resets on
+ * background. A second call replaces the current listener.
+ *
+ * @note ATT is not a readiness condition. If ATT consent is needed before @c start,
+ * collect it inside the block.
+ */
+- (void)registerSessionReadyListener:(AppsFlyerSessionReadyListener)listener
+    NS_SWIFT_NAME(registerSessionReadyListener(_:));
+
+/**
+ * Removes the registered session-ready listener. No-op if none is registered.
+ */
+- (void)unregisterSessionReadyListener
+    NS_SWIFT_NAME(unregisterSessionReadyListener());
+
+/**
+ * Returns YES if the session-ready listener has been fired in the current foreground cycle.
+ */
+- (BOOL)isSessionReady
+    NS_SWIFT_NAME(isSessionReady());
 
 /**
  Use this method to log an events with multiple values. See AppsFlyer's documentation for details.
@@ -473,39 +544,39 @@ NS_SWIFT_NAME(setPluginInfo(plugin:version:additionalParams:));
             completionHandler:(void (^ _Nullable)(NSDictionary<NSString *, id> * _Nullable dictionary, NSError * _Nullable error))completionHandler
 NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
 
-/**
- To log and validate in app purchases you can call this method from the completeTransaction: method on
- your `SKPaymentTransactionObserver`.
- 
- @param productIdentifier The product identifier
- @param price The product price
- @param currency The product currency
- @param transactionId The purchase transaction Id
- @param params The additional param, which you want to receive it in the raw reports
- @param successBlock The success callback
- @param failedBlock The failure callback
- */
-- (void)validateAndLogInAppPurchase:(NSString * _Nullable)productIdentifier
-                              price:(NSString * _Nullable)price
-                           currency:(NSString * _Nullable)currency
-                      transactionId:(NSString * _Nullable)transactionId
-               additionalParameters:(NSDictionary * _Nullable)params
-                            success:(void (^ _Nullable)(NSDictionary * response))successBlock
-                            failure:(void (^ _Nullable)(NSError * _Nullable error, id _Nullable reponse))failedBlock NS_AVAILABLE(10_7, 7_0);
-
 typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nullable result);
 
 /**
- To log and validate in app purchases you can call this method from the completeTransaction: method on
- your `SKPaymentTransactionObserver`.
+ Validates and logs an in-app purchase using the updated VAL V2 flow.
+
+ This method should be called after a successful transaction, typically from:
+ - `paymentQueue:updatedTransactions:` in your `SKPaymentTransactionObserver` (StoreKit 1)
+ - `transaction.listener` or `.finishTransaction()` or  `VerificationResult<SignedType>` in StoreKit 2 (iOS 15+)
+
+ @param purchaseDetails a `AFSDKPurchaseDetails` object. Must include:
+    - `productId` (non-empty)
+    - `transactionId` (non-empty)
+    - `purchaseType` ( `.subscription`, `.oneTimePurchase`)
  
- @param details The product details
- @param extraEventValues The additional param, which you want to receive it in the raw reports
- @param completionHandler The callback
+ @param purchaseAdditionalDetails Optional metadata associated with the purchase
+ (previously known as `extraEventValues`). This can include custom app-level context.
+
+ @param completion Completion block with either a response dictionary or an NSError.
+ On success: `response` contains a parsed result.
+ On failure: `error` describes the reason (validation failure, networking issue...)
  */
-- (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)details
-                   extraEventValues:(NSDictionary * _Nullable)extraEventValues
-                  completionHandler:(AFSDKValidateAndLogCompletion)completionHandler NS_AVAILABLE(10_7, 7_0);
+- (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)purchaseDetails
+          purchaseAdditionalDetails:(NSDictionary * _Nullable)purchaseAdditionalDetails
+                         completion:(void (^)(NSDictionary * _Nullable response, NSError * _Nullable error))completion
+NS_SWIFT_NAME(validateAndLogInAppPurchase(purchaseDetails:purchaseAdditionalDetails:completion:));
+
+/**
+ An API to provide the data from the impression payload to AdRevenue.
+ 
+ @param adRevenueData object used to hold all mandatory parameters of AdRevenue event.
+ @param additionalParameters non-mandatory dictionary which can include pre-defined keys (kAppsFlyerAdRevenueCountry, etc)
+ */
+- (void)logAdRevenue:(AFAdRevenueData *)adRevenueData additionalParameters:(NSDictionary * _Nullable)additionalParameters;
 
 /**
  To log location for geo-fencing. Does the same as code below.
@@ -568,6 +639,22 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
           restorationHandler:(void (^ _Nullable)(NSArray * _Nullable))restorationHandler NS_AVAILABLE_IOS(9_0) API_UNAVAILABLE(macos);
 
 /**
+ Handle a link delivered as a bare URL from SwiftUI `.onOpenURL`.
+
+ SwiftUI apps receive both universal links and custom-scheme deep links as a `URL`,
+ with no `NSUserActivity`, so `-continueUserActivity:restorationHandler:` is never invoked.
+ You can safely route every `.onOpenURL` URL through this method: `https` URLs are
+ classified as Universal Links; custom-scheme URLs (e.g. `myapp://`) are classified
+ exactly as `-handleOpenUrl:options:` would classify them. No need to branch in your closure.
+
+ @note `af_web_referrer` is not populated for universal links on Apple platforms
+       (the OS no longer provides `NSUserActivity.referrerURL`); a bare URL has no referrer.
+ @param url The URL that was passed to your SwiftUI `.onOpenURL` handler.
+ */
+- (void)handleUniversalLink:(NSURL * _Nullable)url
+    NS_SWIFT_NAME(handleUniversalLink(_:)) NS_AVAILABLE_IOS(9_0) API_UNAVAILABLE(macos);
+
+/**
  Enable AppsFlyer to handle a push notification.
  
  @see [Learn more here](https://support.appsflyer.com/hc/en-us/articles/207364076-Measuring-Push-Notification-Re-Engagement-Campaigns)
@@ -588,10 +675,10 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
 
 /**
  Get SDK version.
- 
+
  @return The AppsFlyer SDK version info.
  */
-- (NSString *)getSDKVersion;
+- (NSString *)getSdkVersion;
 
 /**
  This is for internal use.
@@ -604,11 +691,11 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
 - (void)remoteDebuggingCallV2WithData:(NSString *)dataAsString;
 
 /**
- Used to force the trigger `onAppOpenAttribution` delegate.
+ Used to force deep link resolution via `DeepLinkDelegate.didResolveDeepLink:`.
  Notice, re-engagement, session and launch won't be counted.
  Only for OneLink/UniversalLink/Deeplink resolving.
  
- @param URL The param to resolve into -[AppsFlyerLibDelegate onAppOpenAttribution:]
+ @param URL The URL to resolve.
  */
 - (void)performOnAppAttributionWithURL:(NSURL * _Nullable)URL;
 
@@ -633,9 +720,18 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
 @property(nonatomic, strong, readonly) NSString *host;
 
 /**
- * This function set the host name and prefix host name for all the endpoints
- **/
-- (void)setHost:(NSString *)host withHostPrefix:(NSString *)hostPrefix;
+ Sets the host prefix and host name for all SDK endpoints.
+
+ @param hostPrefixName Prefix prepended to the endpoint hostname (first positional).
+ @param hostName Base hostname for all SDK endpoints (second positional).
+
+ @warning SDK7 migration: the selector changed from
+ `setHost:withHostPrefix:` (host, hostPrefix) to `setHost:hostName:`
+ (hostPrefixName, hostName). Note the argument order is swapped to match
+ the Android SDK: the first positional argument is now the host prefix.
+ Callers must update both the selector and argument order.
+ */
+- (void)setHost:(NSString *)hostPrefixName hostName:(NSString *)hostName;
 
 /**
  * This property accepts a string value representing the prefix host name for all endpoints.
@@ -651,10 +747,10 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
 
 /**
  API to shut down all SDK activities.
- 
+
  @warning This will disable all requests from AppsFlyer SDK.
  */
-@property(atomic) BOOL isStopped;
+@property(atomic, getter=isStopped, setter=stop:) BOOL isStopped;
 
 /**
  API to set manually Facebook deferred app link
@@ -665,15 +761,9 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
  Block an events from being shared with ad networks and other 3rd party integrations
  Must only include letters/digits or underscore, maximum length: 45
  */
-@property(nonatomic, nullable, copy) NSArray<NSString *> *sharingFilter DEPRECATED_MSG_ATTRIBUTE("starting SDK version 6.4.0, please use `setSharingFilterForPartners:`");
+@property(nonatomic, nullable, copy) NSArray<NSString *> *sharingFilter;
 
 @property(nonatomic) NSUInteger deepLinkTimeout;
-
-/**
- Block an events from being shared with any partner
- This method overwrite -[AppsFlyerLib setSharingFilter:]
- */
-- (void)setSharingFilterForAllPartners DEPRECATED_MSG_ATTRIBUTE("starting SDK version 6.4.0, please use `setSharingFilterForPartners:`");
 
 /**
  Block an events from being shared with ad networks and other 3rd party integrations
@@ -686,6 +776,14 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
  */
 - (void)setSharingFilterForPartners:(NSArray<NSString *> * _Nullable)sharingFilter;
 
+
+/**
+    Sets Custom Install Id - this overrides the default AppsFlyer Install ID.
+    Only effective if Info.plist has `AppsFlyerAllowCustomInstallId=YES`
+     * Must be called before calling set appsFlyerDevKey and appleAppID
+    @param customID the customId.
+    */
+- (void)setInstallId:(NSString *)customID;
 
 /**
     Sets or updates the user consent data related to GDPR and DMA regulations for advertising and data usage
@@ -702,10 +800,10 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
 
 /**
     Enable the SDK to collect and send TCF data
-     
-    @param shouldCollectConsentData indicates if the TCF data collection is enabled.
+
+    @param shouldCollect indicates if the TCF data collection is enabled.
  */
-- (void)enableTCFDataCollection:(BOOL)shouldCollectConsentData;
+- (void)enableTCFDataCollection:(BOOL)shouldCollect;
 
 /**
  Validate if URL contains certain string and append quiery
@@ -717,7 +815,7 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
  */
 - (void)appendParametersToDeepLinkingURLWithString:(NSString *)containsString
                                         parameters:(NSDictionary<NSString *, NSString*> *)parameters
-NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
+NS_SWIFT_NAME(appendParametersToDeepLinkingURL(contains:parameters:));
 
 /**
  Adds array of keys, which are used to compose key path
@@ -731,11 +829,11 @@ NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
  * Allows sending custom data for partner integration purposes.
  *
  * @param partnerId ID of the partner (usually has "_int" suffix)
- * @param partnerInfo customer data, depends on the integration nature with specific partner
+ * @param data customer data, depends on the integration nature with specific partner
  */
 
-- (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId partnerInfo:(NSDictionary<NSString *, id> * _Nullable)partnerInfo
-NS_SWIFT_NAME(setPartnerData(partnerId:partnerInfo:));
+- (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId data:(NSDictionary<NSString *, id> * _Nullable)data
+NS_SWIFT_NAME(setPartnerData(partnerId:data:));
 
 @end
 

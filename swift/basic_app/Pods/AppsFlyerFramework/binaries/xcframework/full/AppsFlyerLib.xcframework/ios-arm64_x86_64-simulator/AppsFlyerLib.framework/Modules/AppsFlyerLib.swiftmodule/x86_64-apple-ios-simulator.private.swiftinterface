@@ -1,0 +1,34 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AppsFlyerLib
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+@_exported import AppsFlyerLib
+import CommonCrypto
+import Foundation
+import StoreKit
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(AppsFlyerConsent) @objcMembers final public class AppsFlyerConsent : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc final public var isUserSubjectToGDPR: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForDataUsage: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForAdsPersonalization: Swift.Bool {
+    @objc get
+  }
+  @objc final public var hasConsentForAdStorage: Foundation.NSNumber? {
+    @objc get
+  }
+  @objc @available(*, deprecated, message: "Use init(isUserSubjectToGDPR:, hasConsentForDataUsage:, hasConsentForAdsPersonalization:, hasConsentForAdStorage:) instead")
+  convenience public init(nonGDPRUser: Swift.Void)
+  @objc convenience public init(isUserSubjectToGDPR: Foundation.NSNumber? = nil, hasConsentForDataUsage: Foundation.NSNumber? = nil, hasConsentForAdsPersonalization: Foundation.NSNumber? = nil, hasConsentForAdStorage: Foundation.NSNumber? = nil)
+  @objc @available(*, deprecated, message: "Use init(isUserSubjectToGDPR:, hasConsentForDataUsage:, hasConsentForAdsPersonalization:, hasConsentForAdStorage:) instead")
+  convenience public init(forGDPRUserWithHasConsentForDataUsage: Swift.Bool, hasConsentForAdsPersonalization: Swift.Bool)
+  @objc final public func encode(with coder: Foundation.NSCoder)
+  @objc convenience public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}

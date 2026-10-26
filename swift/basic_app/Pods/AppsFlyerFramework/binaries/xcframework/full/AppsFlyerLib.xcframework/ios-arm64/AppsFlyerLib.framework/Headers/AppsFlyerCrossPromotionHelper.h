@@ -21,27 +21,27 @@ NS_ASSUME_NONNULL_BEGIN
  To log an impression use the following API call.
  Make sure to use the promoted App ID as it appears within the AppsFlyer dashboard.
 
- @param appID Promoted App ID
+ @param appId Promoted App ID
  @param campaign A campaign name
- @param parameters Additional params like `@{@"af_sub1": @"val", @"custom_param": @"val2" }`
+ @param userParams Additional params like `@{@"af_sub1": @"val", @"custom_param": @"val2" }`
 */
-+ (void)logCrossPromoteImpression:(nonnull NSString *)appID
++ (void)logCrossPromoteImpression:(nonnull NSString *)appId
                          campaign:(nullable NSString *)campaign
-                       parameters:(nullable NSDictionary *)parameters;
+                       userParams:(nullable NSDictionary *)userParams;
 
 /**
  iOS allows you to utilize the StoreKit component to open
  the App Store while remaining in the context of your app.
  More details at https://support.appsflyer.com/hc/en-us/articles/115004481946-Cross-Promotion-Tracking#tracking-cross-promotion-impressions
- 
- @param appID Promoted App ID
+
+ @param promotedAppId Promoted App ID
  @param campaign A campaign name
- @param parameters Additional params like `@{@"af_sub1": @"val", @"custom_param": @"val2" }`
+ @param userParams Additional params like `@{@"af_sub1": @"val", @"custom_param": @"val2" }`
  @param openStoreBlock Contains promoted `clickURL`
  */
-+ (void)logAndOpenStore:(nonnull NSString *)appID
++ (void)logAndOpenStore:(nonnull NSString *)promotedAppId
                campaign:(nullable NSString *)campaign
-             parameters:(nullable NSDictionary *)parameters
+             userParams:(nullable NSDictionary *)userParams
               openStore:(void (^)(NSURLSession *urlSession, NSURL *clickURL))openStoreBlock;
 
 @end

@@ -18,6 +18,22 @@ class DLViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func logContentView(fruitName: String) {
+            AppsFlyerLib.shared().logEvent(name: AFEventContentView,
+                values: [
+                    AFEventParamContentId: fruitName,
+                    AFEventParamContentType: "fruit"
+                ],
+                completionHandler: { (response: [String : Any]?, error: Error?) in
+                    if let response = response {
+                        print("In app event callback Success: ", response)
+                    }
+                    if let error = error {
+                        print("In app event callback ERROR:", error)
+                    }
+                })
+        }
+    
     func attributionDataToString(data : [String: Any]) -> NSMutableAttributedString {
         let newString = NSMutableAttributedString()
         let boldAttribute = [
@@ -69,7 +85,7 @@ class DLViewController: UIViewController {
     }
     
     func copyShareInviteLink(fruitName: String){
-        AppsFlyerShareInviteHelper.generateInviteUrl(linkGenerator:
+        AppsFlyerShareInviteHelper.generateInviteLink(linkGenerator:
          {(_ generator: AppsFlyerLinkGenerator) -> AppsFlyerLinkGenerator in
             generator.addParameterValue(fruitName, forKey: "deep_link_value")
             generator.addParameterValue(self.fruitAmountStr, forKey: "deep_link_sub1")
@@ -77,7 +93,7 @@ class DLViewController: UIViewController {
             generator.setCampaign("share_invite")
             generator.setChannel("mobile_share")
           return generator },
-        completionHandler: {(_ url: URL?) -> Void in
+        completionHandler: {(_ url: URL?, _ error: Error?) -> Void in
             if url != nil{
                 //Copy url to clipboard
                 UIPasteboard.general.string = (url!.absoluteString)
@@ -86,7 +102,7 @@ class DLViewController: UIViewController {
                     self.showToast(message: "Link copied to clipboard", font: .systemFont(ofSize: 12.0))
                 }
                 AppsFlyerShareInviteHelper.logInvite("mobile_share",
-                                                     parameters: ["referrerId": "THIS_USER_ID",
+                                                     eventParameters: ["referrerId": "THIS_USER_ID",
                                                                   "campaign": "share_invite"])
             }
             else{

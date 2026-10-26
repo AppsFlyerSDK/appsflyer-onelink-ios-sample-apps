@@ -22,13 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  This information is available through `onConversionDataReceived:` when the user accepts the invite and installs the app.
  *  In addition, campaign and channel parameters are visible within the AppsFlyer Dashboard.
  */
-+ (void)generateInviteUrlWithLinkGenerator:(AppsFlyerLinkGenerator *(^)(AppsFlyerLinkGenerator *generator))generatorCreator completionHandler:(void (^)(NSURL *_Nullable url))completionHandler;
++ (void)generateInviteLinkWithLinkGenerator:(AppsFlyerLinkGenerator *(^)(AppsFlyerLinkGenerator *generator))generatorCreator completionHandler:(void (^)(NSURL *_Nullable url, NSError * _Nullable error))completionHandler;
 
 /**
- *  It is recommended to generate an in-app event after the invite is sent to log the invites from the senders' perspective. 
+ *  It is recommended to generate an in-app event after the invite is sent to log the invites from the senders' perspective.
  *  This enables you to find the users that tend most to invite friends, and the media sources that get you these users.
  */
-+ (void)logInvite:(nullable NSString *)channel parameters:(nullable NSDictionary *)parameters;
++ (void)logInvite:(nullable NSString *)channel eventParameters:(nullable NSDictionary *)eventParameters;
 
 @end
 

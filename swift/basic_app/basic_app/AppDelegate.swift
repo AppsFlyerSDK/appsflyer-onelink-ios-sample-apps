@@ -18,12 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        // Subscribe to didBecomeActiveNotification if you use SceneDelegate or just call
-        // -[AppsFlyerLib start] from -[AppDelegate applicationDidBecomeActive:]
-        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActiveNotification),
-        // For Swift version < 4.2 replace name argument with the commented out code
-        name: UIApplication.didBecomeActiveNotification, //.UIApplicationDidBecomeActive for Swift < 4.2
-        object: nil)
+        AppsFlyerLib.shared().isDebug = true
+        AppsFlyerLib.shared().initialize(devKey: "DzWhTw4F78vGTeTuYAucoF", appId: "1550796743")
+        
+        AppsFlyerLib.shared().delegate = self
+
+        AppsFlyerLib.shared().registerSessionReadyListener {
+            AppsFlyerLib.shared().start()
+        }
+
         
         return true
     }
@@ -48,6 +51,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     }
     
+}
+
+extension AppDelegate: AppsFlyerLibDelegate {
+
+    // Handle organic / non-organic install
+    func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
+        ConversionData = data
+        print("onConversionDataSuccess: \(data)")
+    }
+
+    func onConversionDataFail(_ error: Error) {
+        print("onConversionDataFail: \(error)")
+    }
 }
 
 extension UIStoryboard {

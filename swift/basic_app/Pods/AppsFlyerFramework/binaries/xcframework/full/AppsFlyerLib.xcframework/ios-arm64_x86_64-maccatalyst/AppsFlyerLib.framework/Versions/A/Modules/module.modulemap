@@ -4,3 +4,8 @@ framework module AppsFlyerLib {
     export *
     module * { export * }
 }
+
+module AppsFlyerLib.Swift {
+  header "AppsFlyerLib-Swift.h"
+  requires objc
+}

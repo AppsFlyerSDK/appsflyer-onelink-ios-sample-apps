@@ -15,6 +15,8 @@ class BananasViewController: DLViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        logContentView(fruitName: "bananas")
+
 
         if (deepLinkData != nil) {
             bananasDlTextView.attributedText = attributionDataToString(data: deepLinkData!)

@@ -11,15 +11,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Payload container for the `generateInviteUrlWithLinkGenerator:completionHandler:` from `AppsFlyerShareInviteHelper`
+ Payload container for the `generateInviteLinkWithLinkGenerator:completionHandler:` from `AppsFlyerShareInviteHelper`
  */
 @interface AppsFlyerLinkGenerator : NSObject
 
 /// Instance initialization is not allowed. Use generated instance
-/// from `-[AppsFlyerShareInviteHelper generateInviteUrlWithLinkGenerator:completionHandler]`
+/// from `-[AppsFlyerShareInviteHelper generateInviteLinkWithLinkGenerator:completionHandler]`
 - (instancetype)init NS_UNAVAILABLE;
 /// Instance initialization is not allowed. Use generated instance
-/// from `-[AppsFlyerShareInviteHelper generateInviteUrlWithLinkGenerator:completionHandler]`
+/// from `-[AppsFlyerShareInviteHelper generateInviteLinkWithLinkGenerator:completionHandler]`
 + (instancetype)new NS_UNAVAILABLE;
 
 @property(nonatomic, nullable, copy) NSString *brandDomain;
@@ -35,17 +35,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// Referrer name
 - (void)setReferrerName      :(nonnull NSString *)referrerName;
 /// The URL to referrer user avatar. Usage: Optional
-- (void)setReferrerImageURL  :(nonnull NSString *)referrerImageURL;
-/// AppleAppID
-- (void)setAppleAppID        :(nonnull NSString *)appleAppID;
-/// Deeplink path
-- (void)setDeeplinkPath      :(nonnull NSString *)deeplinkPath;
+- (void)setReferrerImageUrl  :(nonnull NSString *)referrerImageUrl;
 /// Base deeplink path
-- (void)setBaseDeeplink      :(nonnull NSString *)baseDeeplink;
+- (void)setBaseDeepLink      :(nonnull NSString *)baseDeepLink;
 /// A single key value custom parameter. Usage: Optional
 - (void)addParameterValue    :(nonnull NSString *)value forKey:(NSString *)key;
 /// Multiple key value custom parameters. Usage: Optional
-- (void)addParameters        :(nonnull NSDictionary *)parameters;
+- (void)addUserParams        :(nonnull NSDictionary *)userParams;
 
 @end
 

@@ -15,6 +15,8 @@ class PeachesViewController: DLViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        logContentView(fruitName: "peaches")
+
 
         if (deepLinkData != nil) {
             peachesDlTextView.attributedText = attributionDataToString(data: deepLinkData!)
